@@ -1434,29 +1434,49 @@ body[data-view="case-studies"] .float-nav .navlink{color:var(--leaf);text-decora
   var home = document.getElementById('home');
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  function go(id, smooth){
+  // y: a saved scroll position to return to (used when going back)
+  function go(id, smooth, y){
     var el = id ? document.getElementById(id) : null;
     var view = el ? (el.classList.contains('view') ? el : el.closest('.view')) : null;
     if (!view) { view = home; if (el && !el.closest('.view')) view = home; }
     views.forEach(function(v){ v.hidden = (v !== view); });
     document.body.setAttribute('data-view', view.id);
-    if (el && el !== view) {
+    if (typeof y === 'number') {
+      requestAnimationFrame(function(){ window.scrollTo({top:y, behavior:'auto'}); });
+    } else if (el && el !== view) {
       requestAnimationFrame(function(){ el.scrollIntoView({behavior: (smooth && !reduce) ? 'smooth' : 'auto', block:'start'}); });
     } else {
       window.scrollTo({top:0, behavior:'auto'});
     }
   }
 
+  // Every page switch is a real browser history step, so the back button (and the phone's back gesture)
+  // returns to the previous page at the spot you were reading, instead of leaving the site.
+  // Each entry remembers its scroll position (y) and the page it was opened from (from).
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  function hashId(){ try { return (location.hash || '').slice(1); } catch(err) { return ''; } }
+  function same(a, b){ return (a === 'home' ? '' : a || '') === (b === 'home' ? '' : b || ''); }
+
   document.addEventListener('click', function(e){
     var a = e.target.closest('a[href^="#"]');
     if (!a) return;
     var id = a.getAttribute('href').slice(1);
     e.preventDefault();
+    var state = history.state || {};
+    // A link back to the page we just came from works like the back button, so the scroll position comes back too
+    if (state.from !== undefined && same(id, state.from)) { history.back(); return; }
+    var currentId = hashId();
+    try { history.replaceState({id: currentId, y: window.pageYOffset, from: state.from}, '', location.href); } catch(err) {}
     var current = document.body.getAttribute('data-view');
     var target = document.getElementById(id);
     var targetView = target ? (target.classList.contains('view') ? target : target.closest('.view')) : home;
     go(id, current === (targetView ? targetView.id : 'home'));
-    try { history.replaceState(null, '', '#' + id); } catch(err) {}
+    try { history.pushState({id: id, from: currentId}, '', '#' + id); } catch(err) {}
+  });
+
+  window.addEventListener('popstate', function(e){
+    var s = e.state || {};
+    go(s.id !== undefined ? s.id : hashId(), false, typeof s.y === 'number' ? s.y : undefined);
   });
 
   // The floating nav stays out of the way on the first screen and appears once the hero button scrolls away.
@@ -1471,8 +1491,8 @@ body[data-view="case-studies"] .float-nav .navlink{color:var(--leaf);text-decora
     nav.classList.remove('is-hidden');
   }
 
-  var start = '';
-  try { start = (location.hash || '').slice(1); } catch(err) {}
+  var start = hashId();
+  try { if (!history.state) history.replaceState({id: start}, '', location.href); } catch(err) {}
   go(start, false);
 })();
 
