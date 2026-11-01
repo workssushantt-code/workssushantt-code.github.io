@@ -406,10 +406,13 @@ body[data-view="case-studies"] .float-nav .navlink{color:var(--leaf);text-decora
 .hero h1 .l{display:block;white-space:nowrap}
 .hero h1 .hl{color:var(--leaf-deep)}
 @media (max-width:700px){.hero h1 .l{white-space:normal}}
-@media (max-width:420px){
-  .hero h1{font-size:1.68rem}
-  .kicker{font-size:.72rem;letter-spacing:.1em}
+/* Phones: smaller kicker and subheading, a bigger, tighter headline (800 is the font's heaviest weight) */
+@media (max-width:480px){
+  .hero h1{font-size:1.95rem;line-height:1.06;letter-spacing:-.035em}
+  .kicker{font-size:.62rem;letter-spacing:.09em}
+  .hero .lead{font-size:.94rem;line-height:1.55}
 }
+@media (max-width:374px){.hero h1{font-size:1.82rem}}  /* small phones: keep the headline on 3 lines */
 .hero .lead{max-width:none;text-wrap:balance}
 .hero .lead .l{display:block}
 @media (max-width:860px){.hero .lead{max-width:36rem}.hero .lead .l{display:inline}}
@@ -626,6 +629,8 @@ body[data-view="case-studies"] .float-nav .navlink{color:var(--leaf);text-decora
 .site-foot{background:var(--paper);border-top:1px solid var(--rule)}
 .site-foot .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px 32px;padding-block:32px calc(116px + env(safe-area-inset-bottom,0px));color:var(--muted);font-size:var(--fs-small)}
 .site-foot .logo .name{font-size:1.7rem}
+.foot-mail{color:var(--forest);font-weight:600;text-underline-offset:4px}
+.foot-mail:hover{color:var(--leaf)}
 
 /* Case study page */
 .cs-hero{background:
@@ -1424,7 +1429,7 @@ body[data-view="case-studies"] .float-nav .navlink{color:var(--leaf);text-decora
   <div class="wrap">
     <a class="logo" href="#home"><span class="name">Sushant</span></a>
     <p>Online sales growth for food &amp; drink brands in the US and UK.</p>
-    <p>hello@yourdomain.com <span class="ph-chip">Placeholder</span></p>
+    <p><a class="foot-mail" href="mailto:works@sushnt.com">works@sushnt.com</a></p>
   </div>
 </footer>
 
