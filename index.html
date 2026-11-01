@@ -1,0 +1,1481 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>[hidden]:not([hidden=until-found i]){display:none!important}img{max-width:100%}</style>
+<title>Sushant Food Brand Growth</title>
+<meta name="description" content="Sushant helps food and drink brands in the US and UK grow online sales on Amazon, eBay and Shopify.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=DM+Mono:wght@400;500&family=Bricolage+Grotesque:opsz,wght@12..96,800&family=Caveat:wght@500;700&family=Figtree:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: a growth notebook. White paper sections with a mint gradient wash, dot grid behind the hero,
+   taped-in sketches, handwritten notes on real numbers, one forest band to close. Single light theme by choice. */
+:root{
+  --mint-edge:#B4DBA9;
+  --mint-mid:#E3F2DD;
+  --paper:#FFFFFF;
+  --paper-tint:#F4FAF1;
+  --leaf:#3F8F4E;
+  --leaf-soft:#CFE8C6;
+  --leaf-deep:#2C7A3C;
+  --highlight:#D3F0BF;
+  --forest:#133A22;
+  --forest-2:#1D5131;
+  --ink:#0F1A12;
+  --muted:#4A5C4F;
+  --rule:#D6E7D0;
+  --tape:rgba(205,232,190,.78);
+  --on-forest:#F2FAEE;
+  --on-forest-muted:#BFD9B8;
+
+  --f-display:"Plus Jakarta Sans","Segoe UI",system-ui,sans-serif;
+  --f-body:"Figtree","Segoe UI",system-ui,sans-serif;
+  --f-hand:"Caveat","Segoe Print","Bradley Hand",cursive;
+  --f-mono:"DM Mono","Consolas","Courier New",monospace;
+  --receipt:#FCF9EC;
+  --receipt-band:#E4F2C4;
+
+  --fs-h1:clamp(2.35rem,5.4vw,4.3rem);
+  --fs-h2:clamp(1.85rem,3.6vw,2.75rem);
+  --fs-h3:1.3rem;
+  --fs-body:1.125rem;
+  --fs-small:.95rem;
+  --fs-hand:1.55rem;
+
+  --radius:14px;
+  --maxw:1120px;
+  color-scheme:light;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--f-body);font-size:var(--fs-body);line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--paper)}
+h1,h2,h3{font-family:var(--f-display);color:var(--forest);line-height:1.08;margin:0;text-wrap:balance;letter-spacing:-.015em}
+h1{font-size:var(--fs-h1);font-weight:700}
+h2{font-size:var(--fs-h2);font-weight:700}
+h3{font-size:var(--fs-h3);font-weight:700;line-height:1.25}
+p{margin:0}
+a{color:var(--forest)}
+:focus-visible{outline:3px solid var(--leaf);outline-offset:3px;border-radius:6px}
+img{max-width:100%}
+
+.wrap{
+  max-width:var(--maxw);margin-inline:auto;
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+}
+.band{padding-block:clamp(64px,9vw,112px)}
+.band + .band{border-top:1px solid var(--rule)}
+section[id], article[id]{scroll-margin-top:24px}
+
+.hand{font-family:var(--f-hand);font-weight:700;font-size:var(--fs-hand);color:var(--leaf);line-height:1.15}
+.eyebrow{font-weight:600;font-size:var(--fs-small);letter-spacing:.06em;text-transform:uppercase;color:var(--forest-2)}
+.lead{font-size:clamp(1.1rem,1.6vw,1.3rem);color:var(--muted);max-width:36rem}
+.mark{background:linear-gradient(transparent 58%,var(--highlight) 58%,var(--highlight) 94%,transparent 94%);padding-inline:.08em}
+.section-head{display:grid;gap:14px;max-width:44rem;margin-bottom:clamp(36px,5vw,56px)}
+.section-head .hand{transform:rotate(-2deg);transform-origin:left;justify-self:start}
+.section-head.center{justify-items:center;text-align:center;margin-inline:auto}
+.section-head.center .hand{justify-self:center;transform-origin:center}
+.section-head .kicker{font-weight:800}
+#proof .section-head h2{font-size:clamp(2.2rem,4.4vw,3.3rem);font-weight:800;letter-spacing:-.03em}
+
+/* Case cards: logo plate, then one chart, then two short facts */
+.cc{border:1.5px solid var(--rule);border-radius:20px;overflow:hidden;background:var(--paper);display:grid;grid-template-rows:auto 1fr;min-width:0;box-shadow:0 18px 40px -30px rgba(19,58,34,.45)}
+.cc-logo{position:relative;display:grid;place-items:center;height:clamp(140px,16vw,180px);padding:20px;background:radial-gradient(ellipse 70% 90% at 50% 50%, #FFFFFF 0%, var(--paper-tint) 60%, var(--mint-mid) 100%);border-bottom:1.5px solid var(--rule)}
+.cc-logo img{max-height:100%;max-width:min(280px,80%);width:auto;height:auto;object-fit:contain}
+.cc-title{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}
+.cc-badge{background:var(--forest);color:var(--on-forest);font-family:var(--f-display);font-weight:800;font-size:.85rem;padding:6px 12px;border-radius:999px}
+.cc-body{padding:clamp(22px,3vw,30px);display:flex;flex-direction:column;gap:22px}
+.cc-cta{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:12px;
+  padding:8px 8px 8px 22px;border:1.5px solid var(--forest);border-radius:999px;
+  font-family:var(--f-display);font-weight:700;font-size:1rem;color:var(--forest);text-decoration:none;
+  transition:background-color .15s ease,color .15s ease}
+.cc-arrow{width:38px;height:38px;border-radius:50%;background:var(--forest);display:grid;place-items:center;flex:none;transition:transform .15s ease}
+.cc-arrow svg{width:18px;height:18px;fill:none;stroke:var(--on-forest);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.cc-cta:hover{background:var(--forest);color:var(--on-forest)}
+.cc-cta:hover .cc-arrow{background:var(--on-forest);transform:translateX(3px)}
+.cc-cta:hover .cc-arrow svg{stroke:var(--forest)}
+@media (prefers-reduced-motion:reduce){.cc-cta:hover .cc-arrow{transform:none}}
+.cc-name h3{font-size:1.5rem;font-weight:800}
+.cc-name p{color:var(--muted);font-size:1rem;margin-top:2px}
+.cc-chart{margin:0;display:grid;gap:10px}
+.cc-chart figcaption{font-weight:700;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.cc-row{display:grid;grid-template-columns:7.5rem minmax(0,1fr) 4.2rem;align-items:center;gap:12px}
+.cc-lab{font-weight:600;font-size:.95rem;color:var(--muted)}
+.cc-track{height:30px;border-radius:8px;background:var(--paper-tint);position:relative;overflow:hidden}
+.cc-bar{position:absolute;inset:0 auto 0 0;width:var(--w);background:var(--leaf);border-radius:8px}
+.cc-row.before .cc-track::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--muted);border-radius:2px}
+.cc-val{font-family:var(--f-display);font-weight:800;font-size:clamp(2rem,3.2vw,2.6rem);line-height:1;color:var(--forest);text-align:right;font-variant-numeric:tabular-nums;letter-spacing:-.03em}
+.cc-row.before .cc-val{color:var(--muted)}
+.cc-facts{margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;padding-top:18px;border-top:1px dashed var(--leaf-soft)}
+.cc-facts dt{font-weight:700;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf-deep);margin-bottom:4px}
+.cc-facts dd{margin:0;color:var(--ink);font-size:1rem;line-height:1.45}
+@media (max-width:480px){.cc-facts{grid-template-columns:minmax(0,1fr)}.cc-row{grid-template-columns:6.2rem minmax(0,1fr) 3.4rem}}
+
+/* Receipt edges: zigzag teeth cut into the top and bottom of each card.
+   The mask removes the box border and shadow, so the outline and soft shadow come from drop-shadow on the grid and follow the teeth. */
+#proof{background:radial-gradient(ellipse 80% 70% at 50% 45%, #FFFFFF 0%, #EEF8EA 55%, var(--mint-mid) 100%)}
+#proof .proof-grid{gap:clamp(24px,4vw,56px);max-width:980px;margin-inline:auto;filter:drop-shadow(0 0 .6px rgba(19,58,34,.30)) drop-shadow(0 16px 22px rgba(19,58,34,.14))}
+#proof .rc{
+  --tooth:18px;
+  background:var(--receipt);color:var(--forest);min-width:0;
+  display:flex;flex-direction:column;gap:10px;
+  padding:calc(18px + 9px) clamp(20px,2.4vw,28px) calc(20px + 9px);
+  -webkit-mask:
+    conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/var(--tooth) 51% repeat-x,
+    conic-gradient(from 135deg at top,#0000,#000 1deg 89deg,#0000 90deg) top/var(--tooth) 51% repeat-x;
+          mask:
+    conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/var(--tooth) 51% repeat-x,
+    conic-gradient(from 135deg at top,#0000,#000 1deg 89deg,#0000 90deg) top/var(--tooth) 51% repeat-x;
+}
+#proof .rc:nth-child(1){rotate:-1.2deg}
+#proof .rc:nth-child(2){rotate:1.2deg}
+@media (max-width:820px){#proof .rc:nth-child(n){rotate:0deg}}
+.rc-head img{display:block;margin:0 auto;width:auto;height:auto;max-height:clamp(70px,6.2vw,86px);max-width:min(230px,72%)}
+.rc-meta{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.03em;text-transform:uppercase;text-align:center;color:var(--muted);line-height:1.5}
+.rc-meta span{opacity:.6;margin-inline:3px}
+.rc-band{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 12px;background:var(--receipt-band);padding:8px 12px;margin-inline:-6px}
+.rc-chips{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin:0;padding:0}
+.rc-chips li{font-size:.72rem;font-weight:700;color:var(--leaf-deep);background:var(--receipt);border:1.5px solid var(--leaf);border-radius:999px;padding:2px 10px}
+.rc-band > span{font-family:var(--f-mono);font-size:.8rem;font-weight:500;color:var(--forest)}
+.rc-sec{font-family:var(--f-display);font-weight:700;font-size:.95rem;color:var(--forest);padding-bottom:6px;border-bottom:1.5px solid var(--forest)}
+.rc-lines{margin:0;display:grid;gap:3px;font-family:var(--f-mono);font-size:.88rem}
+.rc-lines div{display:grid;grid-template-columns:auto minmax(12px,1fr) auto;align-items:end;gap:6px}
+.rc-lines div::before{content:"";grid-column:2;grid-row:1;border-bottom:2px dotted rgba(19,58,34,.28);margin-bottom:5px}
+.rc-lines dt{grid-column:1;grid-row:1}
+.rc-lines dd{grid-column:3;grid-row:1;margin:0;font-weight:500;text-align:right}
+.rc hr{border:0;border-top:1.5px dashed rgba(19,58,34,.32);margin:2px 0;width:100%}
+.rc-chart{margin:0;display:grid;gap:6px}
+.rc-chart figcaption{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.rc .cc-track{background:rgba(19,58,34,.07)}
+.rc .cc-row:not(.before) .cc-lab{color:var(--forest);font-weight:700}
+.rc-notes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.rc-notes span{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--leaf-deep)}
+.rc-notes ul{list-style:none;margin:4px 0 0;padding:0;display:grid;gap:1px;font-size:.88rem;color:var(--ink)}
+.rc-notes li::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--leaf);margin-right:8px;vertical-align:middle}
+.rc-tag{font-family:var(--f-hand);font-weight:700;font-size:1.6rem;line-height:1.1;text-align:center;color:var(--forest);margin-top:2px}
+.rc .cc-cta{margin-top:2px;background:var(--receipt)}
+.rc .cc-cta:hover{background:var(--forest)}
+@media (max-width:420px){.rc-notes{grid-template-columns:minmax(0,1fr)}}
+/* Keep both receipts inside one laptop screen */
+#proof .rc{gap:8px}
+.rc-meta{font-size:.62rem;letter-spacing:0}
+.rc-meta span{margin-inline:2px}
+.rc-head img{max-height:clamp(64px,5.4vw,76px)}
+.rc .cc-val{font-size:clamp(1.6rem,2.3vw,1.95rem)}
+.rc-tag{font-size:1.45rem}
+#proof.band{padding-top:clamp(36px,4.5vw,56px)}
+
+/* Sales leaks: a tick-the-ones-that-sound-like-you checklist */
+.leaks-cue{text-align:center;margin:0 0 18px;font-size:1.6rem;color:var(--forest)}
+.leaks-cue span{display:block;font-size:1.15rem;color:var(--leaf);font-weight:500}
+.leaks-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media (max-width:900px){.leaks-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.leaks-grid{grid-template-columns:minmax(0,1fr)}}
+.leak{position:relative;display:flex;flex-direction:column;gap:8px;padding:20px;border:1.5px solid var(--rule);border-radius:16px;background:var(--paper);cursor:pointer;transition:border-color .15s ease,background-color .15s ease,transform .15s ease}
+.leak:hover{border-color:var(--leaf-soft);transform:translateY(-2px)}
+@media (prefers-reduced-motion:reduce){.leak:hover{transform:none}}
+.leak input{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
+.leak-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:4px}
+.leak .ico{width:46px;height:46px}
+.leak-box{width:28px;height:28px;flex:none;border:2px solid var(--leaf-soft);border-radius:8px;display:grid;place-items:center;background:var(--paper);transition:background-color .15s ease,border-color .15s ease}
+.leak-box svg{width:16px;height:16px;fill:none;stroke:var(--on-forest);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;opacity:0}
+.leak b{font-family:var(--f-display);font-weight:800;font-size:1.08rem;line-height:1.3;color:var(--forest)}
+.leak-text{color:var(--muted);font-size:.95rem;line-height:1.45}
+.leak.on{border-color:var(--leaf);background:var(--paper-tint)}
+.leak.on .leak-box{background:var(--leaf);border-color:var(--leaf)}
+.leak.on .leak-box svg{opacity:1}
+.leak:has(input:focus-visible){outline:3px solid var(--leaf);outline-offset:3px}
+.leaks-result{margin-top:28px;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px 24px;text-align:center}
+/* Plain cards now, nothing to click */
+.leak{cursor:default}
+.leak:hover{transform:none;border-color:var(--rule)}
+#problem .section-head{max-width:none}
+@media (min-width:760px){#problem .section-head .lead{max-width:none;white-space:nowrap}}
+
+/* 60 days from now: the outcome, from the client's side */
+.dream-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(20px,3vw,36px);text-align:center}
+@media (max-width:900px){.dream-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:480px){.dream-grid{grid-template-columns:minmax(0,1fr)}}
+.dream-grid li{display:grid;justify-items:center;gap:10px;align-content:start}
+.dream-ico{width:76px;height:76px;border-radius:50%;background:var(--mint-mid);display:grid;place-items:center}
+.dream-ico svg{width:42px;height:42px;fill:none;stroke:var(--forest);stroke-width:2.3;stroke-linecap:round;stroke-linejoin:round}
+.dream-grid h3{font-size:1.2rem;font-weight:800}
+.dream-grid p{color:var(--muted);font-size:1rem;line-height:1.5;max-width:16rem}
+.dream-cta{margin-top:clamp(28px,4vw,40px);display:flex;justify-content:center}
+#problem .section-head h2,#dream .section-head h2{font-size:clamp(2rem,4vw,3rem);font-weight:800;letter-spacing:-.03em;max-width:22ch;margin-inline:auto}
+
+/* Two promises, folded into the honest part under "Not a fit if" */
+.mini-promises{display:grid;gap:12px;padding-top:6px}
+.mini-promises h3{font-size:1.15rem;font-weight:800;color:var(--forest)}
+.mini-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:520px){.mini-grid{grid-template-columns:minmax(0,1fr)}}
+.mini{display:flex;gap:12px;align-items:flex-start;padding:16px;border-radius:var(--radius);background:var(--paper-tint);border:1.5px solid var(--leaf-soft)}
+.mini-ico{width:46px;height:46px;flex:none;border-radius:50%;border:2px solid var(--leaf);display:grid;place-items:center;align-content:center;color:var(--forest);line-height:1}
+.mini-ico b{font-family:var(--f-display);font-weight:800;font-size:1rem}
+.mini-ico small{font-size:.58rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.mini-ico svg{width:22px;height:22px;fill:none;stroke:var(--leaf);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.mini b{display:block;font-family:var(--f-display);font-weight:800;font-size:.98rem;color:var(--forest);line-height:1.3}
+.mini div > span{display:block;margin-top:3px;font-size:.9rem;color:var(--muted);line-height:1.4}
+.mini-ico small,.mini-ico b{display:block}
+
+/* Centered, heavier heading for the two promises; centered FAQ */
+#promise .section-head h2{font-size:clamp(2.2rem,4.2vw,3.1rem);font-weight:800;letter-spacing:-.03em}
+.section-head.center .lead{margin-inline:auto;text-wrap:balance}
+#faq .faq-list{margin-inline:auto}
+
+/* Booking card: opens the real Calendly page (embeds are blocked in the preview; swap in Calendly's inline embed on the live site) */
+.cal-brand{display:inline-flex;align-items:center;gap:6px;font-size:.85rem;font-weight:700;color:var(--muted)}
+.cal-brand svg,.cal-facts svg{width:20px;height:20px;flex:none;fill:none;stroke:var(--leaf);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.cal h3{font-size:1.5rem;font-weight:800;color:var(--forest)}
+.cal-facts{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.cal-facts li{display:flex;align-items:center;gap:10px;font-weight:600;color:var(--ink)}
+.cal .cal-btn{width:100%;justify-content:space-between}
+.cal .note{font-size:.88rem;color:var(--muted);text-align:center;user-select:all}
+
+/* The 60-day recipe: one flow from "your brand today" through four steps to the result */
+.recipe-flow{background:var(--paper-tint)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.flow{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:minmax(0,.9fr) 26px repeat(3,minmax(0,1fr) 26px) minmax(0,1fr);align-items:stretch;gap:0 6px}
+.fl-card{background:var(--paper);border:1.5px solid var(--rule);border-radius:16px;padding:16px 14px 18px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;min-width:0}
+.fl-start{background:transparent;border-style:dashed;border-color:var(--leaf-soft);justify-content:center}
+.fl-card .fl-step{font-family:var(--f-display);font-weight:800;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--leaf-deep)}
+.fl-card .fl-step span{font-weight:600;letter-spacing:.04em;color:var(--muted);text-transform:none}
+.fl-art{width:100%;max-width:170px;height:auto;fill:none;stroke:var(--forest);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.fl-art .accent{stroke:var(--leaf)}
+.fl-art .fill-accent{fill:var(--leaf);stroke:none}
+.fl-art text{font-family:var(--f-hand);font-weight:700;font-size:20px;fill:var(--leaf);stroke:none}
+.fl-card h3{font-size:1.12rem;font-weight:800}
+.fl-card p{font-size:.92rem;color:var(--muted);line-height:1.4}
+.fl-logos{list-style:none;margin:auto 0 0;padding:6px 0 0;display:flex;flex-wrap:wrap;justify-content:center;gap:6px}
+.fl-logos li{width:34px;height:34px;border-radius:9px;background:var(--paper);border:1px solid var(--rule);display:grid;place-items:center}
+.fl-logos svg{width:18px;height:18px}
+.fl-logos .fl-ab{width:auto;padding-inline:10px;font-size:.78rem;font-weight:700;color:var(--forest)}
+.fl-chips{list-style:none;margin:auto 0 0;padding:6px 0 0;display:grid;gap:5px;width:100%}
+.fl-chips li{font-size:.82rem;font-weight:600;color:var(--forest);background:var(--paper-tint);border:1px solid var(--rule);border-radius:8px;padding:5px 8px}
+.fl-arrow{display:grid;place-items:center}
+.fl-arrow svg{width:26px;height:20px;fill:none;stroke:var(--leaf);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.fl-loop{display:flex;align-items:center;justify-content:center;gap:10px;margin:22px auto;width:fit-content;max-width:100%;padding:10px 20px;border:1.5px dashed var(--leaf-soft);border-radius:999px;background:var(--paper);font-weight:600;color:var(--forest);font-size:.98rem;text-align:center}
+.fl-loop svg{width:20px;height:20px;flex:none;fill:none;stroke:var(--leaf);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.fl-result{background:var(--forest);color:var(--on-forest);border-radius:20px;padding:clamp(22px,3vw,34px);display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(20px,3vw,40px);align-items:center}
+.fl-gets .btn{margin-top:20px}
+.fl-result .kicker{color:var(--mint-edge)}
+.fl-gets h3{color:var(--on-forest);font-size:clamp(1.4rem,2.2vw,1.8rem);font-weight:800;margin:6px 0 14px}
+.fl-gets ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.fl-gets li{display:flex;align-items:center;gap:10px;font-weight:600}
+.fl-gets li svg{width:20px;height:20px;flex:none;fill:none;stroke:var(--mint-edge);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.fl-goal{text-align:center;display:grid;justify-items:center;gap:2px}
+.fl-goal svg{width:100%;max-width:190px;height:auto;fill:none;stroke:var(--on-forest-muted);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.fl-goal .accent{stroke:var(--mint-edge)}
+.fl-goal .fill-accent{fill:var(--mint-edge);stroke:none}
+.fl-goal-num{font-family:"Bricolage Grotesque",var(--f-display);font-weight:800;font-size:clamp(2.4rem,4vw,3.2rem);line-height:1;color:var(--on-forest)}
+.fl-goal .hand{color:var(--mint-edge);font-size:1.35rem}
+.fl-price{display:grid;gap:6px;justify-items:start;border-left:1px solid rgba(242,250,238,.2);padding-left:clamp(20px,3vw,40px)}
+.fl-offer{font-weight:700;color:var(--on-forest-muted);font-size:.95rem;line-height:1.35}
+.fl-amount{font-family:var(--f-display);font-weight:800;font-size:clamp(2.4rem,4vw,3.2rem);line-height:1;color:var(--on-forest)}
+.fl-note{color:var(--on-forest-muted);font-size:.92rem;margin-bottom:8px}
+@media (max-width:1040px){
+  .flow{grid-template-columns:minmax(0,1fr);max-width:560px;margin-inline:auto;gap:4px}
+  .fl-card{display:grid;grid-template-columns:120px minmax(0,1fr);text-align:left;align-items:center;column-gap:16px;row-gap:4px}
+  .fl-card > *{grid-column:2}
+  .fl-card .fl-art{grid-column:1;grid-row:1 / span 5;max-width:120px}
+  .fl-logos{justify-content:flex-start;margin-top:4px}
+  .fl-chips{display:flex;flex-wrap:wrap;margin-top:4px}
+  .fl-arrow svg{transform:rotate(90deg)}
+  .fl-result{grid-template-columns:minmax(0,1fr)}
+  .fl-price{border-left:0;padding-left:0;border-top:1px solid rgba(242,250,238,.2);padding-top:20px}
+}
+@media (max-width:420px){.fl-card{grid-template-columns:84px minmax(0,1fr)}.fl-card .fl-art{max-width:84px}}
+
+/* Compact sizing so heading, both cards, their buttons and the note fit one screen at 100% zoom */
+#proof.band{padding-block:clamp(44px,5.5vw,68px)}
+#proof .section-head{gap:8px;margin-bottom:clamp(22px,3vw,30px)}
+#proof .section-head h2{font-size:clamp(2rem,3.8vw,2.9rem)}
+#proof .cc-logo{height:clamp(126px,10.5vw,142px);padding-inline:16px;padding-bottom:14px}
+#proof .cc-logo img{max-height:clamp(86px,7.4vw,104px);max-width:min(270px,82%)}
+#proof .cc-body{padding:20px 24px calc(22px + 7px);gap:16px}
+#proof .cc-name h3{font-size:1.35rem}
+#proof .cc-name p{font-size:.95rem}
+#proof .cc-chart{gap:8px}
+#proof .cc-track{height:24px}
+#proof .cc-val{font-size:clamp(1.7rem,2.6vw,2.2rem)}
+#proof .cc-facts{padding-top:14px;gap:14px}
+#proof .cc-facts dd{font-size:.95rem}
+#proof .cc-cta{padding:6px 6px 6px 20px;font-size:.98rem}
+#proof .cc-arrow{width:34px;height:34px}
+#proof .proof-note{margin-top:16px}
+.scribbled{position:relative;padding-bottom:6px}
+.scribbled::after{content:"";position:absolute;left:-4px;right:-6px;bottom:-4px;height:10px;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 10' preserveAspectRatio='none'%3E%3Cpath d='M2 6 C 20 2, 40 9, 62 5 S 100 2, 118 6' fill='none' stroke='%233F8F4E' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center/100% 100%}
+
+.doodle{filter:url(#rough)}
+.ico{width:48px;height:48px;fill:none;stroke:currentColor;stroke-width:2.3;stroke-linecap:round;stroke-linejoin:round;color:var(--forest)}
+
+/* Buttons */
+.btn{
+  display:inline-flex;align-items:center;gap:10px;justify-content:center;
+  font-family:var(--f-display);font-weight:700;font-size:1.08rem;letter-spacing:-.005em;
+  background:var(--forest);color:var(--on-forest);text-decoration:none;
+  padding:15px 24px;border-radius:999px;border:2px solid var(--forest);
+  transition:transform .15s ease, background-color .15s ease;
+}
+.btn:hover{background:var(--forest-2);transform:translateY(-2px)}
+.btn svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.btn.light{background:var(--on-forest);color:var(--forest);border-color:var(--on-forest)}
+.btn.light:hover{background:var(--paper)}
+.btn.small{padding:10px 18px;font-size:.98rem}
+.cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px}
+.cta-note{font-size:var(--fs-small);color:var(--muted)}
+.text-link{font-weight:600;color:var(--forest);text-decoration:underline;text-decoration-color:var(--leaf);text-decoration-thickness:2px;text-underline-offset:4px}
+
+/* Floating nav: a small paper pill near the bottom of the screen */
+.float-nav{
+  position:fixed;z-index:50;
+  left:50%;transform:translateX(-50%);
+  bottom:calc(14px + env(safe-area-inset-bottom,0px));
+  display:flex;align-items:center;gap:20px;
+  padding:6px 6px 6px 20px;
+  background:rgba(255,255,255,.95);
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+  border:1.5px solid var(--leaf-soft);border-radius:999px;
+  box-shadow:0 10px 26px -16px rgba(19,58,34,.5);
+  max-width:calc(100% - 24px);
+}
+.float-nav .logo .name{font-size:1.85rem}
+.float-nav{transition:opacity .25s ease, translate .25s ease, visibility 0s 0s}
+.float-nav.is-hidden{opacity:0;translate:0 14px;visibility:hidden;pointer-events:none;transition:opacity .25s ease, translate .25s ease, visibility 0s .25s}
+@media (prefers-reduced-motion:reduce){.float-nav,.float-nav.is-hidden{transition:none;translate:none}}
+.float-nav > *{white-space:nowrap;flex:none}
+.float-nav .navlink{text-decoration:none;font-weight:600;color:var(--forest);font-size:1rem;padding:10px 4px}
+.float-nav .navlink:hover{color:var(--leaf)}
+body[data-view="case-studies"] .float-nav .navlink{color:var(--leaf);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:5px}
+.float-nav .btn.small{padding:11px 20px}
+@media (max-width:560px){
+  .float-nav{
+    left:max(12px,env(safe-area-inset-left,0px));
+    right:max(12px,env(safe-area-inset-right,0px));
+    transform:none;max-width:none;justify-content:space-between;gap:12px;padding-left:18px;
+  }
+  .float-nav .navlink{display:none}
+}
+.logo{display:flex;align-items:baseline;gap:10px;text-decoration:none;color:var(--forest)}
+.logo .name{font-family:var(--f-hand);font-weight:700;font-size:2.1rem;line-height:1;position:relative}
+.logo .name::after{content:"";position:absolute;left:2px;right:-4px;bottom:-4px;height:6px;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 8' preserveAspectRatio='none'%3E%3Cpath d='M2 5 C 25 2, 50 7, 98 3' fill='none' stroke='%233F8F4E' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center/100% 100%}
+
+/* Hero */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(circle, rgba(19,58,34,.11) 1px, transparent 1.5px) 0 0/22px 22px,
+    radial-gradient(ellipse 80% 70% at 50% 42%, #FFFFFF 0%, #EEF8EA 52%, var(--mint-edge) 100%);
+  padding-bottom:clamp(56px,8vw,96px);
+  --peek:clamp(44px,8vh,84px);
+}
+/* Hero: the message block fills the first screen except a small strip, where the top of the video peeks in.
+   The photo card and note float in the side margins on wide screens. */
+/* Message block keeps its place on screen; the video follows it closely, and the trust line sits under the video */
+/* Bottom padding matches the subheading-to-button gap (22px gap + 10px button offset) */
+.hero-top{position:relative;padding-block:clamp(56px,20vh,200px) 34px}
+.hero .trust-below{margin-top:28px}
+.hero .wrap{width:100%;display:grid;justify-items:center;position:relative;z-index:2}
+.vsl{margin:0 auto;width:100%;max-width:880px}
+.vsl-frame{position:relative;aspect-ratio:16/9;max-width:100%;border-radius:18px;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;
+  background:radial-gradient(ellipse 70% 80% at 50% 45%, var(--forest-2) 0%, var(--forest) 72%);
+  box-shadow:0 26px 50px -30px rgba(19,58,34,.65)}
+.vsl-play{width:clamp(60px,9vw,84px);height:clamp(60px,9vw,84px);border-radius:50%;background:var(--on-forest);display:grid;place-items:center}
+.vsl-play svg{width:38%;height:38%;fill:var(--forest);margin-left:6%}
+.vsl-cap{font-family:var(--f-display);font-weight:600;color:var(--on-forest);font-size:clamp(.95rem,1.6vw,1.15rem);text-align:center;padding-inline:16px}
+.vsl-chip{position:absolute;top:14px;left:14px}
+.hero-copy{display:grid;justify-items:center;text-align:center;gap:20px;width:100%;max-width:68rem;min-width:0}
+/* Thrivecast-style hero: small spaced label, one heavy headline, a clear subheading, one button */
+.kicker{font-family:var(--f-display);font-weight:700;font-size:clamp(.8rem,1.1vw,.95rem);letter-spacing:.16em;text-transform:uppercase;color:var(--leaf-deep);margin:0}
+.hero .kicker{margin-bottom:-8px}
+.hero-copy{gap:22px}
+.hero h1{font-size:clamp(2.075rem,5.5vw,4.375rem);line-height:1.08;font-weight:800;letter-spacing:-.025em}
+.hero .lead{font-size:clamp(1.04rem,1.5vw,1.24rem);color:#2E3D33;line-height:1.55}
+.hero .cta-row{margin-top:10px}
+.hero h1 .l{display:block;white-space:nowrap}
+.hero h1 .hl{color:var(--leaf-deep)}
+@media (max-width:700px){.hero h1 .l{white-space:normal}}
+@media (max-width:420px){
+  .hero h1{font-size:1.68rem}
+  .kicker{font-size:.72rem;letter-spacing:.1em}
+}
+.hero .lead{max-width:none;text-wrap:balance}
+.hero .lead .l{display:block}
+@media (max-width:860px){.hero .lead{max-width:36rem}.hero .lead .l{display:inline}}
+.hero .cta-row{flex-direction:column;gap:8px;margin-top:4px}
+@media (max-width:560px){.trust{gap:6px 16px}.trust li{font-size:.88rem}}
+.hero .btn{min-height:52px}
+.hero h1 .circled{position:relative;display:inline-block;white-space:nowrap;z-index:0;margin-left:.14em;font-family:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;font-weight:800;letter-spacing:-.02em}
+.hero h1 .circled svg{position:absolute;left:-14%;top:-22%;width:128%;height:150%;overflow:visible;z-index:-1;pointer-events:none}
+.hero h1 .circled path{fill:none;stroke:var(--leaf);stroke-width:2.6;stroke-linecap:round}
+@keyframes draw{from{stroke-dashoffset:520}to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){.hero h1 .circled path{animation:none}}
+.goal-note{display:flex;align-items:flex-start;justify-content:center;gap:6px;margin-top:-10px}
+.goal-note svg{width:46px;height:40px;flex:none;fill:none;stroke:var(--leaf);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.goal-note .hand{transform:rotate(-2deg);padding-top:10px}
+.trust{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 22px;margin-top:4px;padding:0;list-style:none}
+.trust li{display:flex;align-items:center;gap:8px;font-weight:600;font-size:var(--fs-small);color:var(--forest)}
+.trust svg{width:24px;height:24px;fill:none;stroke:var(--leaf);stroke-width:2.3;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+.tape{position:absolute;width:96px;height:28px;background:var(--tape);border-left:2px dashed rgba(255,255,255,.6);border-right:2px dashed rgba(255,255,255,.6)}
+.tape.tl{top:-12px;left:22px;transform:rotate(-8deg)}
+.tape.tr{top:-12px;right:26px;transform:rotate(7deg)}
+@media (max-width:520px){.goal-note .hand{font-size:1.35rem;text-wrap:balance}}
+
+/* Floating side pieces: only where the margins have room, so they never crowd the message */
+.hero-float{position:absolute;z-index:1;display:none;box-shadow:0 14px 30px -16px rgba(19,58,34,.45)}
+@media (min-width:1280px){.hero-float{display:block}}
+.polaroid{right:clamp(24px,4.5vw,120px);top:50%;width:160px;background:var(--paper);padding:9px 9px 8px;border:1px solid var(--rule);transform:rotate(5deg);animation:bob 5.5s ease-in-out infinite}
+.polaroid .tape{width:64px;height:22px;top:-11px;left:48px;transform:rotate(4deg)}
+.polaroid .hand{font-size:1.2rem;text-align:center;color:var(--forest);margin-top:6px}
+.polaroid img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover}
+.side-note{left:clamp(24px,4.5vw,120px);top:56%;width:150px;background:var(--mint-mid);padding:18px 14px 12px;border-radius:3px;transform:rotate(-4deg);animation:bob 6.5s ease-in-out -2.5s infinite}
+.side-note .tape{width:58px;height:20px;top:-10px;left:44px;transform:rotate(-5deg)}
+.side-note svg{width:100%;height:auto;display:block;fill:none;stroke:var(--forest);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.side-note .up{stroke:var(--leaf);stroke-width:3.2}
+.side-note circle{fill:var(--leaf);stroke:none}
+.side-note .hand{font-size:1.25rem;text-align:center;color:var(--forest);margin-top:6px}
+@keyframes bob{0%,100%{translate:0 0}50%{translate:0 -12px}}
+@media (prefers-reduced-motion:reduce){.hero-float{animation:none}}
+
+/* Placeholder treatment */
+.ph-photo{aspect-ratio:1/1;background:var(--paper-tint);border:2px dashed var(--leaf-soft);display:grid;place-items:center;max-width:100%}
+.ph-photo svg{width:70%;height:70%;fill:none;stroke:var(--leaf);stroke-width:2;stroke-linecap:round}
+.ph-chip{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--forest);background:var(--highlight);padding:3px 8px;border-radius:5px}
+
+
+/* Storyboard */
+.story{background:var(--paper-tint)}
+.panels{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;list-style:none;margin:0;padding:0;counter-reset:panel}
+@media (max-width:900px){.panels{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.panel{background:var(--paper);border:2px solid var(--forest);border-radius:10px;padding:14px 14px 18px;display:grid;gap:8px;align-content:start;min-width:0;position:relative}
+.panel:nth-child(odd){transform:rotate(-.6deg)}
+.panel:nth-child(even){transform:rotate(.5deg)}
+.panel .num{font-family:var(--f-display);font-weight:800;font-size:.85rem;color:var(--leaf);letter-spacing:.06em}
+.panel svg{width:100%;height:auto;display:block;fill:none;stroke:var(--forest);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.panel svg .accent{stroke:var(--leaf)}
+.panel svg .fill-accent{fill:var(--leaf);stroke:none}
+.panel svg text{font-family:var(--f-hand);font-weight:700;stroke:none;fill:var(--leaf);font-size:18px}
+.panel p{font-family:var(--f-hand);font-weight:700;font-size:1.5rem;line-height:1.1;color:var(--forest)}
+.panel:not(:last-child)::after{
+  content:"";position:absolute;right:-22px;top:42%;width:26px;height:20px;z-index:2;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 20'%3E%3Cpath d='M2 11 C 8 8, 14 12, 22 9 M16 4 L23 9 L17 15' fill='none' stroke='%233F8F4E' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center/contain;
+}
+@media (max-width:900px){.panel:nth-child(2)::after{display:none}}
+.story-foot{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center}
+
+/* Proof */
+.proof-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+@media (max-width:820px){.proof-grid{grid-template-columns:minmax(0,1fr)}}
+.case-card{border:2px solid var(--forest);border-radius:var(--radius);padding:clamp(22px,3vw,32px);display:grid;gap:18px;background:var(--paper);min-width:0}
+.case-card .brand{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.case-card .brand h3{font-size:1.45rem;margin-bottom:6px}
+.brand-logo{display:block;height:auto;flex:none}
+.case-card .brand-logo{width:128px}
+.cs .brand-logo{width:168px;margin-bottom:6px}
+.card-links{display:flex;flex-wrap:wrap;gap:10px 24px}
+.ext::after{content:" \2197"}
+.tags{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin:0;padding:0}
+.tags li{font-size:.82rem;font-weight:600;color:var(--forest);background:var(--mint-mid);padding:3px 10px;border-radius:999px}
+.bignum{display:grid;gap:2px}
+.bignum strong{font-family:var(--f-display);font-weight:800;font-size:clamp(3.4rem,8vw,5.2rem);line-height:.95;color:var(--forest);letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.bignum span{font-weight:600;color:var(--muted)}
+.bars{display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px 14px;align-items:center;font-size:var(--fs-small);font-variant-numeric:tabular-nums}
+.bars .lab{font-weight:600;color:var(--muted);white-space:nowrap}
+.bar{height:22px;border-radius:4px;background:var(--leaf);position:relative;min-width:4px}
+.bar.zero{background:var(--muted);width:4px}
+.bar b{position:absolute;left:calc(100% + 8px);top:50%;transform:translateY(-50%);font-weight:700;color:var(--forest);white-space:nowrap}
+.bar.full{width:calc(100% - 84px)}
+.case-card .story-line{display:grid;gap:6px;list-style:none;margin:0;padding:0}
+.case-card .story-line li{display:grid;grid-template-columns:72px minmax(0,1fr);gap:10px}
+.case-card .story-line b{font-family:var(--f-hand);font-size:1.3rem;color:var(--leaf);line-height:1.2}
+.proof-note{margin-top:26px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px 24px}
+.proof-note p{color:var(--muted);font-size:var(--fs-small);max-width:36rem}
+.bridge{margin-top:40px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;padding:26px clamp(20px,3vw,32px);background:var(--mint-mid);border-radius:var(--radius)}
+.bridge p{font-family:var(--f-display);font-weight:700;font-size:clamp(1.25rem,2.2vw,1.6rem);color:var(--forest);max-width:34rem;line-height:1.25}
+
+/* Problems */
+.problems{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;border-top:2px solid var(--forest);list-style:none;margin:0;padding:0}
+@media (max-width:720px){.problems{grid-template-columns:minmax(0,1fr)}}
+.problems li{display:grid;grid-template-columns:64px minmax(0,1fr);gap:18px;padding:28px 8px 28px 0;border-bottom:1px solid var(--rule);align-items:start}
+@media (min-width:721px){.problems li:nth-child(odd){padding-right:32px;border-right:1px solid var(--rule)}.problems li:nth-child(even){padding-left:32px}}
+.problems .ico{width:58px;height:58px;color:var(--forest)}
+.problems h3{margin-bottom:6px}
+.problems p{color:var(--muted)}
+.problem-close{margin-top:32px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.problem-close p{font-family:var(--f-display);font-weight:700;font-size:1.3rem;color:var(--forest)}
+
+/* Steps */
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;list-style:none;margin:0;padding:0;position:relative}
+@media (max-width:900px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:540px){.steps{grid-template-columns:minmax(0,1fr)}}
+.step{display:grid;gap:12px;align-content:start;min-width:0}
+.step .top{display:flex;align-items:center;gap:12px}
+.step .badge{width:64px;height:64px;border-radius:50%;background:var(--mint-mid);display:grid;place-items:center;flex:none;border:2px solid var(--forest)}
+.step .badge .ico{width:36px;height:36px}
+.step .when{font-family:var(--f-hand);font-weight:700;font-size:1.4rem;color:var(--leaf);line-height:1}
+.step h3 span{color:var(--leaf);font-weight:800;margin-right:6px}
+.step p{color:var(--muted)}
+.steps-line{height:24px;margin-bottom:6px}
+.steps-line svg{width:100%;height:24px;display:block;fill:none;stroke:var(--leaf);stroke-width:2.4;stroke-linecap:round;stroke-dasharray:2 9}
+@media (max-width:900px){.steps-line{display:none}}
+
+/* Offer: recipe card */
+.offer{background:
+  radial-gradient(ellipse 70% 80% at 30% 40%, #FFFFFF 0%, var(--mint-mid) 55%, var(--mint-edge) 100%)}
+.offer .wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(32px,5vw,64px);align-items:center}
+@media (max-width:900px){.offer .wrap{grid-template-columns:minmax(0,1fr)}}
+.offer-copy{display:grid;gap:18px;min-width:0}
+.recipe{position:relative;background:var(--paper);border-radius:8px;padding:clamp(26px,3.5vw,40px);box-shadow:0 22px 50px -28px rgba(19,58,34,.55);min-width:0;
+  background-image:repeating-linear-gradient(180deg, transparent 0 35px, var(--rule) 35px 36px);background-position:0 92px;background-repeat:no-repeat;background-size:100% calc(100% - 92px)}
+.recipe .tape.tl{left:40px}
+.recipe-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap;border-bottom:2px solid var(--forest);padding-bottom:14px;margin-bottom:8px;background:var(--paper)}
+.recipe-head .hand{font-size:1.4rem}
+.recipe-head h3{font-size:1.5rem;max-width:20rem}
+.recipe ul{list-style:none;margin:0;padding:0;display:grid}
+.recipe li{display:grid;grid-template-columns:32px minmax(0,1fr);gap:12px;padding-block:10px;align-items:start}
+.recipe li svg{width:28px;height:28px;fill:none;stroke:var(--leaf);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;margin-top:2px}
+.recipe li b{color:var(--forest);font-family:var(--f-display);font-weight:700;font-size:1.12rem;display:block;line-height:1.3}
+.recipe li span{color:var(--muted);font-size:1rem;line-height:1.45}
+.price{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:18px;padding-top:18px;border-top:2px dashed var(--leaf-soft)}
+.price strong{font-family:var(--f-display);font-weight:800;font-size:clamp(3rem,6vw,4.2rem);line-height:.9;color:var(--forest);letter-spacing:-.03em}
+.price .hand{font-size:1.35rem;display:block;margin-top:6px}
+
+/* Honest part */
+.honest .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,5vw,64px);align-items:start}
+@media (max-width:900px){.honest .wrap{grid-template-columns:minmax(0,1fr)}}
+.honest-copy{display:grid;gap:18px;min-width:0}
+.baseline{width:100%;height:auto;display:block;max-width:440px}
+.baseline .bar-a{fill:var(--mint-mid);stroke:var(--forest);stroke-width:2}
+.baseline .bar-b{fill:var(--leaf)}
+.baseline .ln{fill:none;stroke:var(--forest);stroke-width:2;stroke-linecap:round}
+.baseline .dash{fill:none;stroke:var(--muted);stroke-width:1.6;stroke-dasharray:5 6}
+.baseline .br{fill:none;stroke:var(--leaf);stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+.baseline text{font-family:var(--f-body);font-weight:600;font-size:14px;fill:var(--muted)}
+.baseline text.h{font-family:var(--f-hand);font-weight:700;font-size:24px;fill:var(--leaf)}
+.fit{display:grid;gap:22px}
+.fit-box{border:2px solid var(--forest);border-radius:var(--radius);padding:22px 24px;display:grid;gap:10px}
+.fit-box.no{border-style:dashed;border-color:var(--muted)}
+.fit-box h3{font-size:1.15rem}
+.fit-box ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.fit-box li{display:grid;grid-template-columns:26px minmax(0,1fr);gap:10px;align-items:start}
+.fit-box li svg{width:22px;height:22px;margin-top:4px;fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.fit-box .yes svg{stroke:var(--leaf)}
+.fit-box.no li svg{stroke:var(--muted)}
+
+/* Promise */
+.promise{background:var(--paper-tint)}
+.promise-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+@media (max-width:820px){.promise-grid{grid-template-columns:minmax(0,1fr)}}
+.promise-card{background:var(--paper);border-radius:var(--radius);border:1px solid var(--rule);padding:clamp(24px,3vw,36px);display:grid;grid-template-columns:auto minmax(0,1fr);gap:22px;align-items:start}
+@media (max-width:480px){.promise-card{grid-template-columns:minmax(0,1fr)}}
+.promise-card p{color:var(--muted);margin-top:8px}
+.stamp{width:112px;height:112px;flex:none}
+.stamp circle,.stamp path{fill:none;stroke:var(--leaf);stroke-width:2.6;stroke-linecap:round}
+.stamp .guide{stroke:none}
+.stamp text{font-family:var(--f-display);font-weight:800;fill:var(--forest)}
+.stamp .ring-text{font-family:var(--f-body);font-weight:700;font-size:10.5px;letter-spacing:2.4px;fill:var(--leaf)}
+.pins{display:flex;gap:14px;margin-top:14px;flex-wrap:wrap}
+.pin{display:flex;align-items:center;gap:8px;font-weight:700;color:var(--forest);background:var(--mint-mid);border-radius:999px;padding:6px 14px 6px 8px;font-size:var(--fs-small)}
+.pin svg{width:22px;height:22px;fill:var(--leaf);stroke:none}
+
+/* FAQ */
+.faq-list{display:grid;border-top:2px solid var(--forest);max-width:52rem}
+.faq-list details{border-bottom:1px solid var(--rule)}
+.faq-list summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:18px;align-items:center;padding:22px 2px;font-family:var(--f-display);font-weight:700;font-size:1.2rem;color:var(--forest)}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary svg{width:26px;height:26px;flex:none;fill:none;stroke:var(--leaf);stroke-width:2.6;stroke-linecap:round;transition:transform .2s}
+.faq-list details[open] summary svg{transform:rotate(45deg)}
+.faq-list .ans{padding:0 2px 24px;color:var(--muted);max-width:44rem}
+
+/* Book */
+.book{background:var(--forest);color:var(--on-forest)}
+.book .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,5vw,64px);align-items:center}
+@media (max-width:900px){.book .wrap{grid-template-columns:minmax(0,1fr)}}
+.book h2{color:var(--on-forest)}
+.book .hand{color:var(--mint-edge)}
+.book p{color:var(--on-forest-muted)}
+.book-copy{display:grid;gap:20px;min-width:0}
+.book-copy ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.book-copy li{display:flex;gap:10px;align-items:center;color:var(--on-forest)}
+.book-copy li svg{width:22px;height:22px;fill:none;stroke:var(--mint-edge);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.cal{background:var(--paper);color:var(--ink);border-radius:var(--radius);padding:24px;display:grid;gap:16px;min-width:0}
+.cal-top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.cal-top b{font-family:var(--f-display);font-size:1.15rem;color:var(--forest)}
+.cal-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;text-align:center;font-size:.85rem;font-variant-numeric:tabular-nums}
+.cal-grid span{padding:7px 0;border-radius:6px;color:var(--muted)}
+.cal-grid .dow{font-weight:700;color:var(--forest);font-size:.75rem}
+.cal-grid .open{background:var(--mint-mid);color:var(--forest);font-weight:700}
+.cal-grid .pick{background:var(--forest);color:var(--on-forest);font-weight:700}
+.slots{display:flex;flex-wrap:wrap;gap:8px}
+.slots span{border:2px solid var(--leaf);border-radius:8px;padding:6px 12px;font-weight:700;color:var(--forest);font-size:.92rem}
+.cal .note{font-size:.88rem;color:var(--muted)}
+
+/* Footer */
+.site-foot{background:var(--paper);border-top:1px solid var(--rule)}
+.site-foot .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px 32px;padding-block:32px calc(116px + env(safe-area-inset-bottom,0px));color:var(--muted);font-size:var(--fs-small)}
+.site-foot .logo .name{font-size:1.7rem}
+
+/* Case study page */
+.cs-hero{background:
+    radial-gradient(circle, rgba(19,58,34,.1) 1px, transparent 1.5px) 0 0/22px 22px,
+    radial-gradient(ellipse 80% 90% at 70% 40%, #FFFFFF 0%, var(--mint-mid) 50%, var(--mint-edge) 100%);
+  padding-block:clamp(48px,7vw,88px)}
+.cs-hero .wrap{display:grid;gap:20px}
+.back{display:inline-flex;align-items:center;gap:8px;font-weight:600;text-decoration:none;color:var(--forest)}
+.back svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.jump{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
+.jump a{display:inline-flex;align-items:center;gap:10px;background:var(--paper);border:2px solid var(--forest);border-radius:999px;padding:8px 16px;font-weight:700;color:var(--forest);text-decoration:none}
+.jump a b{font-family:var(--f-display);color:var(--leaf)}
+.cs{display:grid;gap:clamp(28px,4vw,44px)}
+.cs-top{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(28px,4vw,56px);align-items:end}
+@media (max-width:860px){.cs-top{grid-template-columns:minmax(0,1fr)}}
+.cs-top .intro{display:grid;gap:14px;min-width:0}
+.cs-top .bignum strong{font-size:clamp(4rem,10vw,6.5rem)}
+.cs-three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:2px solid var(--forest);list-style:none;margin:0;padding:0}
+@media (max-width:860px){.cs-three{grid-template-columns:minmax(0,1fr)}}
+.cs-three > li{padding:24px 24px 24px 0;display:grid;gap:10px;align-content:start;border-bottom:1px solid var(--rule)}
+@media (min-width:861px){.cs-three > li + li{padding-left:24px;border-left:1px solid var(--rule)}}
+.cs-three .hand{font-size:1.5rem}
+.cs-three p{color:var(--muted)}
+.cs-three ul{margin:0;padding-left:1.1em;color:var(--muted);display:grid;gap:4px}
+.cs-three ul li{list-style:disc}
+.evidence{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:22px}
+.ev{border:2px dashed var(--leaf-soft);border-radius:var(--radius);padding:20px;display:grid;gap:12px;align-content:start;background:var(--paper);min-width:0;position:relative}
+.ev h3{font-size:1.08rem;display:flex;align-items:center;gap:10px}
+.ev h3 svg{width:26px;height:26px;fill:none;stroke:var(--leaf);stroke-width:2.3;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.ev p{color:var(--muted);font-size:1rem}
+.ev.video{grid-column:span 4}
+.ev.shot{grid-column:span 2}
+.ev.link,.ev.sales,.ev.quote{grid-column:span 2}
+@media (max-width:900px){.evidence{grid-template-columns:minmax(0,1fr)}.ev.video,.ev.shot,.ev.link,.ev.sales,.ev.quote{grid-column:auto}}
+.frame{aspect-ratio:16/9;max-width:100%;border-radius:10px;background:var(--paper-tint);border:1px solid var(--rule);display:grid;place-items:center;position:relative;overflow:hidden}
+.frame.tall{aspect-ratio:4/5}
+.frame .play{width:68px;height:68px;border-radius:50%;background:var(--forest);display:grid;place-items:center}
+.frame .play svg{width:26px;height:26px;fill:var(--on-forest);stroke:none;margin-left:4px}
+.frame .mock{position:absolute;inset:0;padding:14px;display:grid;gap:8px;align-content:start}
+.frame .mock i{display:block;height:10px;border-radius:4px;background:var(--rule)}
+.frame .mock .img{height:auto;aspect-ratio:1/1;width:46%;background:var(--mint-mid);border-radius:6px}
+.frame .mock .w60{width:60%}.frame .mock .w80{width:80%}.frame .mock .w40{width:40%}
+.frame .mock .btnph{width:50%;height:26px;border-radius:999px;background:var(--leaf-soft)}
+.frame .over{position:relative;z-index:1}
+.quote blockquote{margin:0;font-family:var(--f-display);font-weight:600;font-size:1.2rem;line-height:1.35;color:var(--forest)}
+.quote .who{display:flex;align-items:center;gap:12px}
+.quote .who .av{width:44px;height:44px;border-radius:50%;background:var(--mint-mid);border:2px dashed var(--leaf-soft);flex:none}
+.quote .who span{font-size:.92rem;color:var(--muted)}
+.sales-num{font-family:var(--f-display);font-weight:800;font-size:2.6rem;color:var(--leaf-soft);line-height:1}
+/* Case studies hub: each case is a zip folder (kraft folder with a tab, a receipt peeking out, a zipper on the front).
+   Hovering opens the flap a little and lifts the receipt. */
+.cs-hub{background:radial-gradient(ellipse 80% 70% at 50% 40%, #FFFFFF 0%, #EEF8EA 55%, var(--mint-mid) 100%)}
+.zf-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,3.5vw,44px);max-width:1060px;margin-inline:auto}
+@media (max-width:900px){.zf-grid{grid-template-columns:minmax(0,1fr);max-width:440px}}
+.zf{--kraft:#EADBB0;--kraft-2:#DCC892;--kraft-ink:#76622B;position:relative;display:block;padding-top:30px;text-decoration:none;color:var(--forest);perspective:900px}
+.zf-back{position:absolute;inset:30px 0 0;background:var(--kraft-2);border-radius:4px 14px 16px 16px}
+.zf-tab{position:absolute;z-index:2;left:0;bottom:100%;height:30px;margin-bottom:-1px;padding:8px 16px 0;background:var(--kraft-2);border-radius:12px 12px 0 0;
+  font-family:var(--f-mono);font-size:.74rem;letter-spacing:.04em;color:var(--kraft-ink);white-space:nowrap}
+.zf-paper{position:absolute;z-index:1;left:12%;right:7%;top:18px;height:58%;padding:16px 18px;display:grid;gap:9px;align-content:start;
+  background:var(--receipt);border-radius:3px;box-shadow:0 2px 6px rgba(19,58,34,.15);transition:transform .35s ease}
+.zf-paper i{display:block;height:5px;border-radius:3px;background:var(--rule)}
+.zf-paper i:nth-child(1){width:55%;background:var(--leaf-soft)}.zf-paper i:nth-child(2){width:80%}.zf-paper i:nth-child(3){width:68%}.zf-paper i:nth-child(4){width:40%}
+.zf-front{position:relative;z-index:3;display:grid;gap:10px;justify-items:start;margin-top:52px;padding:26px 24px 22px;
+  background:linear-gradient(180deg,#F6EBCB 0%,var(--kraft) 100%);border-radius:6px 6px 16px 16px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.65),0 20px 32px -22px rgba(19,58,34,.55);transform-origin:50% 100%;transition:transform .35s ease}
+.zf-zip{position:absolute;top:0;right:20%;width:12px;height:62px;opacity:.8;
+  background:repeating-linear-gradient(180deg,var(--kraft-ink) 0 3px,transparent 3px 6px) left/6px 100% no-repeat,
+             repeating-linear-gradient(180deg,transparent 0 3px,var(--kraft-ink) 3px 6px) right/6px 100% no-repeat}
+.zf-zip::after{content:"";position:absolute;left:50%;top:100%;width:12px;height:18px;margin-left:-6px;border-radius:3px 3px 6px 6px;background:var(--kraft-ink);box-shadow:inset 0 0 0 3px #CDB878}
+.zf-logo{height:58px;display:flex;align-items:center}
+.zf-logo img{display:block;max-height:58px;max-width:150px;width:auto;height:auto}
+.zf-name{font-family:var(--f-display);font-weight:800;font-size:1.3rem;line-height:1.15}
+.zf-stat{display:flex;align-items:baseline;gap:8px;color:var(--muted);font-weight:600;font-size:.95rem}
+.zf-stat b{font-family:var(--f-display);font-weight:800;font-size:2.2rem;line-height:1;letter-spacing:-.03em;color:var(--forest);font-variant-numeric:tabular-nums}
+.zf-line{font-size:.98rem;line-height:1.4;color:var(--ink)}
+.zf-tags{display:flex;flex-wrap:wrap;gap:6px}
+.zf-tags i{font-style:normal;font-size:.76rem;font-weight:600;padding:2px 9px;border-radius:999px;background:rgba(255,255,255,.6);color:var(--kraft-ink)}
+.zf-open{margin-top:6px;display:inline-flex;align-items:center;gap:8px;font-family:var(--f-display);font-weight:700;color:var(--forest)}
+.zf-open svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s ease}
+.zf:hover .zf-front{transform:rotateX(-12deg)}
+.zf:hover .zf-paper{transform:translateY(-14px)}
+.zf:hover .zf-open svg{transform:translateX(3px)}
+.zf:focus-visible{outline:none}
+.zf:focus-visible .zf-front{outline:3px solid var(--leaf);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){.zf-front,.zf-paper,.zf-open svg{transition:none}.zf:hover .zf-front,.zf:hover .zf-paper,.zf:hover .zf-open svg{transform:none}}
+/* One case study per page */
+.cs-bar{background:var(--paper-tint);border-bottom:1px solid var(--rule)}
+.cs-bar .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;padding-block:18px}
+.cs-file{font-family:var(--f-mono);font-size:.8rem;color:var(--muted)}
+.cs-next{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;margin-top:clamp(40px,6vw,64px);padding-top:28px;border-top:1px dashed var(--leaf-soft)}
+.cs-next .cc-cta{margin-top:0}
+.cs-divider{display:flex;justify-content:center;padding-block:8px}
+.cs-divider svg{width:180px;height:24px;fill:none;stroke:var(--leaf);stroke-width:2.4;stroke-linecap:round}
+
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <filter id="rough"><feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.4"/></filter>
+</svg>
+
+<nav class="float-nav is-hidden" aria-label="Main">
+  <a class="logo" href="#home" aria-label="Sushant, home"><span class="name">Sushant</span></a>
+  <a class="btn small" href="https://calendly.com/works-sushant/schedule-your-cro-consultation-now" target="_blank" rel="noopener">Hit the $10K mark</a>
+</nav>
+
+<main>
+<!-- ===================== HOME VIEW ===================== -->
+<div class="view" id="home">
+
+  <section class="hero">
+    <div class="hero-top">
+    <div class="wrap">
+      <div class="hero-copy">
+        <p class="kicker">For Food &amp; Beverage E-commerce Brands</p>
+        <h1><span class="l">Grow your food brand's</span> <span class="l">online sales by <span class="hl circled">$10K<svg viewBox="0 0 160 62" preserveAspectRatio="none" aria-hidden="true"><path d="M14 30 C 12 12, 62 5, 110 8 C 150 11, 158 30, 150 43 C 139 57, 80 60, 40 54 C 14 50, 3 38, 13 24 C 20 15, 42 10, 66 9"/></svg></span></span> <span class="l hl">in 60 days.</span></h1>
+        <p class="lead"><span class="l">I find where your Amazon, eBay and Shopify sales get stuck.</span> <span class="l">Then I fix it for you with a clear plan, hands-on work and weekly results.</span></p>
+        <div class="cta-row">
+          <a class="btn" href="https://calendly.com/works-sushant/schedule-your-cro-consultation-now" target="_blank" rel="noopener">Let's hit your $10K mark
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+          <span class="cta-note">A 30-minute call. I'll tell you straight if I can help.</span>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="wrap">
+      <figure class="vsl" id="video" aria-label="Video placeholder: how the 60 days work">
+        <div class="vsl-frame">
+          <span class="ph-chip vsl-chip">Video coming soon</span>
+          <span class="vsl-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></span>
+          <span class="vsl-cap">Watch: how the 60 days work</span>
+        </div>
+      </figure>
+      <ul class="trust trust-below">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>One food brand per country</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>14-day money-back guarantee</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h16"/><path d="M6 20v-5M11 20v-9M16 20V6"/></svg>Every move backed by your data</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="band" id="proof">
+    <div class="wrap">
+      <div class="section-head center">
+        <p class="kicker">Case studies</p>
+        <h2>I've done this before.</h2>
+      </div>
+      <div class="proof-grid">
+        <!-- Receipt 1. Bars share one scale across both receipts (max 148). -->
+        <article class="rc">
+          <div class="rc-head"><img src="assets/logo-best-bites.png" alt="Best Bites Namkeen logo" width="520" height="271"></div>
+          <p class="rc-meta">Order #001 <span>|</span> Date: June 2026 <span>|</span> Time: 10:30 AM <span>|</span> Host: Sushant</p>
+          <div class="rc-band">
+            <ul class="rc-chips" aria-label="Channels"><li>Website</li><li>Amazon</li><li>Flipkart</li></ul>
+            <span>Timeline: 45 days</span>
+          </div>
+          <p class="rc-sec">Brand on the bill</p>
+          <dl class="rc-lines">
+            <div><dt>Best Bites Namkeen</dt><dd>Snacks</dd></div>
+            <div><dt>Physical stores</dt><dd>Many</dd></div>
+            <div><dt>Brand value</dt><dd>$1M+</dd></div>
+          </dl>
+          <hr>
+          <figure class="rc-chart" aria-label="Monthly online orders: 0 before, 127 after 45 days">
+            <figcaption>Monthly online orders</figcaption>
+            <div class="cc-row before"><span class="cc-lab">Before</span><span class="cc-track"><span class="cc-bar" style="--w:0%"></span></span><b class="cc-val">0</b></div>
+            <div class="cc-row"><span class="cc-lab">After 45 days</span><span class="cc-track"><span class="cc-bar" style="--w:85.8%"></span></span><b class="cc-val">127</b></div>
+          </figure>
+          <hr>
+          <div class="rc-notes">
+            <div><span>Starting point</span><ul><li>Strong offline sales</li><li>No website</li><li>No online orders</li></ul></div>
+            <div><span>What I did</span><ul><li>Built the website</li><li>Set up Amazon</li><li>Set up Flipkart</li></ul></div>
+          </div>
+          <p class="rc-tag">From offline favorite to online seller.</p>
+          <a class="cc-cta" href="#best-bite">View the full case study<span class="cc-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span></a>
+        </article>
+
+        <!-- Receipt 2 -->
+        <article class="rc">
+          <div class="rc-head"><img src="assets/logo-shahi-sweets.png" alt="Shahi Sweets logo" width="520" height="303"></div>
+          <p class="rc-meta">Order #002 <span>|</span> Date: June 2026 <span>|</span> Time: 04:15 PM <span>|</span> Host: Sushant</p>
+          <div class="rc-band">
+            <ul class="rc-chips" aria-label="Channels"><li>Amazon</li><li>Flipkart</li></ul>
+            <span>Timeline: 60 days</span>
+          </div>
+          <p class="rc-sec">Brand on the bill</p>
+          <dl class="rc-lines">
+            <div><dt>Shahi Sweets</dt><dd>Sweets</dd></div>
+            <div><dt>Online presence</dt><dd>Small</dd></div>
+            <div><dt>Brand value</dt><dd>$2.2M+</dd></div>
+          </dl>
+          <hr>
+          <figure class="rc-chart" aria-label="Monthly online orders: 0 before, 148 after 60 days">
+            <figcaption>Monthly online orders</figcaption>
+            <div class="cc-row before"><span class="cc-lab">Before</span><span class="cc-track"><span class="cc-bar" style="--w:0%"></span></span><b class="cc-val">0</b></div>
+            <div class="cc-row"><span class="cc-lab">After 60 days</span><span class="cc-track"><span class="cc-bar" style="--w:100%"></span></span><b class="cc-val">148</b></div>
+          </figure>
+          <hr>
+          <div class="rc-notes">
+            <div><span>Starting point</span><ul><li>Small online presence</li><li>Almost no orders</li></ul></div>
+            <div><span>What I did</span><ul><li>Grew Amazon sales</li><li>Grew Flipkart sales</li></ul></div>
+          </div>
+          <p class="rc-tag">Sweet results, every month.</p>
+          <a class="cc-cta" href="#shahi-sweets">View the full case study<span class="cc-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span></a>
+        </article>
+      </div>
+      <div class="bridge">
+        <p>I built online sales from zero. Picture what I can do for a brand that already sells.</p>
+        <a class="btn" href="#case-studies">See my case studies
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="band recipe-flow" id="how">
+    <!-- Platform logos: Simple Icons (CC0 paths), each in its brand color -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+      <symbol id="i-shopify" viewBox="0 0 24 24"><path fill="#7AB55C" d="M15.337 23.979l7.216-1.561s-2.604-17.613-2.625-17.73c-.018-.116-.114-.192-.211-.192s-1.929-.136-1.929-.136-1.275-1.274-1.439-1.411c-.045-.037-.075-.057-.121-.074l-.914 21.104h.023zM11.71 11.305s-.81-.424-1.774-.424c-1.447 0-1.504.906-1.504 1.141 0 1.232 3.24 1.715 3.24 4.629 0 2.295-1.44 3.76-3.406 3.76-2.354 0-3.54-1.465-3.54-1.465l.646-2.086s1.245 1.066 2.28 1.066c.675 0 .975-.545.975-.932 0-1.619-2.654-1.694-2.654-4.359-.034-2.237 1.571-4.416 4.827-4.416 1.257 0 1.875.361 1.875.361l-.945 2.715-.02.01zM11.17.83c.136 0 .271.038.405.135-.984.465-2.064 1.639-2.508 3.992-.656.213-1.293.405-1.889.578C7.697 3.750 8.951.84 11.17.84V.83zm1.235 2.949v.135c-.754.232-1.583.484-2.394.736.466-1.777 1.333-2.645 2.085-2.971.193.501.309 1.176.309 2.1zm.539-2.234c.694.074 1.141.867 1.429 1.755-.349.114-.735.231-1.158.366v-.252c0-.752-.096-1.371-.271-1.871v.002zm2.992 1.289c-.02 0-.06.021-.078.021s-.289.075-.714.21c-.423-1.233-1.176-2.37-2.508-2.37h-.115C12.135.209 11.669 0 11.265 0 8.159 0 6.675 3.877 6.21 5.846c-1.194.365-2.063.636-2.16.674-.675.213-.694.232-.772.87-.075.462-1.83 14.063-1.83 14.063L15.009 24l.927-21.166z"/></symbol>
+      <symbol id="i-amazon" viewBox="0 0 24 24"><path fill="#232F3E" d="M.045 18.02c.072-.116.187-.124.348-.022 3.636 2.11 7.594 3.166 11.87 3.166 2.852 0 5.668-.533 8.447-1.595l.315-.14c.138-.06.234-.1.293-.13.226-.088.39-.046.525.13.12.174.09.336-.12.48-.256.19-.6.41-1.006.654-1.244.743-2.64 1.316-4.185 1.726a17.617 17.617 0 01-10.951-.577 17.88 17.88 0 01-5.43-3.35c-.1-.074-.151-.15-.151-.22 0-.047.021-.09.051-.13zm6.565-6.218c0-1.005.247-1.863.743-2.577.495-.71 1.17-1.25 2.04-1.615.796-.335 1.756-.575 2.912-.72.39-.046 1.033-.103 1.92-.174v-.37c0-.93-.105-1.558-.3-1.875-.302-.43-.78-.65-1.44-.65h-.182c-.48.046-.896.196-1.246.46-.35.27-.575.63-.675 1.096-.06.3-.206.465-.435.51l-2.52-.315c-.248-.06-.372-.18-.372-.39 0-.046.007-.09.022-.15.247-1.29.855-2.25 1.82-2.88.976-.616 2.1-.975 3.39-1.05h.54c1.65 0 2.957.434 3.888 1.29.135.15.27.3.405.48.12.165.224.314.283.45.075.134.15.33.195.57.06.254.105.42.135.51.03.104.062.3.076.615.01.313.02.493.02.553v5.28c0 .376.06.72.165 1.036.105.313.21.54.315.674l.51.674c.09.136.136.256.136.36 0 .12-.06.226-.18.314-1.2 1.05-1.86 1.62-1.963 1.71-.165.135-.375.15-.63.045a6.062 6.062 0 01-.526-.496l-.31-.347a9.391 9.391 0 01-.317-.42l-.3-.435c-.81.886-1.603 1.44-2.4 1.665-.494.15-1.093.227-1.83.227-1.11 0-2.04-.343-2.76-1.034-.72-.69-1.080-1.665-1.08-2.94l-.05-.076zm3.753-.438c0 .566.14 1.02.425 1.364.285.34.675.512 1.155.512.045 0 .106-.007.195-.02.09-.016.134-.023.166-.023.614-.16 1.08-.553 1.424-1.178.165-.28.285-.58.36-.91.09-.32.12-.59.135-.8.015-.195.015-.54.015-1.005v-.54c-.84 0-1.484.06-1.92.18-1.275.36-1.92 1.17-1.92 2.43l-.035-.02zm9.162 7.027c.03-.06.075-.11.132-.17.362-.243.714-.41 1.05-.5a8.094 8.094 0 011.612-.24c.14-.012.28 0 .41.03.65.06 1.05.168 1.172.33.063.09.099.228.099.39v.15c0 .51-.149 1.11-.424 1.8-.278.69-.664 1.248-1.156 1.68-.073.06-.14.09-.197.09-.03 0-.06 0-.09-.012-.09-.044-.107-.12-.064-.24.54-1.26.806-2.143.806-2.64 0-.15-.03-.27-.087-.344-.145-.166-.55-.257-1.224-.257-.243 0-.533.016-.87.046-.363.045-.7.09-1 .135-.09 0-.148-.014-.18-.044-.03-.03-.036-.047-.02-.077 0-.017.006-.03.02-.063v-.06z"/><path fill="#FF9900" d="M.045 18.02c.072-.116.187-.124.348-.022 3.636 2.11 7.594 3.166 11.87 3.166 2.852 0 5.668-.533 8.447-1.595l.315-.14c.138-.06.234-.1.293-.13.226-.088.39-.046.525.13.12.174.09.336-.12.48-.256.19-.6.41-1.006.654-1.244.743-2.64 1.316-4.185 1.726a17.617 17.617 0 01-10.951-.577 17.88 17.88 0 01-5.43-3.35c-.1-.074-.151-.15-.151-.22 0-.047.021-.09.051-.13zM19.525 18.39c.03-.06.075-.11.132-.17.362-.243.714-.41 1.05-.5a8.094 8.094 0 011.612-.24c.14-.012.28 0 .41.03.65.06 1.05.168 1.172.33.063.09.099.228.099.39v.15c0 .51-.149 1.11-.424 1.8-.278.69-.664 1.248-1.156 1.68-.073.06-.14.09-.197.09-.03 0-.06 0-.09-.012-.09-.044-.107-.12-.064-.24.54-1.26.806-2.143.806-2.64 0-.15-.03-.27-.087-.344-.145-.166-.55-.257-1.224-.257-.243 0-.533.016-.87.046-.363.045-.7.09-1 .135-.09 0-.148-.014-.18-.044-.03-.03-.036-.047-.02-.077 0-.017.006-.03.02-.063v-.06z"/></symbol>
+      <symbol id="i-ebay" viewBox="0 0 24 24"><path fill="#E53238" d="M6.056 12.132v-4.92h1.2v3.026c.59-.703 1.402-.906 2.202-.906 1.34 0 2.828.904 2.828 2.855 0 .233-.015.457-.06.668.24-.953 1.274-1.305 2.896-1.344.51-.018 1.095-.018 1.56-.018v-.135c0-.885-.556-1.244-1.53-1.244-.72 0-1.245.3-1.305.81h-1.275c.136-1.290 1.5-1.62 2.686-1.62 1.064 0 1.995.27 2.415 1.02l-.436-.84h1.41l2.055 4.125 2.055-4.126H24l-3.72 7.305h-1.346l1.07-2.04-2.33-4.38c.13.255.2.555.2.93v2.46c0 .346.01.69.04 1.005H16.8a6.543 6.543 0 01-.046-.765c-.603.734-1.32.96-2.32.96-1.48 0-2.272-.78-2.272-1.695 0-.15.015-.284.037-.405-.3 1.246-1.36 2.086-2.767 2.086-.87 0-1.694-.315-2.2-.93 0 .24-.015.494-.04.734h-1.18c.02-.39.04-.855.04-1.245v-1.05h-4.83c.065 1.095.818 1.74 1.853 1.74.718 0 1.355-.3 1.568-.93h1.24c-.24 1.29-1.61 1.725-2.790 1.725C.95 15.009 0 13.822 0 12.232c0-1.754.982-2.910 3.116-2.910 1.688 0 2.930.886 2.940 2.806v.005zm9.137.183c-1.095.034-1.770.233-1.770.950 0 .465.360.970 1.305.970 1.260 0 1.935-.690 1.935-1.814v-.130c-.450 0-.990.006-1.484.022h.012zm-6.060 1.875c1.110 0 1.876-.806 1.876-2.020s-.768-2.020-1.893-2.020c-1.110 0-1.890.806-1.890 2.020s.765 2.020 1.875 2.020h.030zm-4.350-2.514c-.044-1.125-.854-1.546-1.725-1.546-.944 0-1.694.474-1.815 1.546z"/></symbol>
+      <symbol id="i-ga" viewBox="0 0 24 24"><path fill="#E37400" d="M22.84 2.9982v17.9987c.0086 1.6473-1.3197 2.9897-2.967 2.9984a2.9808 2.9808 0 01-.3677-.0208c-1.528-.226-2.6477-1.5558-2.6105-3.1V3.1204c-.0369-1.5458 1.0856-2.8762 2.6157-3.1 1.6361-.1915 3.1178.9796 3.3093 2.6158.014.1201.0208.241.0202.3619zM4.1326 18.0548c-1.6417 0-2.9726 1.331-2.9726 2.9726C1.16 22.6691 2.4909 24 4.1326 24s2.9726-1.3309 2.9726-2.9726-1.331-2.9726-2.9726-2.9726zm7.8728-9.0098c-.0171 0-.0342 0-.0513.0003-1.6495.0904-2.9293 1.474-2.891 3.1256v7.9846c0 2.167.9535 3.4825 2.3505 3.763 1.6118.3266 3.1832-.7152 3.5098-2.327.04-.1974.06-.3983.0593-.5998v-8.9585c.003-1.6474-1.33-2.9852-2.9773-2.9882z"/></symbol>
+      <symbol id="i-gsc" viewBox="0 0 24 24"><path fill="#458CF5" d="M8.548 1.156L6.832 2.872v1.682h1.716zm0 3.398v.035H6.832v-.035H3.386L0 7.844v3.577h2.826V8.94c0-.525.429-.954.954-.954h16.476c.525 0 .954.43.954.954v2.48h2.754V7.844l-3.386-3.29H17.3v.035h-1.717v-.035zm7.035 0H17.3V2.872l-1.717-1.716zM8.679 1.188V2.84h6.773V1.188zm11.471 7.07a.834.834 0 00-.132.01l-.543.002c-5.216.014-10.432-.008-15.648.01-.435-.063-.794.436-.716.883v2.264h17.812c-.016-.888.045-1.782-.034-2.666-.104-.342-.427-.502-.739-.502zm-15.422.634a.689.698 0 01.689.698.689.698 0 01-.689.697.689.698 0 01-.688-.697.689.698 0 01.688-.698zm2.134 0a.689.698 0 01.689.698.689.698 0 01-.689.697.689.698 0 01-.688-.697.689.698 0 01.688-.698zM.036 11.645v9.156c0 1.05.858 1.908 1.907 1.908h.883V11.645zm21.174 0v11.064h.882c1.05 0 1.908-.858 1.908-1.908v-9.156zM4.057 13.133v6.85h6.137v-6.85zm13.243.021v3.777l-1.708.977-1.708-.977v-3.758a4.006 4.006 0 000 7.23v2.441h3.457v-2.442a4.006 4.006 0 00-.041-7.248zm-13.243 8.26v1.43h7.925v-1.43z"/></symbol>
+      <symbol id="i-gads" viewBox="0 0 24 24"><path fill="#4285F4" d="M3.9998 22.9291C1.7908 22.9291 0 21.1383 0 18.9293s1.7908-3.9998 3.9998-3.9998 3.9998 1.7908 3.9998 3.9998-1.7908 3.9998-3.9998 3.9998zm19.4643-6.0004L15.4632 3.072C14.3586 1.1587 11.9121.5028 9.9988 1.6074S7.4295 5.1585 8.5341 7.0718l8.0009 13.8567c1.1046 1.9133 3.5511 2.5679 5.4644 1.4646 1.9134-1.1046 2.568-3.5511 1.4647-5.4644zM7.5137 4.8438L1.5645 15.1484A4.5 4.5 0 0 1 4 14.4297c2.5597-.0075 4.6248 2.1585 4.4941 4.7148l3.2168-5.5723-3.6094-6.25c-.4499-.7793-.6322-1.6394-.5878-2.4784z"/></symbol>
+      <symbol id="i-meta" viewBox="0 0 24 24"><path fill="#0467DF" d="M6.915 4.03c-1.968 0-3.683 1.28-4.871 3.113C.704 9.208 0 11.883 0 14.449c0 .706.07 1.369.21 1.973a6.624 6.624 0 0 0 .265.86 5.297 5.297 0 0 0 .371.761c.696 1.159 1.818 1.927 3.593 1.927 1.497 0 2.633-.671 3.965-2.444.76-1.012 1.144-1.626 2.663-4.32l.756-1.339.186-.325c.061.1.121.196.183.3l2.152 3.595c.724 1.21 1.665 2.556 2.47 3.314 1.046.987 1.992 1.22 3.06 1.22 1.075 0 1.876-.355 2.455-.843a3.743 3.743 0 0 0 .81-.973c.542-.939.861-2.127.861-3.745 0-2.72-.681-5.357-2.084-7.450-1.282-1.912-2.957-2.930-4.716-2.930-1.047 0-2.088.467-3.053 1.308-.652.570-1.257 1.290-1.820 2.050-.690-.875-1.335-1.547-1.958-2.056-1.182-.966-2.315-1.303-3.454-1.303zm10.16 2.053c1.147 0 2.188.758 2.992 1.999 1.132 1.748 1.647 4.195 1.647 6.4 0 1.548-.368 2.9-1.839 2.9-.58 0-1.027-.23-1.664-1.004-.496-.601-1.343-1.878-2.832-4.358l-.617-1.028a44.908 44.908 0 0 0-1.255-1.98c.07-.109.141-.224.211-.327 1.12-1.667 2.118-2.602 3.358-2.602zm-10.201.553c1.265 0 2.058.791 2.675 1.446.307.327.737.871 1.234 1.579l-1.020 1.566c-.757 1.163-1.882 3.017-2.837 4.338-1.191 1.649-1.810 1.817-2.486 1.817-.524 0-1.038-.237-1.383-.794-.263-.426-.464-1.130-.464-2.046 0-2.221.630-4.535 1.660-6.088.454-.687.964-1.226 1.533-1.533a2.264 2.264 0 0 1 1.088-.285z"/></symbol>
+    </svg>
+
+    <div class="wrap">
+      <div class="section-head center">
+        <p class="kicker">The 60-day recipe</p>
+        <h2>How I grow your online sales.</h2>
+      </div>
+
+      <ol class="flow">
+        <li class="fl-card fl-start">
+          <svg class="fl-art doodle" viewBox="0 0 200 130" aria-hidden="true">
+            <rect x="46" y="18" width="108" height="72" rx="5"/>
+            <path d="M30 98h140l-8 12H38z"/>
+            <path class="accent" d="M60 70 C 80 71, 100 69, 140 70"/>
+            <path d="M60 32v42"/>
+            <text x="126" y="44">zzz</text>
+          </svg>
+          <h3>Your brand today</h3>
+          <p>Great food. Online sales stuck.</p>
+        </li>
+
+        <li class="fl-arrow" aria-hidden="true"><svg viewBox="0 0 26 20"><path d="M2 11 C 8 8, 14 12, 22 9 M16 4 L23 9 L17 15"/></svg></li>
+
+        <li class="fl-card">
+          <p class="fl-step">Step 1 <span>· week 1</span></p>
+          <svg class="fl-art doodle" viewBox="0 0 200 130" aria-hidden="true">
+            <path d="M24 112h110"/>
+            <path d="M36 112V86M56 112V72M76 112V92M96 112V64"/>
+            <circle class="accent" cx="130" cy="56" r="26"/>
+            <path class="accent" d="M149 75l22 22"/>
+            <path class="accent" d="M76 92 c0 0 -5 6 -5 10 a5 5 0 0 0 10 0 c0 -4 -5 -10 -5 -10z"/>
+            <text x="114" y="62">leak!</text>
+          </svg>
+          <h3>Taste test</h3>
+          <p>I check your sales, ads, traffic and SEO data.</p>
+          <ul class="fl-logos" aria-label="Data I check">
+            <li title="Shopify"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-shopify"/></svg><span class="sr">Shopify</span></li>
+            <li title="Amazon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-amazon"/></svg><span class="sr">Amazon</span></li>
+            <li title="eBay"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-ebay"/></svg><span class="sr">eBay</span></li>
+            <li title="Google Analytics"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-ga"/></svg><span class="sr">Google Analytics</span></li>
+            <li title="Google Search Console"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-gsc"/></svg><span class="sr">Google Search Console</span></li>
+          </ul>
+        </li>
+
+        <li class="fl-arrow" aria-hidden="true"><svg viewBox="0 0 26 20"><path d="M2 11 C 8 8, 14 12, 22 9 M16 4 L23 9 L17 15"/></svg></li>
+
+        <li class="fl-card">
+          <p class="fl-step">Step 2 <span>· weeks 2–3</span></p>
+          <svg class="fl-art doodle" viewBox="0 0 200 130" aria-hidden="true">
+            <rect x="40" y="14" width="120" height="96" rx="6"/>
+            <path d="M40 30h120"/>
+            <rect class="accent" x="52" y="42" width="40" height="40" rx="4"/>
+            <path d="M102 48h44M102 60h32"/>
+            <rect class="fill-accent" x="102" y="70" width="44" height="14" rx="7"/>
+            <path class="accent" d="M58 96l6 6 12-12"/>
+            <text x="84" y="104">fixed</text>
+          </svg>
+          <h3>Fix the recipe</h3>
+          <p>I fix the biggest revenue leaks first.</p>
+          <ul class="fl-chips"><li>Product pages</li><li>Add-to-cart rate</li><li>SEO</li></ul>
+        </li>
+
+        <li class="fl-arrow" aria-hidden="true"><svg viewBox="0 0 26 20"><path d="M2 11 C 8 8, 14 12, 22 9 M16 4 L23 9 L17 15"/></svg></li>
+
+        <li class="fl-card">
+          <p class="fl-step">Step 3 <span>· weeks 4–8</span></p>
+          <svg class="fl-art doodle" viewBox="0 0 200 130" aria-hidden="true">
+            <path d="M24 114h152"/>
+            <rect x="40" y="90" width="20" height="24"/>
+            <rect x="70" y="76" width="20" height="38"/>
+            <rect x="100" y="60" width="20" height="54"/>
+            <rect class="fill-accent" x="130" y="42" width="20" height="72"/>
+            <path class="accent" d="M140 34c-7 0-11-4-11-9 0-6 5-8 6-14 3 2 5 5 5 8 2-1 3-3 3-4 3 3 5 6 5 10 0 5-3 9-8 9z"/>
+            <text x="34" y="40">A / B</text>
+          </svg>
+          <h3>Turn up the heat</h3>
+          <p>I test, then scale what sells. I run your ads so they convert better.</p>
+          <ul class="fl-logos" aria-label="Ad platforms">
+            <li title="Amazon Ads"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-amazon"/></svg><span class="sr">Amazon Ads</span></li>
+            <li title="Google Ads"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-gads"/></svg><span class="sr">Google Ads</span></li>
+            <li title="Meta Ads"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-meta"/></svg><span class="sr">Meta Ads</span></li>
+            <li class="fl-ab">A/B tests</li>
+          </ul>
+        </li>
+
+        <li class="fl-arrow" aria-hidden="true"><svg viewBox="0 0 26 20"><path d="M2 11 C 8 8, 14 12, 22 9 M16 4 L23 9 L17 15"/></svg></li>
+
+        <li class="fl-card">
+          <p class="fl-step">Step 4 <span>· every week</span></p>
+          <svg class="fl-art doodle" viewBox="0 0 200 130" aria-hidden="true">
+            <rect x="58" y="14" width="84" height="106" rx="6"/>
+            <path d="M84 14V8h32v6"/>
+            <path d="M72 34h56M72 44h38"/>
+            <path class="accent" d="M72 100l16-18 12 9 24-28"/>
+            <path class="accent" d="M114 63h10v10"/>
+          </svg>
+          <h3>Check the oven</h3>
+          <p>You get a short report every week.</p>
+          <ul class="fl-chips"><li>Conversion rate</li><li>Sales</li><li>Revenue</li></ul>
+        </li>
+      </ol>
+
+      <p class="fl-loop"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.3-5.6"/><path d="M20 4v4h-4"/></svg>Each week's numbers decide the next week's fixes.</p>
+
+    </div>
+  </section>
+
+  <section class="band leaks" id="problem">
+    <div class="wrap">
+      <div class="section-head center">
+        <p class="kicker">Sound familiar?</p>
+        <h2>The pain I solve.</h2>
+        <p class="lead">You have a great product. But is your online store doing it justice?</p>
+      </div>
+      <div class="leaks-grid">
+        <div class="leak">
+          <span class="leak-top">
+            <svg class="ico doodle" viewBox="0 0 48 48" aria-hidden="true"><circle cx="20" cy="20" r="12"/><path d="M29 29l11 11"/><path d="M16.5 16.5c0-2.2 1.7-3.6 3.7-3.6s3.6 1.4 3.6 3.2c0 2.6-3.4 2.8-3.4 5.4"/><path d="M20.4 26.2h.02"/></svg>
+          </span>
+          <b>People can't find your products.</b>
+          <span class="leak-text">Hungry buyers search, but your products don't show up.</span>
+        </div>
+        <div class="leak">
+          <span class="leak-top">
+            <svg class="ico doodle" viewBox="0 0 48 48" aria-hidden="true"><path d="M5 9h6l5 21h21l4-14H13"/><circle cx="19" cy="37" r="3"/><circle cx="34" cy="37" r="3"/><path d="M23 17l7 7M30 17l-7 7"/></svg>
+          </span>
+          <b>People visit but don't buy.</b>
+          <span class="leak-text">They land on your page, then something stops the order.</span>
+        </div>
+        <div class="leak">
+          <span class="leak-top">
+            <svg class="ico doodle" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6a18 18 0 1 0 17.4 13.6c-2.3.5-4.3-.8-4.6-3-2.3.3-4.2-1.2-4.3-3.4-2.2-.3-3.6-2.2-3.2-4.4A18 18 0 0 0 24 6z"/><path d="M28 19c-.9-1.5-2.5-2.3-4.3-2.3-2.4 0-4.1 1.3-4.1 3.2 0 4.5 8.8 2.6 8.8 7.3 0 2-1.9 3.5-4.5 3.5-2 0-3.7-.9-4.7-2.5M23.8 13.6v3M23.8 30.7v3.2"/></svg>
+          </span>
+          <b>Your ad spend isn't paying off.</b>
+          <span class="leak-text">You pay for clicks that don't turn into orders.</span>
+        </div>
+        <div class="leak">
+          <span class="leak-top">
+            <svg class="ico doodle" viewBox="0 0 48 48" aria-hidden="true"><path d="M4 38h40"/><rect x="8" y="24" width="8" height="14" rx="2"/><rect x="20" y="16" width="8" height="22" rx="2" fill="currentColor" style="color:var(--leaf)" stroke="var(--leaf)"/><rect x="32" y="26" width="8" height="12" rx="2"/><path d="M9 19l2-3M35 21l2-3M40 21l1-3"/></svg>
+          </span>
+          <b>Your products aren't selling as well as they should.</b>
+          <span class="leak-text">Some get attention. Others sit unnoticed.</span>
+        </div>
+        <div class="leak">
+          <span class="leak-top">
+            <svg class="ico doodle" viewBox="0 0 48 48" aria-hidden="true"><rect x="5" y="8" width="15" height="12" rx="2"/><rect x="28" y="6" width="15" height="12" rx="2"/><rect x="15" y="29" width="17" height="13" rx="2"/><path d="M9 16l3-3 3 2 3-4M32 14h7M32 10h5M19 38v-3M23 38v-5M27 38v-2"/><path d="M21 22l2 5M28 20l-3 7" stroke-dasharray="2 3"/></svg>
+          </span>
+          <b>You don't know where your sales get stuck.</b>
+          <span class="leak-text">Your numbers are spread across Amazon, Shopify, eBay and ad platforms.</span>
+        </div>
+        <div class="leak">
+          <span class="leak-top">
+            <svg class="ico doodle" viewBox="0 0 48 48" aria-hidden="true"><path d="M6 40h36M6 40V8"/><path d="M9 34c5-8 9-13 15-13h14"/><path d="M34 17l4 4-4 4"/></svg>
+          </span>
+          <b>Your online sales have stopped growing.</b>
+          <span class="leak-text">Your brand is great. Your online channels just aren't keeping up.</span>
+        </div>
+      </div>
+      <div class="leaks-result">
+        <a class="btn" href="https://calendly.com/works-sushant/schedule-your-cro-consultation-now" target="_blank" rel="noopener">Hit the $10K mark
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="band honest" id="honest">
+    <div class="wrap">
+      <div class="honest-copy">
+        <p class="hand">the honest part</p>
+        <h2>$10K is my goal for you. Not a promise.</h2>
+        <p class="lead">Here is how I count it. Your sales from the last 60 days are the starting line. My goal is $10K more than that in the next 60 days.</p>
+        <svg class="baseline doodle" viewBox="0 0 440 250" role="img" aria-label="Example: your last 60 days of sales as one bar, the next 60 days as a taller bar. The difference is the plus 10K goal.">
+          <path class="ln" d="M20 220 H 420"/>
+          <rect class="bar-a" x="60" y="110" width="110" height="110"/>
+          <rect class="bar-a" x="250" y="110" width="110" height="110"/>
+          <rect class="bar-b" x="250" y="40" width="110" height="70"/>
+          <path class="dash" d="M60 110 H 380"/>
+          <path class="br" d="M372 42 h10 v66 h-10 M382 75 h8"/>
+          <text class="h" x="356" y="30">+$10K</text>
+          <text x="58" y="242">Your last 60 days</text>
+          <text x="254" y="242">Next 60 days</text>
+          <text x="66" y="100">starting line</text>
+        </svg>
+      </div>
+      <div class="fit">
+        <div class="fit-box">
+          <h3>This works best if you:</h3>
+          <ul>
+            <li class="yes"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13l5 5L21 5"/></svg><span>already sell online</span></li>
+            <li class="yes"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13l5 5L21 5"/></svg><span>sell about $20K a month online</span></li>
+            <li class="yes"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13l5 5L21 5"/></svg><span>have stock ready to ship in the US or UK</span></li>
+            <li class="yes"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13l5 5L21 5"/></svg><span>can give me access to your store and ad accounts</span></li>
+          </ul>
+        </div>
+        <div class="fit-box no">
+          <h3>Not a fit if:</h3>
+          <ul>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg><span>your product isn't ready to sell yet</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg><span>you want a big agency team</span></li>
+          </ul>
+        </div>
+        <div class="mini-promises">
+          <h3>Two promises I keep.</h3>
+          <div class="mini-grid">
+            <div class="mini">
+              <span class="mini-ico" aria-hidden="true"><b>14</b><small>days</small></span>
+              <div><b>Try it for 14 days.</b><span>Not happy? Full refund. Terms are in our agreement.</span></div>
+            </div>
+            <div class="mini">
+              <span class="mini-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
+              <div><b>One food brand per country.</b><span>No competitor of yours gets my time while we work together.</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="faq">
+    <div class="wrap">
+      <div class="section-head center">
+        <p class="hand">good questions</p>
+        <h2>Before you book.</h2>
+      </div>
+      <div class="faq-list">
+        <details><summary>Who is this for?<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p class="ans">Food and drink brands that already sell online in the US or UK and want more sales.</p></details>
+        <details><summary>Which channels do you work on?<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p class="ans">Amazon, eBay, Shopify and your own website.</p></details>
+        <details><summary>Is the $10K guaranteed?<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p class="ans">No. It's my goal for you. What is guaranteed is a full refund if you're not happy in the first 14 days.</p></details>
+        <details><summary>How do you count the $10K?<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p class="ans">We look at your sales from the last 60 days. That is the starting line. The goal is $10K more than that in the next 60 days, on the channels I work on. We both see it in one shared report.</p></details>
+        <details><summary>What do I need to give you?<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p class="ans">Access to your store and ad accounts, your product details, and quick replies when I have a question.</p></details>
+        <details><summary>How much of the work do you do?<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p class="ans">Almost all of it. You approve the big calls. I do the work.</p></details>
+        <details><summary>Why only one brand per country?<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p class="ans">So I never work for your competitor while I work for you.</p></details>
+        <details><summary>What happens after 60 days?<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p class="ans"><span class="ph-chip">Placeholder</span> Answer to be confirmed: a monthly plan, a renewal, or a hand-over.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="band book" id="book">
+    <div class="wrap">
+      <div class="book-copy">
+        <p class="hand">your move</p>
+        <h2>Ready to hit your $10K mark?</h2>
+        <p>Pick a time for a 30-minute call. I'll look at where you are now and tell you straight if I can help.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13l5 5L21 5"/></svg>A quick look at your numbers</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13l5 5L21 5"/></svg>Your biggest sales leak, named</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13l5 5L21 5"/></svg>A clear yes or no on fit</li>
+        </ul>
+        <div class="cta-row">
+          <a class="btn light" href="https://calendly.com/works-sushant/schedule-your-cro-consultation-now" target="_blank" rel="noopener">Hit the $10K mark
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+      <div class="cal">
+        <div class="cal-top">
+          <h3>Book your call</h3>
+          <span class="cal-brand"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Calendly</span>
+        </div>
+        <ul class="cal-facts">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>30 minutes</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>Times shown in your time zone</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Calendar invite sent right away</li>
+        </ul>
+        <a class="btn cal-btn" href="https://calendly.com/works-sushant/schedule-your-cro-consultation-now" target="_blank" rel="noopener">Pick a time on Calendly
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        <p class="note">calendly.com/works-sushant</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ===================== CASE STUDIES: HUB ===================== -->
+<!-- Each folder opens that brand's own page (the views below). -->
+<div class="view" id="case-studies" hidden>
+  <section class="cs-hero">
+    <div class="wrap">
+      <a class="back" href="#home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H6M11 6l-6 6 6 6"/></svg>Back to home</a>
+      <p class="hand">case studies</p>
+      <h1>Real food brands. Real results.</h1>
+      <p class="lead">Three brands, three folders. Open one to see where they started, what I did, and what changed.</p>
+    </div>
+  </section>
+
+  <section class="band cs-hub">
+    <div class="wrap">
+      <div class="zf-grid">
+        <a class="zf" href="#dawnbreaker">
+          <span class="zf-back" aria-hidden="true"><span class="zf-tab">case-003.zip</span></span>
+          <span class="zf-paper" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+          <span class="zf-front">
+            <span class="zf-zip" aria-hidden="true"></span>
+            <span class="zf-logo wide"><img src="assets/logo-dawnbreaker.png" alt="Dawnbreaker Oats logo"></span>
+            <span class="zf-name">Dawnbreaker Oats</span>
+            <span class="zf-stat"><b>+3–4.2%</b>conversions</span>
+            <span class="zf-line">From "sketchy website" to a store customers trust.</span>
+            <span class="zf-tags"><i>Oats</i><i>Shopify</i></span>
+            <span class="zf-open">Open case study<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a>
+        <a class="zf" href="#best-bite">
+          <span class="zf-back" aria-hidden="true"><span class="zf-tab">case-001.zip</span></span>
+          <span class="zf-paper" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+          <span class="zf-front">
+            <span class="zf-zip" aria-hidden="true"></span>
+            <span class="zf-logo wide"><img src="assets/logo-best-bites.png" alt="Best Bites Namkeen logo"></span>
+            <span class="zf-name">Best Bites Namkeen</span>
+            <span class="zf-stat"><b>0→127</b>orders a month</span>
+            <span class="zf-line">A $1M+ store brand, online for the first time.</span>
+            <span class="zf-tags"><i>Snacks</i><i>Amazon</i><i>Flipkart</i></span>
+            <span class="zf-open">Open case study<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a>
+        <a class="zf" href="#shahi-sweets">
+          <span class="zf-back" aria-hidden="true"><span class="zf-tab">case-002.zip</span></span>
+          <span class="zf-paper" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+          <span class="zf-front">
+            <span class="zf-zip" aria-hidden="true"></span>
+            <span class="zf-logo wide"><img src="assets/logo-shahi-sweets.png" alt="Shahi Sweets logo"></span>
+            <span class="zf-name">Shahi Sweets</span>
+            <span class="zf-stat"><b>0→148</b>orders a month</span>
+            <span class="zf-line">A $2.2M+ sweets brand, selling online in 60 days.</span>
+            <span class="zf-tags"><i>Sweets</i><i>Amazon</i><i>Flipkart</i></span>
+            <span class="zf-open">Open case study<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="band book">
+    <div class="wrap">
+      <div class="book-copy">
+        <p class="hand">your brand next?</p>
+        <h2>Let's write your story in my notebook.</h2>
+        <p>Every brand starts in a different place. On our call, I'll tell you what's realistic for yours.</p>
+        <div class="cta-row"><a class="btn light" href="https://calendly.com/works-sushant/schedule-your-cro-consultation-now" target="_blank" rel="noopener">Let's hit your $10K mark</a></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ===================== CASE STUDY: DAWNBREAKER OATS ===================== -->
+<div class="view cs-view" id="dawnbreaker" hidden>
+  <section class="cs-bar">
+    <div class="wrap">
+      <a class="back" href="#case-studies"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H6M11 6l-6 6 6 6"/></svg>All case studies</a>
+      <span class="cs-file">case-003.zip</span>
+    </div>
+  </section>
+  <section class="band cs-single">
+    <div class="wrap">
+      <article class="cs">
+        <div class="cs-top">
+          <div class="intro">
+            <img class="brand-logo" src="assets/logo-dawnbreaker.png" alt="Dawnbreaker Oats logo" width="508" height="70">
+            <ul class="tags"><li>Oats</li><li>Shopify</li><li>Conversion rate</li></ul>
+            <h2>Dawnbreaker Oats</h2>
+            <p class="lead">A great product with a website shoppers didn't fully trust yet. I worked with them freelance as their growth expert.</p>
+          </div>
+          <div class="bignum"><strong>+3–4.2%</strong><span>lift in conversions, and more repeat customers</span></div>
+        </div>
+        <ul class="cs-three">
+          <li><span class="hand">where they started</span><h3>Nice product. Sketchy website.</h3><p>People liked the oats, but the store didn't earn enough trust to buy.</p></li>
+          <li><span class="hand">what I did</span><h3>Made the store worth trusting.</h3>
+            <ul><li>Found where shoppers hesitated and left</li><li>Fixed what made the site feel untrustworthy</li><li>Tracked conversions and repeat buyers</li></ul>
+            <span class="ph-chip">Draft. Confirm steps</span></li>
+          <li><span class="hand">what changed</span><h3>3–4.2% more conversions.</h3><p>And more customers coming back to buy again.</p></li>
+        </ul>
+        <div class="evidence">
+          <div class="ev video">
+            <h3><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M10 9l5 3-5 3z"/></svg>The store walkthrough</h3>
+            <div class="frame"><div class="play over"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></div></div>
+            <span class="ph-chip">Placeholder: website walkthrough video</span>
+          </div>
+          <div class="ev shot">
+            <h3><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/></svg>Before and after</h3>
+            <div class="frame tall"><div class="mock" aria-hidden="true"><i class="img"></i><i class="w80"></i><i class="w60"></i><i class="w40"></i><i class="btnph"></i></div></div>
+            <span class="ph-chip">Placeholder: store screenshot</span>
+          </div>
+          <div class="ev link">
+            <h3><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>Live store</h3>
+            <p>See the store as it runs today.</p>
+            <a class="text-link ext" href="https://dawnbreakeroats.com/" target="_blank" rel="noopener">dawnbreakeroats.com</a>
+          </div>
+          <div class="ev sales">
+            <h3><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h16"/><path d="M6 20v-5M11 20v-9M16 20V6"/></svg>Conversion rate</h3>
+            <p class="sales-num">+3–4.2%</p>
+            <p>Lift in conversions after the changes.</p>
+          </div>
+          <div class="ev quote">
+            <h3><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 11h4v6H4v-4c0-4 2-6 5-7M15 11h4v6h-5v-4c0-4 2-6 5-7"/></svg>The client says</h3>
+            <blockquote>We went from a 'nice product, sketchy website' situation to something our customers actually trust. 3–4% lift in conversions, yes, but the bigger win was watching repeat customers go up too. More importantly, they actually give a damn about your brand.</blockquote>
+            <div class="who"><span class="av" aria-hidden="true"></span><span>Dawnbreaker Oats</span></div>
+            <span class="ph-chip">Add name and role</span>
+          </div>
+        </div>
+      </article>
+      <nav class="cs-next" aria-label="More case studies">
+        <a class="back" href="#case-studies"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H6M11 6l-6 6 6 6"/></svg>All case studies</a>
+        <a class="cc-cta" href="#best-bite">Next: Best Bites Namkeen<span class="cc-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span></a>
+      </nav>
+    </div>
+  </section>
+
+  <section class="band book">
+    <div class="wrap">
+      <div class="book-copy">
+        <p class="hand">your brand next?</p>
+        <h2>Let's write your story in my notebook.</h2>
+        <p>Every brand starts in a different place. On our call, I'll tell you what's realistic for yours.</p>
+        <div class="cta-row"><a class="btn light" href="https://calendly.com/works-sushant/schedule-your-cro-consultation-now" target="_blank" rel="noopener">Let's hit your $10K mark</a></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ===================== CASE STUDY: BEST BITES NAMKEEN ===================== -->
+<div class="view cs-view" id="best-bite" hidden>
+  <section class="cs-bar">
+    <div class="wrap">
+      <a class="back" href="#case-studies"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H6M11 6l-6 6 6 6"/></svg>All case studies</a>
+      <span class="cs-file">case-001.zip</span>
+    </div>
+  </section>
+  <section class="band cs-single">
+    <div class="wrap">
+      <article class="cs">
+        <div class="cs-top">
+          <div class="intro">
+            <img class="brand-logo" src="assets/logo-best-bites.png" alt="Best Bites Namkeen logo" width="520" height="271">
+            <ul class="tags"><li>Snacks</li><li>Website</li><li>Amazon</li><li>Flipkart</li></ul>
+            <h2>Best Bites Namkeen</h2>
+            <p class="lead">A $1M+ snack brand with many physical stores. Online, they were starting from nothing.</p>
+          </div>
+          <div class="bignum"><strong>0→127</strong><span>orders a month, within 45 days</span></div>
+        </div>
+        <ul class="cs-three">
+          <li><span class="hand">where they started</span><h3>Strong offline. Zero online.</h3><p>Many physical stores. A brand worth over $1M. No website and no online sales channel.</p></li>
+          <li><span class="hand">what I did</span><h3>Built online sales from scratch.</h3>
+            <ul><li>Set up the website and marketplace listings</li><li>Ran the first ads</li><li>Tracked every order</li></ul>
+            <span class="ph-chip">Draft. Confirm steps</span></li>
+          <li><span class="hand">what changed</span><h3>127 orders a month in 45 days.</h3><p>A working online sales channel, from zero.</p></li>
+        </ul>
+        <div class="evidence">
+          <div class="ev video">
+            <h3><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M10 9l5 3-5 3z"/></svg>The website I built</h3>
+            <div class="frame"><div class="play over"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></div></div>
+            <span class="ph-chip">Placeholder: website walkthrough video</span>
+          </div>
+          <div class="ev shot">
+            <h3><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8l8-4 8 4v9l-8 4-8-4z"/><path d="M4 8l8 4 8-4M12 12v9"/></svg>Amazon listing</h3>
+            <div class="frame tall"><div class="mock" aria-hidden="true"><i class="img"></i><i class="w80"></i><i class="w60"></i><i class="w40"></i><i class="btnph"></i></div></div>
+            <span class="ph-chip">Placeholder: Amazon screenshot</span>
+          </div>
+          <div class="ev link">
+            <h3><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>Live website</h3>
+            <p>See the store as it runs today.</p>
+            <a class="text-link ext" href="https://www.bestnamkeen.com/" target="_blank" rel="noopener">bestnamkeen.com</a>
+          </div>
+          <div class="ev sales">
+            <h3><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h16"/><path d="M6 20v-5M11 20v-9M16 20V6"/></svg>Sales</h3>
+            <p class="sales-num">$ ——</p>
+            <p>Sales numbers from the store report.</p>
+            <span class="ph-chip">Placeholder: sales figure</span>
+          </div>
+          <div class="ev quote">
+            <h3><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 11h4v6H4v-4c0-4 2-6 5-7M15 11h4v6h-5v-4c0-4 2-6 5-7"/></svg>The founder says</h3>
+            <blockquote>Founder's words go here, once approved.</blockquote>
+            <div class="who"><span class="av" aria-hidden="true"></span><span>Founder name, Best Bites Namkeen</span></div>
+            <span class="ph-chip">Placeholder: founder testimonial</span>
+          </div>
+        </div>
+      </article>
+      <nav class="cs-next" aria-label="More case studies">
+        <a class="back" href="#case-studies"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H6M11 6l-6 6 6 6"/></svg>All case studies</a>
+        <a class="cc-cta" href="#shahi-sweets">Next: Shahi Sweets<span class="cc-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span></a>
+      </nav>
+    </div>
+  </section>
+
+  <section class="band book">
+    <div class="wrap">
+      <div class="book-copy">
+        <p class="hand">your brand next?</p>
+        <h2>Let's write your story in my notebook.</h2>
+        <p>Every brand starts in a different place. On our call, I'll tell you what's realistic for yours.</p>
+        <div class="cta-row"><a class="btn light" href="https://calendly.com/works-sushant/schedule-your-cro-consultation-now" target="_blank" rel="noopener">Let's hit your $10K mark</a></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ===================== CASE STUDY: SHAHI SWEETS ===================== -->
+<div class="view cs-view" id="shahi-sweets" hidden>
+  <section class="cs-bar">
+    <div class="wrap">
+      <a class="back" href="#case-studies"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H6M11 6l-6 6 6 6"/></svg>All case studies</a>
+      <span class="cs-file">case-002.zip</span>
+    </div>
+  </section>
+  <section class="band cs-single">
+    <div class="wrap">
+      <article class="cs">
+        <div class="cs-top">
+          <div class="intro">
+            <img class="brand-logo" src="assets/logo-shahi-sweets.png" alt="Shahi Sweets logo" width="520" height="303">
+            <ul class="tags"><li>Sweets</li><li>Amazon</li><li>Flipkart</li></ul>
+            <h2>Shahi Sweets</h2>
+            <p class="lead">A $2.2M+ sweets brand with a small online presence and very few orders.</p>
+          </div>
+          <div class="bignum"><strong>0→148</strong><span>orders a month, within 60 days</span></div>
+        </div>
+        <ul class="cs-three">
+          <li><span class="hand">where they started</span><h3>Almost no online orders.</h3><p>A small online presence that wasn't bringing in sales.</p></li>
+          <li><span class="hand">what I did</span><h3>Turned marketplaces into a sales channel.</h3>
+            <ul><li>Fixed listings on Amazon and Flipkart</li><li>Ran and tuned ads</li><li>Tracked what sold and why</li></ul>
+            <span class="ph-chip">Draft. Confirm steps</span></li>
+          <li><span class="hand">what changed</span><h3>148 orders a month.</h3><p>A steady online channel in 60 days.</p></li>
+        </ul>
+        <div class="evidence">
+          <div class="ev video">
+            <h3><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M10 9l5 3-5 3z"/></svg>The store walkthrough</h3>
+            <div class="frame"><div class="play over"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></div></div>
+            <span class="ph-chip">Placeholder: website walkthrough video</span>
+          </div>
+          <div class="ev shot">
+            <h3><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8l8-4 8 4v9l-8 4-8-4z"/><path d="M4 8l8 4 8-4M12 12v9"/></svg>Amazon listing</h3>
+            <div class="frame tall"><div class="mock" aria-hidden="true"><i class="img"></i><i class="w80"></i><i class="w60"></i><i class="w40"></i><i class="btnph"></i></div></div>
+            <span class="ph-chip">Placeholder: Amazon screenshot</span>
+          </div>
+          <div class="ev link">
+            <h3><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>Live store</h3>
+            <p>See the store as it runs today.</p>
+            <a class="text-link" href="#shahi-sweets">Visit the store</a>
+            <span class="ph-chip">Placeholder: live link</span>
+          </div>
+          <div class="ev sales">
+            <h3><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h16"/><path d="M6 20v-5M11 20v-9M16 20V6"/></svg>Sales</h3>
+            <p class="sales-num">$ ——</p>
+            <p>Sales numbers from the store report.</p>
+            <span class="ph-chip">Placeholder: sales figure</span>
+          </div>
+          <div class="ev quote">
+            <h3><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 11h4v6H4v-4c0-4 2-6 5-7M15 11h4v6h-5v-4c0-4 2-6 5-7"/></svg>The founder says</h3>
+            <blockquote>Founder's words go here, once approved.</blockquote>
+            <div class="who"><span class="av" aria-hidden="true"></span><span>Founder name, Shahi Sweets</span></div>
+            <span class="ph-chip">Placeholder: founder testimonial</span>
+          </div>
+        </div>
+      </article>
+      <nav class="cs-next" aria-label="More case studies">
+        <a class="back" href="#case-studies"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H6M11 6l-6 6 6 6"/></svg>All case studies</a>
+        <a class="cc-cta" href="#dawnbreaker">Next: Dawnbreaker Oats<span class="cc-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span></a>
+      </nav>
+    </div>
+  </section>
+
+  <section class="band book">
+    <div class="wrap">
+      <div class="book-copy">
+        <p class="hand">your brand next?</p>
+        <h2>Let's write your story in my notebook.</h2>
+        <p>Every brand starts in a different place. On our call, I'll tell you what's realistic for yours.</p>
+        <div class="cta-row"><a class="btn light" href="https://calendly.com/works-sushant/schedule-your-cro-consultation-now" target="_blank" rel="noopener">Let's hit your $10K mark</a></div>
+      </div>
+    </div>
+  </section>
+</div>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <a class="logo" href="#home"><span class="name">Sushant</span></a>
+    <p>Online sales growth for food &amp; drink brands in the US and UK.</p>
+    <p>hello@yourdomain.com <span class="ph-chip">Placeholder</span></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var views = Array.prototype.slice.call(document.querySelectorAll('.view'));
+  var home = document.getElementById('home');
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function go(id, smooth){
+    var el = id ? document.getElementById(id) : null;
+    var view = el ? (el.classList.contains('view') ? el : el.closest('.view')) : null;
+    if (!view) { view = home; if (el && !el.closest('.view')) view = home; }
+    views.forEach(function(v){ v.hidden = (v !== view); });
+    document.body.setAttribute('data-view', view.id);
+    if (el && el !== view) {
+      requestAnimationFrame(function(){ el.scrollIntoView({behavior: (smooth && !reduce) ? 'smooth' : 'auto', block:'start'}); });
+    } else {
+      window.scrollTo({top:0, behavior:'auto'});
+    }
+  }
+
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a[href^="#"]');
+    if (!a) return;
+    var id = a.getAttribute('href').slice(1);
+    e.preventDefault();
+    var current = document.body.getAttribute('data-view');
+    var target = document.getElementById(id);
+    var targetView = target ? (target.classList.contains('view') ? target : target.closest('.view')) : home;
+    go(id, current === (targetView ? targetView.id : 'home'));
+    try { history.replaceState(null, '', '#' + id); } catch(err) {}
+  });
+
+  // The floating nav stays out of the way on the first screen and appears once the hero button scrolls away.
+  var nav = document.querySelector('.float-nav');
+  var heroCta = document.querySelector('.hero .cta-row');
+  if (nav && heroCta && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function(entries){
+      var onHome = document.body.getAttribute('data-view') === 'home';
+      nav.classList.toggle('is-hidden', onHome && entries[entries.length - 1].isIntersecting);
+    }).observe(heroCta);
+  } else if (nav) {
+    nav.classList.remove('is-hidden');
+  }
+
+  var start = '';
+  try { start = (location.hash || '').slice(1); } catch(err) {}
+  go(start, false);
+})();
+
+</script>
+</body>
+</html>
