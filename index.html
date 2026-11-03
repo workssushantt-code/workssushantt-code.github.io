@@ -486,7 +486,6 @@ body[data-view="case-studies"] .float-nav .navlink{color:var(--leaf);text-decora
 .case-card .brand h3{font-size:1.45rem;margin-bottom:6px}
 .brand-logo{display:block;height:auto;flex:none}
 .case-card .brand-logo{width:128px}
-.cs .brand-logo{width:168px;margin-bottom:6px}
 .card-links{display:flex;flex-wrap:wrap;gap:10px 24px}
 .ext::after{content:" \2197"}
 .tags{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin:0;padding:0}
@@ -640,46 +639,6 @@ body[data-view="case-studies"] .float-nav .navlink{color:var(--leaf);text-decora
 .cs-hero .wrap{display:grid;gap:20px}
 .back{display:inline-flex;align-items:center;gap:8px;font-weight:600;text-decoration:none;color:var(--forest)}
 .back svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
-.jump{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
-.jump a{display:inline-flex;align-items:center;gap:10px;background:var(--paper);border:2px solid var(--forest);border-radius:999px;padding:8px 16px;font-weight:700;color:var(--forest);text-decoration:none}
-.jump a b{font-family:var(--f-display);color:var(--leaf)}
-.cs{display:grid;gap:clamp(28px,4vw,44px)}
-.cs-top{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(28px,4vw,56px);align-items:end}
-@media (max-width:860px){.cs-top{grid-template-columns:minmax(0,1fr)}}
-.cs-top .intro{display:grid;gap:14px;min-width:0}
-.cs-top .bignum strong{font-size:clamp(4rem,10vw,6.5rem)}
-.cs-three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:2px solid var(--forest);list-style:none;margin:0;padding:0}
-@media (max-width:860px){.cs-three{grid-template-columns:minmax(0,1fr)}}
-.cs-three > li{padding:24px 24px 24px 0;display:grid;gap:10px;align-content:start;border-bottom:1px solid var(--rule)}
-@media (min-width:861px){.cs-three > li + li{padding-left:24px;border-left:1px solid var(--rule)}}
-.cs-three .hand{font-size:1.5rem}
-.cs-three p{color:var(--muted)}
-.cs-three ul{margin:0;padding-left:1.1em;color:var(--muted);display:grid;gap:4px}
-.cs-three ul li{list-style:disc}
-.evidence{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:22px}
-.ev{border:2px dashed var(--leaf-soft);border-radius:var(--radius);padding:20px;display:grid;gap:12px;align-content:start;background:var(--paper);min-width:0;position:relative}
-.ev h3{font-size:1.08rem;display:flex;align-items:center;gap:10px}
-.ev h3 svg{width:26px;height:26px;fill:none;stroke:var(--leaf);stroke-width:2.3;stroke-linecap:round;stroke-linejoin:round;flex:none}
-.ev p{color:var(--muted);font-size:1rem}
-.ev.video{grid-column:span 4}
-.ev.shot{grid-column:span 2}
-.ev.link,.ev.sales,.ev.quote{grid-column:span 2}
-@media (max-width:900px){.evidence{grid-template-columns:minmax(0,1fr)}.ev.video,.ev.shot,.ev.link,.ev.sales,.ev.quote{grid-column:auto}}
-.frame{aspect-ratio:16/9;max-width:100%;border-radius:10px;background:var(--paper-tint);border:1px solid var(--rule);display:grid;place-items:center;position:relative;overflow:hidden}
-.frame.tall{aspect-ratio:4/5}
-.frame .play{width:68px;height:68px;border-radius:50%;background:var(--forest);display:grid;place-items:center}
-.frame .play svg{width:26px;height:26px;fill:var(--on-forest);stroke:none;margin-left:4px}
-.frame .mock{position:absolute;inset:0;padding:14px;display:grid;gap:8px;align-content:start}
-.frame .mock i{display:block;height:10px;border-radius:4px;background:var(--rule)}
-.frame .mock .img{height:auto;aspect-ratio:1/1;width:46%;background:var(--mint-mid);border-radius:6px}
-.frame .mock .w60{width:60%}.frame .mock .w80{width:80%}.frame .mock .w40{width:40%}
-.frame .mock .btnph{width:50%;height:26px;border-radius:999px;background:var(--leaf-soft)}
-.frame .over{position:relative;z-index:1}
-.quote blockquote{margin:0;font-family:var(--f-display);font-weight:600;font-size:1.2rem;line-height:1.35;color:var(--forest)}
-.quote .who{display:flex;align-items:center;gap:12px}
-.quote .who .av{width:44px;height:44px;border-radius:50%;background:var(--mint-mid);border:2px dashed var(--leaf-soft);flex:none}
-.quote .who span{font-size:.92rem;color:var(--muted)}
-.sales-num{font-family:var(--f-display);font-weight:800;font-size:2.6rem;color:var(--leaf-soft);line-height:1}
 /* Case studies hub: each case is a zip folder (kraft folder with a tab, a receipt peeking out, a zipper on the front).
    Hovering opens the flap a little and lifts the receipt. */
 .cs-hub{background:radial-gradient(ellipse 80% 70% at 50% 40%, #FFFFFF 0%, #EEF8EA 55%, var(--mint-mid) 100%)}
@@ -720,16 +679,223 @@ body[data-view="case-studies"] .float-nav .navlink{color:var(--leaf);text-decora
 .cs-bar{background:var(--paper-tint);border-bottom:1px solid var(--rule)}
 .cs-bar .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;padding-block:18px}
 .cs-file{font-family:var(--f-mono);font-size:.8rem;color:var(--muted)}
-.cs-next{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;margin-top:clamp(40px,6vw,64px);padding-top:28px;border-top:1px dashed var(--leaf-soft)}
-.cs-next .cc-cta{margin-top:0}
-.cs-divider{display:flex;justify-content:center;padding-block:8px}
-.cs-divider svg{width:180px;height:24px;fill:none;stroke:var(--leaf);stroke-width:2.4;stroke-linecap:round}
 
+/* Case study pages: the same six parts for every brand (result, challenge, what I did, the work, results + founder, next + call).
+   Placeholders: a .media box keeps its aspect ratio and shows a labelled .ph-fill until the real <img>/<video> replaces it. */
+.csx-sec{padding-block:clamp(56px,8vw,100px)}
+.csx-sec.tint{background:var(--paper-tint);border-block:1px solid var(--rule)}
+.csx-head{display:grid;gap:12px;max-width:46rem;margin-bottom:clamp(28px,4vw,44px)}
+.csx-head h2{font-weight:800;letter-spacing:-.03em}
+.csx-head > p:not(.csx-kicker){color:var(--muted);font-size:clamp(1.02rem,1.4vw,1.15rem);max-width:40rem}
+.csx-kicker{display:block;font-weight:800;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--leaf-deep)}
+.ph-text{font-family:var(--f-mono);font-weight:500;font-size:.8em;letter-spacing:.03em;text-transform:uppercase;line-height:1.5;color:var(--forest);background:var(--highlight);padding:2px 7px;border-radius:5px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+
+/* 01 The result */
+.csx-hero{background:
+    radial-gradient(circle, rgba(19,58,34,.09) 1px, transparent 1.5px) 0 0/22px 22px,
+    radial-gradient(ellipse 80% 90% at 75% 30%, #FFFFFF 0%, var(--mint-mid) 55%, var(--mint-edge) 100%);
+  padding-block:clamp(36px,5vw,64px) clamp(48px,6vw,80px)}
+.csx-hero-grid{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,1fr);gap:clamp(28px,4.5vw,64px);align-items:center}
+@media (max-width:900px){.csx-hero-grid{grid-template-columns:minmax(0,1fr)}}
+.csx-hero-copy{display:grid;gap:16px;justify-items:start;min-width:0}
+.csx-logo{display:block;width:auto;height:auto;max-height:60px;max-width:210px;object-fit:contain}
+.csx-hero h1{font-size:clamp(2rem,3.7vw,2.95rem);font-weight:800;letter-spacing:-.035em;line-height:1.06}
+.csx-hero h1 .hl{color:var(--leaf)}
+.csx-hero .lead{font-size:clamp(1.04rem,1.5vw,1.2rem);max-width:34rem}
+.csx-meta{display:flex;flex-wrap:wrap;gap:12px 30px;margin:4px 0 0;padding-top:16px;border-top:1px dashed var(--leaf-soft);width:100%}
+.csx-meta div{display:grid;gap:2px;min-width:0}
+.csx-meta dt{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.csx-meta dd{margin:0;font-weight:700;color:var(--forest);font-size:.98rem}
+.csx-stats{list-style:none;margin:clamp(32px,4.5vw,52px) 0 0;padding:0;display:grid;grid-template-columns:minmax(0,1.5fr) repeat(var(--n,3),minmax(0,1fr));
+  background:var(--paper);border:1.5px solid var(--forest);border-radius:20px;overflow:hidden;box-shadow:0 22px 44px -32px rgba(19,58,34,.55)}
+.csx-stats li{display:grid;align-content:center;gap:6px;padding:clamp(18px,2.4vw,26px) clamp(18px,2.4vw,28px);min-width:0}
+.csx-stats li + li{border-left:1px solid var(--rule)}
+.csx-stats .main + li{border-left:0}
+.csx-stats b{font-family:var(--f-display);font-weight:800;font-size:clamp(1.9rem,3.4vw,2.7rem);line-height:1;letter-spacing:-.035em;color:var(--forest);font-variant-numeric:tabular-nums}
+.csx-stats span{font-weight:600;font-size:.92rem;line-height:1.35;color:var(--muted)}
+.csx-stats .main{background:var(--forest)}
+.csx-stats .main b{color:var(--on-forest);font-size:clamp(2.6rem,5.6vw,4.2rem)}
+.csx-stats .main span{color:var(--on-forest-muted)}
+@media (max-width:760px){
+  .csx-stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .csx-stats .main{grid-column:1/-1}
+  .csx-stats li + li{border-left:0;border-top:1px solid var(--rule)}
+  .csx-stats .main + li{border-top:0}
+  .csx-stats li:nth-child(3){border-top:0}
+  .csx-stats li:nth-child(odd):not(.main){border-left:1px solid var(--rule)}
+  .csx-stats li:last-child:nth-child(even){grid-column:1/-1}
+}
+/* A gentle rise when a case study opens (hidden views restart the animation each time they show) */
+@keyframes csx-rise{from{opacity:0;translate:0 14px}to{opacity:1;translate:0 0}}
+.csx-hero-copy,.csx-hero-visual,.csx-stats{animation:csx-rise .6s cubic-bezier(.2,.7,.2,1) both}
+.csx-hero-visual{animation-delay:.08s}
+.csx-stats{animation-delay:.16s}
+@media (prefers-reduced-motion:reduce){.csx-hero-copy,.csx-hero-visual,.csx-stats{animation:none}}
+
+/* Media frames and placeholders */
+.media{position:relative;aspect-ratio:var(--ar,16/10);border-radius:12px;overflow:hidden;background:var(--paper-tint);min-width:0}
+.media > img,.media > video,.media > iframe{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:0;display:block}
+.ph-fill{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:16px;text-align:center;
+  border:2px dashed var(--leaf-soft);border-radius:inherit;
+  background:repeating-linear-gradient(135deg,transparent 0 12px,rgba(63,143,78,.05) 12px 24px),var(--paper-tint)}
+.ph-fill > svg{width:30px;height:30px;flex:none;fill:none;stroke:var(--leaf);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ph-fill strong{font-family:var(--f-mono);font-weight:500;font-size:.74rem;letter-spacing:.05em;line-height:1.45;text-transform:uppercase;color:var(--forest);max-width:32ch}
+.ph-fill code{font-family:var(--f-mono);font-size:.68rem;color:var(--muted);overflow-wrap:anywhere}
+.browser{border-radius:14px;background:var(--paper);border:1.5px solid var(--forest);overflow:hidden;box-shadow:0 26px 50px -32px rgba(19,58,34,.55);min-width:0}
+.browser-bar{display:flex;align-items:center;gap:6px;padding:9px 12px;border-bottom:1px solid var(--rule)}
+.browser-bar i{width:9px;height:9px;border-radius:50%;background:var(--leaf-soft);flex:none}
+.browser-bar span{margin-left:8px;flex:1;min-width:0;font-family:var(--f-mono);font-size:.74rem;color:var(--muted);background:var(--paper-tint);border-radius:999px;padding:3px 12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.browser .media{border-radius:0}
+.browser .ph-fill{inset:10px;border-radius:10px}
+.phone{width:min(100%,224px);margin-inline:auto;padding:8px;border-radius:34px;background:var(--forest);box-shadow:0 26px 50px -30px rgba(19,58,34,.6)}
+.phone .media{--ar:9/19.5;border-radius:27px}
+.phone .ph-fill{padding:12px}
+
+/* Video: a ready-made 16:9 slot; swap the .ph-fill for a <video> or an embed */
+.vid{margin:0;display:grid;gap:14px;min-width:0}
+.vid .media{--ar:16/9;border-radius:18px;background:radial-gradient(ellipse 80% 100% at 25% 15%, var(--forest-2) 0%, var(--forest) 70%);box-shadow:0 28px 56px -34px rgba(19,58,34,.7)}
+.vid .ph-fill{border-color:rgba(242,250,238,.22);background:radial-gradient(circle, rgba(242,250,238,.08) 1px, transparent 1.5px) 0 0/22px 22px;gap:12px}
+.vid .ph-fill strong{color:var(--on-forest)}
+.vid .ph-fill code{color:var(--on-forest-muted)}
+.vid-play{width:clamp(58px,8vw,84px);aspect-ratio:1;border-radius:50%;background:var(--on-forest);display:grid;place-items:center;box-shadow:0 0 0 10px rgba(242,250,238,.12)}
+.vid-play svg{width:38%;height:38%;margin-left:7%;fill:var(--forest);stroke:none}
+.vid-tag{position:absolute;z-index:1;top:14px;left:14px;font-weight:700;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;background:var(--highlight);color:var(--forest);border-radius:999px;padding:5px 12px}
+.vid figcaption{display:grid;gap:4px;max-width:44rem}
+.vid figcaption b{font-family:var(--f-display);font-weight:700;color:var(--forest);font-size:1.1rem}
+.vid figcaption span{color:var(--muted);font-size:1rem}
+@media (max-width:520px){.vid .ph-fill code{display:none}.vid-tag{top:10px;left:10px;font-size:.66rem}}
+
+/* 02 The challenge */
+.csx-cards{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2.2vw,24px)}
+.csx-card{background:var(--paper);border:1.5px solid var(--rule);border-radius:18px;padding:24px;display:grid;gap:10px;align-content:start;min-width:0}
+.csx-card .ico{width:48px;height:48px;border-radius:14px;background:var(--mint-mid);display:grid;place-items:center;color:var(--forest)}
+.csx-card .ico svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round}
+.csx-card h3{font-size:1.15rem}
+.csx-card p{color:var(--muted);font-size:1rem;line-height:1.5}
+.csx-card.is-ph{border-style:dashed;border-color:var(--leaf-soft);background:transparent}
+@media (max-width:860px){
+  .csx-cards{grid-template-columns:minmax(0,1fr)}
+  .csx-card{grid-template-columns:48px minmax(0,1fr);column-gap:16px;row-gap:4px;padding:20px}
+  .csx-card .ico{grid-row:span 2}
+}
+
+/* 03 What I did */
+.csx-steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,2.6vw,32px)}
+@media (max-width:900px){.csx-steps{grid-template-columns:minmax(0,1fr);max-width:560px}}
+.csx-step{display:grid;gap:10px;align-content:start;min-width:0}
+.csx-step > .media{margin-bottom:6px}
+@media (max-width:560px){.csx-step > .media{--ar:2/1}}
+.csx-step-top{display:flex;align-items:center;justify-content:space-between;gap:10px;padding-top:12px;border-top:2px solid var(--forest)}
+.csx-step-n{font-family:var(--f-display);font-weight:800;font-size:2.2rem;line-height:1;color:var(--leaf);letter-spacing:-.03em}
+.csx-step h3{font-size:1.2rem}
+.csx-step p{font-size:1rem;line-height:1.5}
+.csx-step .why{color:var(--muted)}
+.csx-step .why b{color:var(--forest)}
+.csx-solves{justify-self:start;display:inline-flex;align-items:center;gap:6px;margin-top:4px;font-size:.84rem !important;font-weight:700;color:var(--leaf-deep);background:var(--mint-mid);border-radius:999px;padding:4px 12px 4px 8px}
+.csx-solves svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+
+/* 04 See the work */
+.csx-work{display:grid;gap:clamp(28px,4vw,44px)}
+.csx-gallery{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(20px,2.8vw,32px);align-items:end}
+.csx-shot{margin:0;display:grid;gap:12px;min-width:0;grid-column:span 6}
+.csx-shot.wide{grid-column:span 8}
+.csx-shot.narrow{grid-column:span 4}
+.csx-shot.full{grid-column:1/-1}
+.csx-shot figcaption{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-weight:600;font-size:.95rem;color:var(--muted)}
+.csx-tag{font-weight:700;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--on-forest);background:var(--leaf-deep);border-radius:999px;padding:3px 10px}
+.csx-tag.before{background:var(--muted)}
+@media (max-width:860px){.csx-shot,.csx-shot.wide,.csx-shot.narrow{grid-column:1/-1}.csx-shot.narrow figcaption{justify-content:center}}
+.csx-live{justify-self:start;display:inline-flex;align-items:center;gap:6px;padding:11px 20px;border:1.5px solid var(--forest);border-radius:999px;font-family:var(--f-display);font-weight:700;font-size:1rem;color:var(--forest);text-decoration:none;transition:background-color .15s ease,color .15s ease}
+.csx-live:hover{background:var(--forest);color:var(--on-forest)}
+
+/* 05 The results + founder */
+.csx-res{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:clamp(20px,3vw,36px);align-items:stretch}
+@media (max-width:900px){.csx-res{grid-template-columns:minmax(0,1fr)}}
+.csx-big{background:var(--forest);color:var(--on-forest);border-radius:22px;padding:clamp(24px,3.4vw,40px);display:grid;gap:14px;align-content:start;min-width:0}
+.csx-big-num{font-family:var(--f-display);font-weight:800;font-size:clamp(4rem,10vw,6.8rem);line-height:.9;letter-spacing:-.045em;color:var(--on-forest);font-variant-numeric:tabular-nums}
+.csx-big-lab{font-family:var(--f-display);font-weight:700;font-size:clamp(1.1rem,1.8vw,1.35rem);color:var(--on-forest)}
+.csx-big .hand{color:var(--mint-edge);font-size:1.5rem;rotate:-3deg;justify-self:start;margin-top:-4px}
+.csx-bars{display:grid;gap:10px;margin-top:6px}
+.csx-big .cc-row{grid-template-columns:6.4rem minmax(0,1fr) 3.6rem}
+.csx-big .cc-track{background:rgba(242,250,238,.1)}
+.csx-big .cc-bar{background:var(--mint-edge)}
+.csx-big .cc-lab{color:var(--on-forest-muted)}
+.csx-big .cc-val{color:var(--on-forest);font-size:1.7rem}
+.csx-big .cc-row.before .cc-val{color:var(--on-forest-muted)}
+.csx-big .cc-row.before .cc-track::before{background:var(--on-forest-muted)}
+.csx-defs{margin:6px 0 0;display:grid;border-top:1px solid rgba(242,250,238,.18)}
+.csx-defs div{display:grid;grid-template-columns:8.5rem minmax(0,1fr);gap:12px;padding:12px 0;border-bottom:1px solid rgba(242,250,238,.18)}
+.csx-defs dt{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--mint-edge);padding-top:4px}
+.csx-defs dd{margin:0;color:var(--on-forest);font-size:.98rem;line-height:1.45}
+@media (max-width:440px){.csx-defs div{grid-template-columns:minmax(0,1fr);gap:2px}}
+.csx-proof{display:flex;flex-direction:column;grid-column:auto}
+.csx-proof .media{flex:1;aspect-ratio:auto;min-height:300px;border-radius:22px}
+@media (max-width:900px){.csx-proof .media{flex:none;aspect-ratio:4/3;min-height:0}}
+.csx-quote{margin-top:clamp(28px,4vw,44px);display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr);gap:clamp(22px,3.5vw,48px);align-items:center;
+  background:var(--paper);border:1.5px solid var(--rule);border-radius:24px;padding:clamp(20px,3vw,36px);box-shadow:0 22px 44px -34px rgba(19,58,34,.5)}
+@media (max-width:700px){.csx-quote{grid-template-columns:minmax(0,1fr)}.csx-quote-photo{width:150px}}
+.csx-quote-photo .media{--ar:4/5;border-radius:16px}
+.csx-quote-body{margin:0;display:grid;gap:16px;min-width:0}
+.csx-quote blockquote{position:relative;margin:0;padding-left:clamp(0px,3vw,8px);font-family:var(--f-display);font-weight:600;font-size:clamp(1.12rem,2vw,1.42rem);line-height:1.45;color:var(--forest);letter-spacing:-.01em}
+.csx-quote blockquote::before{content:"\201C";display:block;font-family:var(--f-display);font-weight:800;font-size:4rem;line-height:.6;height:.42em;color:var(--leaf)}
+.csx-quote blockquote.is-ph{display:grid;gap:6px;padding:22px;border:2px dashed var(--leaf-soft);border-radius:14px;background:var(--paper-tint);font-family:var(--f-mono);font-weight:500;font-size:.85rem;letter-spacing:.05em;text-transform:uppercase}
+.csx-quote blockquote.is-ph::before{content:none}
+.csx-quote blockquote.is-ph small{font-family:var(--f-body);font-size:.92rem;letter-spacing:0;text-transform:none;color:var(--muted)}
+.csx-who{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;padding-top:16px;border-top:1px dashed var(--leaf-soft)}
+.csx-who-text{display:grid;gap:2px}
+.csx-who b{font-family:var(--f-display);font-weight:800;color:var(--forest);font-size:1.05rem}
+.csx-who-text > span{color:var(--muted);font-size:.95rem}
+.csx-who img{display:block;width:auto;height:auto;max-height:40px;max-width:130px;object-fit:contain}
+
+/* 06 Next case study + book a call */
+.csx-nextsec .wrap{display:grid;gap:22px;justify-items:start}
+.csx-next{width:100%;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);text-decoration:none;color:var(--forest);background:var(--paper);
+  border:1.5px solid var(--forest);border-radius:22px;overflow:hidden;transition:transform .2s ease,box-shadow .2s ease}
+.csx-next:hover{transform:translateY(-3px);box-shadow:0 26px 44px -30px rgba(19,58,34,.6)}
+.csx-next-thumb{display:grid;place-items:center;padding:28px;min-height:210px;border-right:1.5px solid var(--rule);
+  background:radial-gradient(ellipse 70% 90% at 50% 50%, #FFFFFF 0%, var(--paper-tint) 55%, var(--mint-mid) 100%)}
+.csx-next-thumb img{display:block;width:auto;height:auto;max-width:min(240px,80%);max-height:120px;object-fit:contain}
+.csx-next-body{display:grid;gap:10px;align-content:center;justify-items:start;padding:clamp(22px,3vw,36px)}
+.csx-next-name{font-family:var(--f-display);font-weight:800;font-size:clamp(1.4rem,2.6vw,1.9rem);line-height:1.1;letter-spacing:-.02em}
+.csx-next-line{color:var(--muted);font-size:1.05rem;line-height:1.45;max-width:32rem}
+.csx-next .cc-cta{margin-top:8px;gap:16px}
+.csx-next:hover .cc-cta{background:var(--forest);color:var(--on-forest)}
+.csx-next:hover .cc-arrow{background:var(--on-forest);transform:translateX(3px)}
+.csx-next:hover .cc-arrow svg{stroke:var(--forest)}
+@media (max-width:700px){.csx-next{grid-template-columns:minmax(0,1fr)}.csx-next-thumb{min-height:140px;border-right:0;border-bottom:1.5px solid var(--rule)}}
+@media (prefers-reduced-motion:reduce){.csx-next,.csx-next:hover,.csx-next:hover .cc-arrow{transition:none;transform:none}}
+.csx-book .wrap{grid-template-columns:minmax(0,1fr);justify-items:center;text-align:center}
+.csx-book .book-copy{justify-items:center;max-width:40rem}
+.csx-book .cta-row{justify-content:center}
+.book .cta-note{color:var(--on-forest-muted)}
+
+
+/* Live state for empty slots: images, proof shots and founder photos stay hidden until the file arrives; videos say "coming soon" */
+.csx-step > .media:has(> .ph-fill),.csx-shot:has(.ph-fill),.csx-quote-photo:has(.ph-fill),.csx-gallery:not(:has(img)){display:none}
+.csx-res:has(.csx-proof .ph-fill),.csx-quote:has(.csx-quote-photo .ph-fill){grid-template-columns:minmax(0,1fr)}
+.ph-fill strong,.ph-fill code{display:none}
+.vid .ph-fill::after{content:"Video coming soon";font-weight:700;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--on-forest)}
+.media > img.logo-fit{object-fit:contain;padding:10% 18%;background:radial-gradient(ellipse 70% 90% at 50% 50%, #FFFFFF 0%, var(--paper-tint) 60%, var(--mint-mid) 100%)}
 </style>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
   <filter id="rough"><feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.4"/></filter>
+  <!-- Case study icons (line icons, 24px grid) -->
+  <symbol id="ci-img" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 9"/></symbol>
+  <symbol id="ci-chart" viewBox="0 0 24 24"><path d="M4 20h16"/><path d="M6 20v-5M11 20v-9M16 20V6"/></symbol>
+  <symbol id="ci-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+  <symbol id="ci-phone" viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></symbol>
+  <symbol id="ci-store" viewBox="0 0 24 24"><path d="M4 10v10h16V10"/><path d="M3 10l2-6h14l2 6"/><path d="M3 10a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0"/><path d="M10 20v-5h4v5"/></symbol>
+  <symbol id="ci-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></symbol>
+  <symbol id="ci-cart" viewBox="0 0 24 24"><circle cx="9" cy="20" r="1.5"/><circle cx="17" cy="20" r="1.5"/><path d="M3 4h2l2.5 11h11L21 8H6.2"/></symbol>
+  <symbol id="ci-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M12 8v5M12 16.5v.01"/></symbol>
+  <symbol id="ci-exit" viewBox="0 0 24 24"><path d="M14 4h5v16h-5"/><path d="M10 8l-4 4 4 4M6 12h10"/></symbol>
+  <symbol id="ci-repeat" viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 14-5.3L20 9"/><path d="M20 4v5h-5"/><path d="M20 12a8 8 0 0 1-14 5.3L4 15"/><path d="M4 20v-5h5"/></symbol>
+  <symbol id="ci-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></symbol>
+  <symbol id="ci-box" viewBox="0 0 24 24"><path d="M4 8l8-4 8 4v9l-8 4-8-4z"/><path d="M4 8l8 4 8-4M12 12v9"/></symbol>
+  <symbol id="ci-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .8-1 1.5V14"/><path d="M12 17.5v.01"/></symbol>
+  <symbol id="ci-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
 </svg>
 
 <nav class="float-nav is-hidden" aria-label="Main">
@@ -1142,7 +1308,7 @@ body[data-view="case-studies"] .float-nav .navlink{color:var(--leaf);text-decora
     <div class="wrap">
       <div class="zf-grid">
         <a class="zf" href="#dawnbreaker">
-          <span class="zf-back" aria-hidden="true"><span class="zf-tab">case-003.zip</span></span>
+          <span class="zf-back" aria-hidden="true"><span class="zf-tab">case-01.zip</span></span>
           <span class="zf-paper" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
           <span class="zf-front">
             <span class="zf-zip" aria-hidden="true"></span>
@@ -1155,7 +1321,7 @@ body[data-view="case-studies"] .float-nav .navlink{color:var(--leaf);text-decora
           </span>
         </a>
         <a class="zf" href="#best-bite">
-          <span class="zf-back" aria-hidden="true"><span class="zf-tab">case-001.zip</span></span>
+          <span class="zf-back" aria-hidden="true"><span class="zf-tab">case-02.zip</span></span>
           <span class="zf-paper" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
           <span class="zf-front">
             <span class="zf-zip" aria-hidden="true"></span>
@@ -1168,7 +1334,7 @@ body[data-view="case-studies"] .float-nav .navlink{color:var(--leaf);text-decora
           </span>
         </a>
         <a class="zf" href="#shahi-sweets">
-          <span class="zf-back" aria-hidden="true"><span class="zf-tab">case-002.zip</span></span>
+          <span class="zf-back" aria-hidden="true"><span class="zf-tab">case-03.zip</span></span>
           <span class="zf-paper" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
           <span class="zf-front">
             <span class="zf-zip" aria-hidden="true"></span>
@@ -1196,229 +1362,594 @@ body[data-view="case-studies"] .float-nav .navlink{color:var(--leaf);text-decora
   </section>
 </div>
 
-<!-- ===================== CASE STUDY: DAWNBREAKER OATS ===================== -->
+<!-- ===================== CASE STUDY PAGES =====================
+     LIVE RULE: a slot still holding .ph-fill is hidden on the page (videos show "Video coming soon"), so empty slots never show.
+     Its label stays in the source, so it is easy to find and fill later.
+     Every case study has the same six parts: 01 result, 02 challenge, 03 what I did, 04 the work, 05 results + founder, 06 next case + call.
+     Order: Dawnbreaker Oats -> Best Bites Namkeen -> Shahi Sweets -> Dawnbreaker Oats.
+     PLACEHOLDERS: each .media holds a .ph-fill until the real file arrives. To fill one, replace the .ph-fill with
+     <img src="(data-asset path)" alt="..."> (or <video>/<iframe> for walkthroughs). Text placeholders use .ph-text.
+     Files go in assets/case-studies/<brand>/ (see the README in each folder). -->
+
+<!-- ===================== CASE STUDY 01: DAWNBREAKER OATS ===================== -->
 <div class="view cs-view" id="dawnbreaker" hidden>
   <section class="cs-bar">
     <div class="wrap">
       <a class="back" href="#case-studies"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H6M11 6l-6 6 6 6"/></svg>All case studies</a>
-      <span class="cs-file">case-003.zip</span>
-    </div>
-  </section>
-  <section class="band cs-single">
-    <div class="wrap">
-      <article class="cs">
-        <div class="cs-top">
-          <div class="intro">
-            <img class="brand-logo" src="assets/logo-dawnbreaker.png" alt="Dawnbreaker Oats logo" width="508" height="70">
-            <ul class="tags"><li>Oats</li><li>Shopify</li><li>Conversion rate</li></ul>
-            <h2>Dawnbreaker Oats</h2>
-            <p class="lead">A great product with a website shoppers didn't fully trust yet. I worked with them freelance as their growth expert.</p>
-          </div>
-          <div class="bignum"><strong>+3–4.2%</strong><span>lift in conversions, and more repeat customers</span></div>
-        </div>
-        <ul class="cs-three">
-          <li><span class="hand">where they started</span><h3>Nice product. Sketchy website.</h3><p>People liked the oats, but the store didn't earn enough trust to buy.</p></li>
-          <li><span class="hand">what I did</span><h3>Made the store worth trusting.</h3>
-            <ul><li>Found where shoppers hesitated and left</li><li>Fixed what made the site feel untrustworthy</li><li>Tracked conversions and repeat buyers</li></ul>
-            <span class="ph-chip">Draft. Confirm steps</span></li>
-          <li><span class="hand">what changed</span><h3>3–4.2% more conversions.</h3><p>And more customers coming back to buy again.</p></li>
-        </ul>
-        <div class="evidence">
-          <div class="ev video">
-            <h3><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M10 9l5 3-5 3z"/></svg>The store walkthrough</h3>
-            <div class="frame"><div class="play over"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></div></div>
-            <span class="ph-chip">Placeholder: website walkthrough video</span>
-          </div>
-          <div class="ev shot">
-            <h3><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/></svg>Before and after</h3>
-            <div class="frame tall"><div class="mock" aria-hidden="true"><i class="img"></i><i class="w80"></i><i class="w60"></i><i class="w40"></i><i class="btnph"></i></div></div>
-            <span class="ph-chip">Placeholder: store screenshot</span>
-          </div>
-          <div class="ev link">
-            <h3><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>Live store</h3>
-            <p>See the store as it runs today.</p>
-            <a class="text-link ext" href="https://dawnbreakeroats.com/" target="_blank" rel="noopener">dawnbreakeroats.com</a>
-          </div>
-          <div class="ev sales">
-            <h3><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h16"/><path d="M6 20v-5M11 20v-9M16 20V6"/></svg>Conversion rate</h3>
-            <p class="sales-num">+3–4.2%</p>
-            <p>Lift in conversions after the changes.</p>
-          </div>
-          <div class="ev quote">
-            <h3><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 11h4v6H4v-4c0-4 2-6 5-7M15 11h4v6h-5v-4c0-4 2-6 5-7"/></svg>The client says</h3>
-            <blockquote>We went from a 'nice product, sketchy website' situation to something our customers actually trust. 3–4% lift in conversions, yes, but the bigger win was watching repeat customers go up too. More importantly, they actually give a damn about your brand.</blockquote>
-            <div class="who"><span class="av" aria-hidden="true"></span><span>Dawnbreaker Oats</span></div>
-            <span class="ph-chip">Add name and role</span>
-          </div>
-        </div>
-      </article>
-      <nav class="cs-next" aria-label="More case studies">
-        <a class="back" href="#case-studies"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H6M11 6l-6 6 6 6"/></svg>All case studies</a>
-        <a class="cc-cta" href="#best-bite">Next: Best Bites Namkeen<span class="cc-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span></a>
-      </nav>
+      <span class="cs-file">Case 01 of 03</span>
     </div>
   </section>
 
-  <section class="band book">
+  <!-- 01 The result -->
+  <section class="csx-hero" aria-labelledby="db-title">
+    <div class="wrap">
+      <div class="csx-hero-grid">
+        <div class="csx-hero-copy">
+          <img class="csx-logo" src="assets/logo-dawnbreaker.png" alt="Dawnbreaker Oats logo" width="508" height="70">
+          <p class="csx-kicker">Oats · Conversion and trust</p>
+          <h1 id="db-title">From “nice product, sketchy website” to <span class="hl">a store customers trust.</span></h1>
+          <p class="lead">Shoppers liked the oats but didn't trust the store enough to buy. I worked with the brand as their freelance growth expert to change that.</p>
+          <dl class="csx-meta">
+            <div><dt>My role</dt><dd>Freelance growth expert</dd></div>
+            <div><dt>Platform</dt><dd>Shopify</dd></div>
+            <div><dt>Live store</dt><dd><a class="text-link ext" href="https://dawnbreakeroats.com/" target="_blank" rel="noopener">dawnbreakeroats.com</a></dd></div>
+          </dl>
+        </div>
+        <div class="csx-hero-visual">
+          <div class="browser">
+            <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>dawnbreakeroats.com</span></div>
+            <div class="media" data-asset="assets/case-studies/dawnbreaker/hero.webp">
+              <img src="assets/case-studies/dawnbreaker/hero.webp" alt="Dawnbreaker Oats store homepage" fetchpriority="high" width="1600" height="1000">
+            </div>
+          </div>
+        </div>
+      </div>
+      <ul class="csx-stats" style="--n:1" aria-label="Results at a glance">
+        <li class="main"><b>+3–4.2%</b><span>lift in conversions</span></li>
+        <li><b>More</b><span>repeat customers, in the client's words</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 02 The challenge (taken from the client's own words) -->
+  <section class="csx-sec tint" aria-labelledby="db-challenge">
+    <div class="wrap">
+      <div class="csx-head">
+        <p class="csx-kicker">The challenge</p>
+        <h2 id="db-challenge">Nice product. Sketchy website.</h2>
+        <p>People liked the oats. The store didn't give them enough reason to trust it and buy.</p>
+      </div>
+      <ul class="csx-cards">
+        <li class="csx-card"><span class="ico"><svg aria-hidden="true"><use href="#ci-shield"/></svg></span><h3>Low trust</h3><p>The site felt “sketchy” to shoppers, in the client's own words.</p></li>
+        <li class="csx-card"><span class="ico"><svg aria-hidden="true"><use href="#ci-exit"/></svg></span><h3>Lost sales</h3><p>Visitors who liked the product left without buying.</p></li>
+        <li class="csx-card"><span class="ico"><svg aria-hidden="true"><use href="#ci-repeat"/></svg></span><h3>Few repeat buyers</h3><p>Customers weren't coming back as often as they could.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 03 What I did (DRAFT: confirm each step) -->
+  <section class="csx-sec" aria-labelledby="db-did">
+    <div class="wrap">
+      <div class="csx-head">
+        <p class="csx-kicker">What I did</p>
+        <h2 id="db-did">Made the store worth trusting.</h2>
+        <p>Each step targets one problem from the list above.</p>
+      </div>
+      <ol class="csx-steps">
+        <li class="csx-step">
+          <div class="media" data-asset="assets/case-studies/dawnbreaker/step-1.webp"><span class="ph-fill"><svg aria-hidden="true"><use href="#ci-chart"/></svg><strong>[Execution image 01: drop-off or funnel report]</strong><code>dawnbreaker/step-1.webp</code></span></div>
+          <div class="csx-step-top"><span class="csx-step-n">01</span></div>
+          <h3>Found where shoppers hesitated</h3>
+          <p>Mapped where visitors dropped off on the way from product page to checkout.</p>
+          <p class="why"><b>Why:</b> so every fix lands where sales are actually lost.</p>
+          <p class="csx-solves"><svg aria-hidden="true"><use href="#ci-check"/></svg>Solves: lost sales</p>
+        </li>
+        <li class="csx-step">
+          <div class="media" data-asset="assets/case-studies/dawnbreaker/step-2.webp"><span class="ph-fill"><svg aria-hidden="true"><use href="#ci-img"/></svg><strong>[Execution image 02: one trust fix, before vs after]</strong><code>dawnbreaker/step-2.webp</code></span></div>
+          <div class="csx-step-top"><span class="csx-step-n">02</span></div>
+          <h3>Fixed the trust gaps</h3>
+          <p>Changed what made the store feel unreliable to first-time buyers.</p>
+          <p class="why"><b>Why:</b> shoppers only hand over card details to a store they trust.</p>
+          <p class="csx-solves"><svg aria-hidden="true"><use href="#ci-check"/></svg>Solves: low trust</p>
+        </li>
+        <li class="csx-step">
+          <div class="media" data-asset="assets/case-studies/dawnbreaker/step-3.webp"><span class="ph-fill"><svg aria-hidden="true"><use href="#ci-repeat"/></svg><strong>[Execution image 03: what brought buyers back]</strong><code>dawnbreaker/step-3.webp</code></span></div>
+          <div class="csx-step-top"><span class="csx-step-n">03</span></div>
+          <h3>Brought buyers back</h3>
+          <p>Made buying a second time easy, and worth it, for first-time customers.</p>
+          <p class="why"><b>Why:</b> a returning customer costs far less to win than a new one.</p>
+          <p class="csx-solves"><svg aria-hidden="true"><use href="#ci-check"/></svg>Solves: few repeat buyers</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 04 See the work -->
+  <section class="csx-sec tint" aria-labelledby="db-work">
+    <div class="wrap">
+      <div class="csx-head">
+        <p class="csx-kicker">See the work</p>
+        <h2 id="db-work">The store customers trust.</h2>
+        <p>dawnbreakeroats.com today, on desktop and on a phone.</p>
+      </div>
+      <div class="csx-work">
+        <figure class="vid">
+          <div class="media" data-asset="assets/case-studies/dawnbreaker/walkthrough.mp4" role="img" aria-label="Video coming soon: store walkthrough">
+            <span class="vid-tag">Store walkthrough</span>
+            <span class="ph-fill"><span class="vid-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></span><strong>[Add website walkthrough video]</strong><code>dawnbreaker/walkthrough.mp4</code></span>
+          </div>
+          <figcaption><b>A walk through the Dawnbreaker store</b><span>The pages shoppers see on the way to buying, and the changes that made them feel trustworthy.</span></figcaption>
+        </figure>
+        <div class="csx-gallery">
+          <figure class="csx-shot wide">
+            <div class="browser">
+              <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>dawnbreakeroats.com</span></div>
+              <div class="media" data-asset="assets/case-studies/dawnbreaker/website-desktop.webp"><img src="assets/case-studies/dawnbreaker/website-desktop.webp" alt="Dawnbreaker Oats product range: Maple, Apple Cinnamon and Classic protein oatmeal" loading="lazy" width="1600" height="1000"></div>
+            </div>
+            <figcaption><span class="csx-tag">Store</span>The product range on desktop</figcaption>
+          </figure>
+          <figure class="csx-shot narrow">
+            <div class="phone">
+              <div class="media" data-asset="assets/case-studies/dawnbreaker/website-mobile.webp"><img src="assets/case-studies/dawnbreaker/website-mobile.webp" alt="Dawnbreaker Oats store on a phone" loading="lazy" width="780" height="1690"></div>
+            </div>
+            <figcaption><span class="csx-tag">Store</span>On a phone</figcaption>
+          </figure>
+        </div>
+        <a class="csx-live ext" href="https://dawnbreakeroats.com/" target="_blank" rel="noopener">See the live store</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 The results + client words -->
+  <section class="csx-sec" aria-labelledby="db-results">
+    <div class="wrap">
+      <div class="csx-head">
+        <p class="csx-kicker">The results</p>
+        <h2 id="db-results">More buyers, and more of them coming back.</h2>
+      </div>
+      <div class="csx-res">
+        <div class="csx-big">
+          <p class="csx-big-num">+3–4.2%</p>
+          <p class="csx-big-lab">lift in conversions</p>
+          <p class="hand">plus more repeat customers</p>
+          <dl class="csx-defs">
+            <div><dt>What it measures</dt><dd>Conversions on the Shopify store, as reported by the client.</dd></div>
+            <div><dt>Repeat buyers</dt><dd>Went up, as the client reports.</dd></div>
+          </dl>
+        </div>
+        <figure class="csx-shot csx-proof">
+          <div class="media" data-asset="assets/case-studies/dawnbreaker/conversion-report.webp"><span class="ph-fill"><svg aria-hidden="true"><use href="#ci-chart"/></svg><strong>[Add analytics screenshot: conversion rate before vs after]</strong><code>dawnbreaker/conversion-report.webp</code></span></div>
+          <figcaption>Conversion report · the proof behind the number</figcaption>
+        </figure>
+      </div>
+      <div class="csx-quote">
+        <div class="csx-quote-photo">
+          <div class="media" data-asset="assets/case-studies/dawnbreaker/founder.webp"><span class="ph-fill"><svg aria-hidden="true"><use href="#ci-user"/></svg><strong>[Add founder photograph]</strong><code>dawnbreaker/founder.webp</code></span></div>
+        </div>
+        <figure class="csx-quote-body">
+          <p class="csx-kicker">In the client's words</p>
+          <blockquote>We went from a ‘nice product, sketchy website’ situation to something our customers actually trust. <span class="mark">3–4% lift in conversions</span>, yes, but the bigger win was watching repeat customers go up too. More importantly, they actually give a damn about your brand.</blockquote>
+          <figcaption class="csx-who">
+            <span class="csx-who-text"><b>Dawnbreaker Oats</b><span>Client, Shopify oats brand</span></span>
+            <img src="assets/logo-dawnbreaker.png" alt="" width="508" height="70">
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 Next case study + book a call -->
+  <section class="csx-sec csx-nextsec" aria-label="Next case study">
+    <div class="wrap">
+      <a class="csx-next" href="#best-bite">
+        <span class="csx-next-thumb"><img src="assets/logo-best-bites.png" alt="" width="520" height="271"></span>
+        <span class="csx-next-body">
+          <span class="csx-kicker">Next case study · 02 of 03</span>
+          <span class="csx-next-name">Best Bites Namkeen</span>
+          <span class="csx-next-line">From offline business to 127 monthly orders across 3 sales channels.</span>
+          <span class="cc-cta">View case study<span class="cc-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span></span>
+        </span>
+      </a>
+      <a class="back" href="#case-studies"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H6M11 6l-6 6 6 6"/></svg>All case studies</a>
+    </div>
+  </section>
+  <section class="band book csx-book">
     <div class="wrap">
       <div class="book-copy">
-        <p class="hand">your brand next?</p>
-        <h2>Let's write your story in my notebook.</h2>
-        <p>Every brand starts in a different place. On our call, I'll tell you what's realistic for yours.</p>
-        <div class="cta-row"><a class="btn light" href="https://calendly.com/works-sushant/schedule-your-cro-consultation-now" target="_blank" rel="noopener">Let's hit your $10K mark</a></div>
+        <h2>Have a similar challenge in your business?</h2>
+        <p>Let's identify what's holding your online sales back and find the right opportunities to grow.</p>
+        <div class="cta-row"><a class="btn light" href="https://calendly.com/works-sushant/schedule-your-cro-consultation-now" target="_blank" rel="noopener">Book a call<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a><span class="cta-note">A 30-minute call. I'll tell you straight if I can help.</span></div>
       </div>
     </div>
   </section>
 </div>
 
-<!-- ===================== CASE STUDY: BEST BITES NAMKEEN ===================== -->
+<!-- ===================== CASE STUDY 02: BEST BITES NAMKEEN ===================== -->
 <div class="view cs-view" id="best-bite" hidden>
   <section class="cs-bar">
     <div class="wrap">
       <a class="back" href="#case-studies"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H6M11 6l-6 6 6 6"/></svg>All case studies</a>
-      <span class="cs-file">case-001.zip</span>
-    </div>
-  </section>
-  <section class="band cs-single">
-    <div class="wrap">
-      <article class="cs">
-        <div class="cs-top">
-          <div class="intro">
-            <img class="brand-logo" src="assets/logo-best-bites.png" alt="Best Bites Namkeen logo" width="520" height="271">
-            <ul class="tags"><li>Snacks</li><li>Website</li><li>Amazon</li><li>Flipkart</li></ul>
-            <h2>Best Bites Namkeen</h2>
-            <p class="lead">A $1M+ snack brand with many physical stores. Online, they were starting from nothing.</p>
-          </div>
-          <div class="bignum"><strong>0→127</strong><span>orders a month, within 45 days</span></div>
-        </div>
-        <ul class="cs-three">
-          <li><span class="hand">where they started</span><h3>Strong offline. Zero online.</h3><p>Many physical stores. A brand worth over $1M. No website and no online sales channel.</p></li>
-          <li><span class="hand">what I did</span><h3>Built online sales from scratch.</h3>
-            <ul><li>Set up the website and marketplace listings</li><li>Ran the first ads</li><li>Tracked every order</li></ul>
-            <span class="ph-chip">Draft. Confirm steps</span></li>
-          <li><span class="hand">what changed</span><h3>127 orders a month in 45 days.</h3><p>A working online sales channel, from zero.</p></li>
-        </ul>
-        <div class="evidence">
-          <div class="ev video">
-            <h3><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M10 9l5 3-5 3z"/></svg>The website I built</h3>
-            <div class="frame"><div class="play over"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></div></div>
-            <span class="ph-chip">Placeholder: website walkthrough video</span>
-          </div>
-          <div class="ev shot">
-            <h3><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8l8-4 8 4v9l-8 4-8-4z"/><path d="M4 8l8 4 8-4M12 12v9"/></svg>Amazon listing</h3>
-            <div class="frame tall"><div class="mock" aria-hidden="true"><i class="img"></i><i class="w80"></i><i class="w60"></i><i class="w40"></i><i class="btnph"></i></div></div>
-            <span class="ph-chip">Placeholder: Amazon screenshot</span>
-          </div>
-          <div class="ev link">
-            <h3><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>Live website</h3>
-            <p>See the store as it runs today.</p>
-            <a class="text-link ext" href="https://www.bestnamkeen.com/" target="_blank" rel="noopener">bestnamkeen.com</a>
-          </div>
-          <div class="ev sales">
-            <h3><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h16"/><path d="M6 20v-5M11 20v-9M16 20V6"/></svg>Sales</h3>
-            <p class="sales-num">$ ——</p>
-            <p>Sales numbers from the store report.</p>
-            <span class="ph-chip">Placeholder: sales figure</span>
-          </div>
-          <div class="ev quote">
-            <h3><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 11h4v6H4v-4c0-4 2-6 5-7M15 11h4v6h-5v-4c0-4 2-6 5-7"/></svg>The founder says</h3>
-            <blockquote>Founder's words go here, once approved.</blockquote>
-            <div class="who"><span class="av" aria-hidden="true"></span><span>Founder name, Best Bites Namkeen</span></div>
-            <span class="ph-chip">Placeholder: founder testimonial</span>
-          </div>
-        </div>
-      </article>
-      <nav class="cs-next" aria-label="More case studies">
-        <a class="back" href="#case-studies"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H6M11 6l-6 6 6 6"/></svg>All case studies</a>
-        <a class="cc-cta" href="#shahi-sweets">Next: Shahi Sweets<span class="cc-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span></a>
-      </nav>
+      <span class="cs-file">Case 02 of 03</span>
     </div>
   </section>
 
-  <section class="band book">
+  <!-- 01 The result -->
+  <section class="csx-hero" aria-labelledby="bb-title">
+    <div class="wrap">
+      <div class="csx-hero-grid">
+        <div class="csx-hero-copy">
+          <img class="csx-logo" src="assets/logo-best-bites.png" alt="Best Bites Namkeen logo" width="520" height="271">
+          <p class="csx-kicker">Namkeen snacks · Offline to online</p>
+          <h1 id="bb-title">From offline business to <span class="hl">127 monthly orders</span> across 3 sales channels.</h1>
+          <p class="lead">I built and launched an online sales ecosystem for an offline-first food brand: its own website, Amazon and Flipkart, in 45 days.</p>
+          <dl class="csx-meta">
+            <div><dt>Timeline</dt><dd>45 days</dd></div>
+            <div><dt>Channels</dt><dd>Website, Amazon, Flipkart</dd></div>
+            <div><dt>Live store</dt><dd><a class="text-link ext" href="https://www.bestnamkeen.com/" target="_blank" rel="noopener">bestnamkeen.com</a></dd></div>
+          </dl>
+        </div>
+        <div class="csx-hero-visual">
+          <div class="browser">
+            <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>bestnamkeen.com</span></div>
+            <div class="media" data-asset="assets/case-studies/best-bites/hero.webp">
+              <img src="assets/case-studies/best-bites/hero.webp" alt="Best Bites Namkeen website homepage" fetchpriority="high" width="1600" height="1000">
+            </div>
+          </div>
+        </div>
+      </div>
+      <ul class="csx-stats" aria-label="Results at a glance">
+        <li class="main"><b>127</b><span>online orders a month, all 3 channels combined</span></li>
+        <li><b>45</b><span>days from start to result</span></li>
+        <li><b>3</b><span>sales channels launched</span></li>
+        <li><b>0</b><span>online orders before</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 02 The challenge -->
+  <section class="csx-sec tint" aria-labelledby="bb-challenge">
+    <div class="wrap">
+      <div class="csx-head">
+        <p class="csx-kicker">The challenge</p>
+        <h2 id="bb-challenge">Loved offline since 1960. Invisible online.</h2>
+        <p>Every sale happened at the brand's own counters. Shoppers looking online couldn't find it, let alone buy it.</p>
+      </div>
+      <ul class="csx-cards">
+        <li class="csx-card"><span class="ico"><svg aria-hidden="true"><use href="#ci-store"/></svg></span><h3>Offline only</h3><p>A $1M+ brand whose sales all came through its physical stores.</p></li>
+        <li class="csx-card"><span class="ico"><svg aria-hidden="true"><use href="#ci-globe"/></svg></span><h3>No website</h3><p>No storefront of its own, so no way to order directly.</p></li>
+        <li class="csx-card"><span class="ico"><svg aria-hidden="true"><use href="#ci-cart"/></svg></span><h3>Not on marketplaces</h3><p>Missing from Amazon and Flipkart, where online snack shoppers search.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 03 What I did -->
+  <section class="csx-sec" aria-labelledby="bb-did">
+    <div class="wrap">
+      <div class="csx-head">
+        <p class="csx-kicker">What I did</p>
+        <h2 id="bb-did">Three sales channels, built from zero.</h2>
+        <p>Each one closes a gap from the list above.</p>
+      </div>
+      <ol class="csx-steps">
+        <li class="csx-step">
+          <div class="media" data-asset="assets/case-studies/best-bites/step-1-website.webp"><img src="assets/case-studies/best-bites/step-1-website.webp" alt="Product cards on bestnamkeen.com with Amazon and Flipkart buttons" loading="lazy" width="1600" height="1000"></div>
+          <div class="csx-step-top"><span class="csx-step-n">01</span></div>
+          <h3>Website development</h3>
+          <p>Built the online storefront, so customers can browse the range and order directly.</p>
+          <p class="why"><b>Why:</b> the brand gets a store it owns, with its own customers.</p>
+          <p class="csx-solves"><svg aria-hidden="true"><use href="#ci-check"/></svg>Solves: no website</p>
+        </li>
+        <li class="csx-step">
+          <div class="media" data-asset="assets/case-studies/best-bites/step-2-amazon.webp"><img src="assets/case-studies/best-bites/step-2-amazon.webp" alt="Bappu Best Bites brand store on Amazon" loading="lazy" width="1600" height="1000"></div>
+          <div class="csx-step-top"><span class="csx-step-n">02</span></div>
+          <h3>Amazon launch</h3>
+          <p>Set up the brand's Amazon sales channel and created its product listings.</p>
+          <p class="why"><b>Why:</b> Amazon is where a lot of online shoppers start their search.</p>
+          <p class="csx-solves"><svg aria-hidden="true"><use href="#ci-check"/></svg>Solves: not on marketplaces</p>
+        </li>
+        <li class="csx-step">
+          <div class="media" data-asset="assets/case-studies/best-bites/step-3-flipkart.webp"><img src="assets/case-studies/best-bites/step-3-flipkart.webp" alt="Best Bites Sada Sev listing on Flipkart" loading="lazy" width="1600" height="1000"></div>
+          <div class="csx-step-top"><span class="csx-step-n">03</span></div>
+          <h3>Flipkart expansion</h3>
+          <p>Established Flipkart as a second marketplace channel.</p>
+          <p class="why"><b>Why:</b> more online shoppers reached, and sales don't hang on one platform.</p>
+          <p class="csx-solves"><svg aria-hidden="true"><use href="#ci-check"/></svg>Solves: sales stuck offline</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 04 See the work -->
+  <section class="csx-sec tint" aria-labelledby="bb-work">
+    <div class="wrap">
+      <div class="csx-head">
+        <p class="csx-kicker">See the work</p>
+        <h2 id="bb-work">Here's what I built.</h2>
+        <p>The store and the marketplace listings, as customers see them.</p>
+      </div>
+      <div class="csx-work">
+        <figure class="vid">
+          <div class="media" data-asset="assets/case-studies/best-bites/walkthrough.mp4" role="img" aria-label="Video coming soon: website walkthrough">
+            <span class="vid-tag">Website walkthrough</span>
+            <span class="ph-fill"><span class="vid-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></span><strong>[Add website walkthrough video]</strong><code>best-bites/walkthrough.mp4</code></span>
+          </div>
+          <figcaption><b>A tour of bestnamkeen.com</b><span>From the homepage to a product page and the order button: the direct buying experience I built.</span></figcaption>
+        </figure>
+        <div class="csx-gallery">
+          <figure class="csx-shot wide">
+            <div class="browser">
+              <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>bestnamkeen.com</span></div>
+              <div class="media" data-asset="assets/case-studies/best-bites/website-desktop.webp"><img src="assets/case-studies/best-bites/website-desktop.webp" alt="The product shelf on bestnamkeen.com" loading="lazy" width="1600" height="1000"></div>
+            </div>
+            <figcaption><span class="csx-tag">Website</span>Homepage on desktop</figcaption>
+          </figure>
+          <figure class="csx-shot narrow">
+            <div class="phone">
+              <div class="media" data-asset="assets/case-studies/best-bites/website-mobile.webp"><img src="assets/case-studies/best-bites/website-mobile.webp" alt="bestnamkeen.com on a phone" loading="lazy" width="780" height="1690"></div>
+            </div>
+            <figcaption><span class="csx-tag">Website</span>On a phone</figcaption>
+          </figure>
+          <figure class="csx-shot">
+            <div class="browser">
+              <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>Amazon</span></div>
+              <div class="media" data-asset="assets/case-studies/best-bites/amazon-listing.webp"><img src="assets/case-studies/best-bites/amazon-listing.webp" alt="Best Bites Ratlami Sev product listing on Amazon" loading="lazy" width="1600" height="1000"></div>
+            </div>
+            <figcaption><span class="csx-tag">Amazon</span>Product listing</figcaption>
+          </figure>
+          <figure class="csx-shot">
+            <div class="browser">
+              <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>Flipkart</span></div>
+              <div class="media" data-asset="assets/case-studies/best-bites/flipkart-listing.webp"><img src="assets/case-studies/best-bites/flipkart-listing.webp" alt="Best Bites Kadipatta Mix product listing on Flipkart" loading="lazy" width="1600" height="1000"></div>
+            </div>
+            <figcaption><span class="csx-tag">Flipkart</span>Product listing</figcaption>
+          </figure>
+        </div>
+        <a class="csx-live ext" href="https://www.bestnamkeen.com/" target="_blank" rel="noopener">See the live store</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 The results + founder -->
+  <section class="csx-sec" aria-labelledby="bb-results">
+    <div class="wrap">
+      <div class="csx-head">
+        <p class="csx-kicker">The results</p>
+        <h2 id="bb-results">0 to 127 online orders a month, in 45 days.</h2>
+      </div>
+      <div class="csx-res">
+        <div class="csx-big">
+          <p class="csx-big-num">127</p>
+          <p class="csx-big-lab">online orders a month</p>
+          <p class="hand">orders, not revenue</p>
+          <div class="csx-bars" role="img" aria-label="Monthly online orders: 0 before, 127 within 45 days">
+            <div class="cc-row before"><span class="cc-lab">Before</span><span class="cc-track"><span class="cc-bar" style="--w:0%"></span></span><b class="cc-val">0</b></div>
+            <div class="cc-row"><span class="cc-lab">By day 45</span><span class="cc-track"><span class="cc-bar" style="--w:100%"></span></span><b class="cc-val">127</b></div>
+          </div>
+          <dl class="csx-defs">
+            <div><dt>What counts</dt><dd>Orders from the website, Amazon and Flipkart, added together.</dd></div>
+            <div><dt>Time frame</dt><dd>A monthly order count, reached within 45 days.</dd></div>
+            <div><dt>Not shown</dt><dd>Revenue, and the split between channels.</dd></div>
+          </dl>
+        </div>
+        <figure class="csx-shot csx-proof">
+          <div class="media" data-asset="assets/case-studies/best-bites/orders-report.webp"><span class="ph-fill"><svg aria-hidden="true"><use href="#ci-chart"/></svg><strong>[Add verified order report / dashboard screenshot]</strong><code>best-bites/orders-report.webp</code></span></div>
+          <figcaption>Order report · the proof behind the 127</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 Next case study + book a call -->
+  <section class="csx-sec csx-nextsec" aria-label="Next case study">
+    <div class="wrap">
+      <a class="csx-next" href="#shahi-sweets">
+        <span class="csx-next-thumb"><img src="assets/logo-shahi-sweets.png" alt="" width="520" height="303"></span>
+        <span class="csx-next-body">
+          <span class="csx-kicker">Next case study · 03 of 03</span>
+          <span class="csx-next-name">Shahi Sweets</span>
+          <span class="csx-next-line">From zero online orders to 148 a month on Amazon and Flipkart.</span>
+          <span class="cc-cta">View case study<span class="cc-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span></span>
+        </span>
+      </a>
+      <a class="back" href="#case-studies"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H6M11 6l-6 6 6 6"/></svg>All case studies</a>
+    </div>
+  </section>
+  <section class="band book csx-book">
     <div class="wrap">
       <div class="book-copy">
-        <p class="hand">your brand next?</p>
-        <h2>Let's write your story in my notebook.</h2>
-        <p>Every brand starts in a different place. On our call, I'll tell you what's realistic for yours.</p>
-        <div class="cta-row"><a class="btn light" href="https://calendly.com/works-sushant/schedule-your-cro-consultation-now" target="_blank" rel="noopener">Let's hit your $10K mark</a></div>
+        <h2>Have a similar challenge in your business?</h2>
+        <p>Let's identify what's holding your online sales back and find the right opportunities to grow.</p>
+        <div class="cta-row"><a class="btn light" href="https://calendly.com/works-sushant/schedule-your-cro-consultation-now" target="_blank" rel="noopener">Book a call<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a><span class="cta-note">A 30-minute call. I'll tell you straight if I can help.</span></div>
       </div>
     </div>
   </section>
 </div>
 
-<!-- ===================== CASE STUDY: SHAHI SWEETS ===================== -->
+<!-- ===================== CASE STUDY 03: SHAHI SWEETS ===================== -->
 <div class="view cs-view" id="shahi-sweets" hidden>
   <section class="cs-bar">
     <div class="wrap">
       <a class="back" href="#case-studies"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H6M11 6l-6 6 6 6"/></svg>All case studies</a>
-      <span class="cs-file">case-002.zip</span>
-    </div>
-  </section>
-  <section class="band cs-single">
-    <div class="wrap">
-      <article class="cs">
-        <div class="cs-top">
-          <div class="intro">
-            <img class="brand-logo" src="assets/logo-shahi-sweets.png" alt="Shahi Sweets logo" width="520" height="303">
-            <ul class="tags"><li>Sweets</li><li>Amazon</li><li>Flipkart</li></ul>
-            <h2>Shahi Sweets</h2>
-            <p class="lead">A $2.2M+ sweets brand with a small online presence and very few orders.</p>
-          </div>
-          <div class="bignum"><strong>0→148</strong><span>orders a month, within 60 days</span></div>
-        </div>
-        <ul class="cs-three">
-          <li><span class="hand">where they started</span><h3>Almost no online orders.</h3><p>A small online presence that wasn't bringing in sales.</p></li>
-          <li><span class="hand">what I did</span><h3>Turned marketplaces into a sales channel.</h3>
-            <ul><li>Fixed listings on Amazon and Flipkart</li><li>Ran and tuned ads</li><li>Tracked what sold and why</li></ul>
-            <span class="ph-chip">Draft. Confirm steps</span></li>
-          <li><span class="hand">what changed</span><h3>148 orders a month.</h3><p>A steady online channel in 60 days.</p></li>
-        </ul>
-        <div class="evidence">
-          <div class="ev video">
-            <h3><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M10 9l5 3-5 3z"/></svg>The store walkthrough</h3>
-            <div class="frame"><div class="play over"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></div></div>
-            <span class="ph-chip">Placeholder: website walkthrough video</span>
-          </div>
-          <div class="ev shot">
-            <h3><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8l8-4 8 4v9l-8 4-8-4z"/><path d="M4 8l8 4 8-4M12 12v9"/></svg>Amazon listing</h3>
-            <div class="frame tall"><div class="mock" aria-hidden="true"><i class="img"></i><i class="w80"></i><i class="w60"></i><i class="w40"></i><i class="btnph"></i></div></div>
-            <span class="ph-chip">Placeholder: Amazon screenshot</span>
-          </div>
-          <div class="ev link">
-            <h3><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>Live store</h3>
-            <p>See the store as it runs today.</p>
-            <a class="text-link" href="#shahi-sweets">Visit the store</a>
-            <span class="ph-chip">Placeholder: live link</span>
-          </div>
-          <div class="ev sales">
-            <h3><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h16"/><path d="M6 20v-5M11 20v-9M16 20V6"/></svg>Sales</h3>
-            <p class="sales-num">$ ——</p>
-            <p>Sales numbers from the store report.</p>
-            <span class="ph-chip">Placeholder: sales figure</span>
-          </div>
-          <div class="ev quote">
-            <h3><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 11h4v6H4v-4c0-4 2-6 5-7M15 11h4v6h-5v-4c0-4 2-6 5-7"/></svg>The founder says</h3>
-            <blockquote>Founder's words go here, once approved.</blockquote>
-            <div class="who"><span class="av" aria-hidden="true"></span><span>Founder name, Shahi Sweets</span></div>
-            <span class="ph-chip">Placeholder: founder testimonial</span>
-          </div>
-        </div>
-      </article>
-      <nav class="cs-next" aria-label="More case studies">
-        <a class="back" href="#case-studies"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H6M11 6l-6 6 6 6"/></svg>All case studies</a>
-        <a class="cc-cta" href="#dawnbreaker">Next: Dawnbreaker Oats<span class="cc-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span></a>
-      </nav>
+      <span class="cs-file">Case 03 of 03</span>
     </div>
   </section>
 
-  <section class="band book">
+  <!-- 01 The result -->
+  <section class="csx-hero" aria-labelledby="ss-title">
+    <div class="wrap">
+      <div class="csx-hero-grid">
+        <div class="csx-hero-copy">
+          <img class="csx-logo" src="assets/logo-shahi-sweets.png" alt="Shahi Sweets logo" width="520" height="303">
+          <p class="csx-kicker">Sweets · Marketplace growth</p>
+          <h1 id="ss-title">From zero online orders to <span class="hl">148 a month</span> on Amazon and Flipkart.</h1>
+          <p class="lead">A $2.2M+ sweets brand had a small online presence that wasn't selling. In 60 days, I turned its marketplaces into a working sales channel.</p>
+          <dl class="csx-meta">
+            <div><dt>Timeline</dt><dd>60 days</dd></div>
+            <div><dt>Channels</dt><dd>Amazon, Flipkart</dd></div>
+          </dl>
+        </div>
+        <div class="csx-hero-visual">
+          <div class="browser">
+            <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>Shahi Sweets</span></div>
+            <div class="media" data-asset="assets/case-studies/shahi-sweets/hero.webp">
+              <img class="logo-fit" src="assets/logo-shahi-sweets.png" alt="Shahi Sweets logo" width="520" height="303">
+            </div>
+          </div>
+        </div>
+      </div>
+      <ul class="csx-stats" aria-label="Results at a glance">
+        <li class="main"><b>148</b><span>online orders a month</span></li>
+        <li><b>60</b><span>days from start to result</span></li>
+        <li><b>2</b><span>marketplaces selling</span></li>
+        <li><b>0</b><span>online orders before</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 02 The challenge -->
+  <section class="csx-sec tint" aria-labelledby="ss-challenge">
+    <div class="wrap">
+      <div class="csx-head">
+        <p class="csx-kicker">The challenge</p>
+        <h2 id="ss-challenge">Present online. Not selling online.</h2>
+        <p>A big sweets brand with an online footprint that wasn't turning into orders.</p>
+      </div>
+      <ul class="csx-cards">
+        <li class="csx-card"><span class="ico"><svg aria-hidden="true"><use href="#ci-search"/></svg></span><h3>Small online presence</h3><p>The brand was online, but only just.</p></li>
+        <li class="csx-card"><span class="ico"><svg aria-hidden="true"><use href="#ci-box"/></svg></span><h3>Zero online orders</h3><p>Monthly online orders were at zero.</p></li>
+        <li class="csx-card"><span class="ico"><svg aria-hidden="true"><use href="#ci-cart"/></svg></span><h3>Listings not selling</h3><p>Products sat on the marketplaces without turning visits into orders.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 03 What I did (titles from the project; details to confirm) -->
+  <section class="csx-sec" aria-labelledby="ss-did">
+    <div class="wrap">
+      <div class="csx-head">
+        <p class="csx-kicker">What I did</p>
+        <h2 id="ss-did">Two marketplaces, turned into sales channels.</h2>
+        <p>Each step targets one problem from the list above.</p>
+      </div>
+      <ol class="csx-steps">
+        <li class="csx-step">
+          <div class="media" data-asset="assets/case-studies/shahi-sweets/step-1-amazon.webp"><span class="ph-fill"><svg aria-hidden="true"><use href="#ci-cart"/></svg><strong>[Execution image 01: Amazon work, e.g. Seller Central or a listing I changed]</strong><code>shahi-sweets/step-1-amazon.webp</code></span></div>
+          <div class="csx-step-top"><span class="csx-step-n">01</span></div>
+          <h3>Amazon growth</h3>
+          <p>Grew the brand's Amazon channel into a source of monthly orders.</p>
+          <p class="why"><b>Why:</b> Amazon is where a lot of online shoppers start their search.</p>
+          <p class="csx-solves"><svg aria-hidden="true"><use href="#ci-check"/></svg>Solves: zero online orders</p>
+        </li>
+        <li class="csx-step">
+          <div class="media" data-asset="assets/case-studies/shahi-sweets/step-2-flipkart.webp"><span class="ph-fill"><svg aria-hidden="true"><use href="#ci-cart"/></svg><strong>[Execution image 02: Flipkart work, e.g. seller dashboard or listing]</strong><code>shahi-sweets/step-2-flipkart.webp</code></span></div>
+          <div class="csx-step-top"><span class="csx-step-n">02</span></div>
+          <h3>Flipkart growth</h3>
+          <p>Grew Flipkart as a second marketplace channel.</p>
+          <p class="why"><b>Why:</b> more reach, and sales don't depend on one platform.</p>
+          <p class="csx-solves"><svg aria-hidden="true"><use href="#ci-check"/></svg>Solves: small online presence</p>
+        </li>
+        <li class="csx-step">
+          <div class="media" data-asset="assets/case-studies/shahi-sweets/step-3-ads.webp"><span class="ph-fill"><svg aria-hidden="true"><use href="#ci-chart"/></svg><strong>[Execution image 03: ads or sales tracking report]</strong><code>shahi-sweets/step-3-ads.webp</code></span></div>
+          <div class="csx-step-top"><span class="csx-step-n">03</span></div>
+          <h3>Ads and tracking</h3>
+          <p>Ran and tuned ads, and tracked what sold.</p>
+          <p class="why"><b>Why:</b> so spend goes to what actually turns into orders.</p>
+          <p class="csx-solves"><svg aria-hidden="true"><use href="#ci-check"/></svg>Solves: zero online orders</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 04 See the work -->
+  <section class="csx-sec tint" aria-labelledby="ss-work">
+    <div class="wrap">
+      <div class="csx-head">
+        <p class="csx-kicker">See the work</p>
+        <h2 id="ss-work">The listings that started selling.</h2>
+        <p>Shahi Sweets on Amazon and Flipkart, as shoppers see it.</p>
+      </div>
+      <div class="csx-work">
+        <figure class="vid">
+          <div class="media" data-asset="assets/case-studies/shahi-sweets/walkthrough.mp4" role="img" aria-label="Video coming soon: marketplace walkthrough">
+            <span class="vid-tag">Marketplace walkthrough</span>
+            <span class="ph-fill"><span class="vid-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></span><strong>[Add marketplace walkthrough video]</strong><code>shahi-sweets/walkthrough.mp4</code></span>
+          </div>
+          <figcaption><b>A tour of the Shahi Sweets listings</b><span>The Amazon and Flipkart pages shoppers buy from, and what changed on them.</span></figcaption>
+        </figure>
+        <div class="csx-gallery">
+          <figure class="csx-shot">
+            <div class="browser">
+              <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>Amazon</span></div>
+              <div class="media" data-asset="assets/case-studies/shahi-sweets/amazon-listing.webp"><span class="ph-fill"><svg aria-hidden="true"><use href="#ci-cart"/></svg><strong>[Add Amazon product listing screenshot]</strong><code>shahi-sweets/amazon-listing.webp</code></span></div>
+            </div>
+            <figcaption><span class="csx-tag">Amazon</span>Product listing</figcaption>
+          </figure>
+          <figure class="csx-shot">
+            <div class="browser">
+              <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>Flipkart</span></div>
+              <div class="media" data-asset="assets/case-studies/shahi-sweets/flipkart-listing.webp"><span class="ph-fill"><svg aria-hidden="true"><use href="#ci-cart"/></svg><strong>[Add Flipkart product listing screenshot]</strong><code>shahi-sweets/flipkart-listing.webp</code></span></div>
+            </div>
+            <figcaption><span class="csx-tag">Flipkart</span>Product listing</figcaption>
+          </figure>
+          <figure class="csx-shot full">
+            <div class="media" style="--ar:21/9" data-asset="assets/case-studies/shahi-sweets/before-after.webp"><span class="ph-fill"><svg aria-hidden="true"><use href="#ci-img"/></svg><strong>[Add before / after listing screenshot, if available]</strong><code>shahi-sweets/before-after.webp</code></span></div>
+            <figcaption><span class="csx-tag before">Before</span><span class="csx-tag">After</span>A listing, before and after my changes</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 The results + founder -->
+  <section class="csx-sec" aria-labelledby="ss-results">
+    <div class="wrap">
+      <div class="csx-head">
+        <p class="csx-kicker">The results</p>
+        <h2 id="ss-results">0 to 148 online orders a month, in 60 days.</h2>
+      </div>
+      <div class="csx-res">
+        <div class="csx-big">
+          <p class="csx-big-num">148</p>
+          <p class="csx-big-lab">online orders a month</p>
+          <p class="hand">orders, not revenue</p>
+          <div class="csx-bars" role="img" aria-label="Monthly online orders: 0 before, 148 within 60 days">
+            <div class="cc-row before"><span class="cc-lab">Before</span><span class="cc-track"><span class="cc-bar" style="--w:0%"></span></span><b class="cc-val">0</b></div>
+            <div class="cc-row"><span class="cc-lab">By day 60</span><span class="cc-track"><span class="cc-bar" style="--w:100%"></span></span><b class="cc-val">148</b></div>
+          </div>
+          <dl class="csx-defs">
+            <div><dt>What counts</dt><dd>Orders on Amazon and Flipkart, added together.</dd></div>
+            <div><dt>Time frame</dt><dd>A monthly order count, reached within 60 days.</dd></div>
+            <div><dt>Not shown</dt><dd>Revenue, and the split between channels.</dd></div>
+          </dl>
+        </div>
+        <figure class="csx-shot csx-proof">
+          <div class="media" data-asset="assets/case-studies/shahi-sweets/orders-report.webp"><span class="ph-fill"><svg aria-hidden="true"><use href="#ci-chart"/></svg><strong>[Add verified order report: Amazon + Flipkart]</strong><code>shahi-sweets/orders-report.webp</code></span></div>
+          <figcaption>Order report · the proof behind the 148</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 Next case study + book a call -->
+  <section class="csx-sec csx-nextsec" aria-label="Next case study">
+    <div class="wrap">
+      <a class="csx-next" href="#dawnbreaker">
+        <span class="csx-next-thumb"><img src="assets/logo-dawnbreaker.png" alt="" width="508" height="70"></span>
+        <span class="csx-next-body">
+          <span class="csx-kicker">Next case study · 01 of 03</span>
+          <span class="csx-next-name">Dawnbreaker Oats</span>
+          <span class="csx-next-line">From “nice product, sketchy website” to a store customers trust.</span>
+          <span class="cc-cta">View case study<span class="cc-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span></span>
+        </span>
+      </a>
+      <a class="back" href="#case-studies"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H6M11 6l-6 6 6 6"/></svg>All case studies</a>
+    </div>
+  </section>
+  <section class="band book csx-book">
     <div class="wrap">
       <div class="book-copy">
-        <p class="hand">your brand next?</p>
-        <h2>Let's write your story in my notebook.</h2>
-        <p>Every brand starts in a different place. On our call, I'll tell you what's realistic for yours.</p>
-        <div class="cta-row"><a class="btn light" href="https://calendly.com/works-sushant/schedule-your-cro-consultation-now" target="_blank" rel="noopener">Let's hit your $10K mark</a></div>
+        <h2>Have a similar challenge in your business?</h2>
+        <p>Let's identify what's holding your online sales back and find the right opportunities to grow.</p>
+        <div class="cta-row"><a class="btn light" href="https://calendly.com/works-sushant/schedule-your-cro-consultation-now" target="_blank" rel="noopener">Book a call<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a><span class="cta-note">A 30-minute call. I'll tell you straight if I can help.</span></div>
       </div>
     </div>
   </section>
