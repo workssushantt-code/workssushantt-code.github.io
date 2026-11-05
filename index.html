@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <style>[hidden]:not([hidden=until-found i]){display:none!important}img{max-width:100%}</style>
 <title>Sushant Food Brand Growth</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <meta name="description" content="Sushant helps food and drink brands in the US and UK grow online sales on Amazon, eBay and Shopify.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -409,11 +412,13 @@ body[data-view="case-studies"] .float-nav .navlink{color:var(--leaf);text-decora
 @media (max-width:700px){.hero h1 .l{white-space:normal}}
 /* Phones: smaller kicker and subheading, a bigger, tighter headline (800 is the font's heaviest weight) */
 @media (max-width:480px){
-  .hero h1{font-size:1.95rem;line-height:1.06;letter-spacing:-.035em}
+  .hero h1{font-size:2.35rem;line-height:1.06;letter-spacing:-.035em}
   .kicker{font-size:.62rem;letter-spacing:.09em}
   .hero .lead{font-size:.94rem;line-height:1.55}
 }
-@media (max-width:374px){.hero h1{font-size:1.82rem}}  /* small phones: keep the headline on 3 lines */
+/* Smaller phones step down so "by $10K" never ends up alone on a line */
+@media (max-width:374px){.hero h1{font-size:2.2rem}}
+@media (max-width:359px){.hero h1{font-size:2rem}}
 .hero .lead{max-width:none;text-wrap:balance}
 .hero .lead .l{display:block}
 @media (max-width:860px){.hero .lead{max-width:36rem}.hero .lead .l{display:inline}}
@@ -886,6 +891,7 @@ body[data-view="case-studies"] .float-nav .navlink{color:var(--leaf);text-decora
 /* Overview + polaroids from the start of the project */
 .csx-ov{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(36px,6vw,80px);align-items:center}
 @media (max-width:900px){.csx-ov{grid-template-columns:minmax(0,1fr)}}
+.csx-ov:not(:has(.bts-start)){grid-template-columns:minmax(0,1fr)}
 .csx-ov-copy{display:grid;gap:16px;min-width:0;max-width:38rem}
 .csx-ov-copy h2{font-weight:800;letter-spacing:-.03em}
 .csx-ov-copy > p:not(.csx-kicker){font-size:clamp(1.04rem,1.4vw,1.15rem);line-height:1.6}
@@ -1090,7 +1096,7 @@ body[data-view="case-studies"] .float-nav .navlink{color:var(--leaf);text-decora
     </div>
     </div>
     <div class="wrap">
-      <figure class="vsl" id="video" aria-label="Video placeholder: how the 60 days work">
+      <figure class="vsl" id="video" aria-label="Video placeholder: how the 60 days work" hidden>
         <div class="vsl-frame">
           <span class="ph-chip vsl-chip">Video coming soon</span>
           <span class="vsl-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></span>
@@ -1420,7 +1426,7 @@ body[data-view="case-studies"] .float-nav .navlink{color:var(--leaf);text-decora
         <details><summary>What do I need to give you?<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p class="ans">Access to your store and ad accounts, your product details, and quick replies when I have a question.</p></details>
         <details><summary>How much of the work do you do?<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p class="ans">Almost all of it. You approve the big calls. I do the work.</p></details>
         <details><summary>Why only one brand per country?<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p class="ans">So I never work for your competitor while I work for you.</p></details>
-        <details><summary>What happens after 60 days?<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p class="ans"><span class="ph-chip">Placeholder</span> Answer to be confirmed: a monthly plan, a renewal, or a hand-over.</p></details>
+        <details hidden><summary>What happens after 60 days?<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p class="ans"><span class="ph-chip">Placeholder</span> Answer to be confirmed: a monthly plan, a renewal, or a hand-over.</p></details>
       </div>
     </div>
   </section>
@@ -1586,13 +1592,13 @@ body[data-view="case-studies"] .float-nav .navlink{color:var(--leaf);text-decora
       <li><a href="#db-problem">The problem</a></li>
       <li><a href="#db-goal">The goal</a></li>
       <li><a href="#db-fix">How I fixed it</a></li>
-      <li><a href="#db-work">The work</a></li>
+      <li hidden><a href="#db-work">The work</a></li>
       <li><a href="#db-results">The results</a></li>
-      <li><a href="#db-bts">Behind the scenes</a></li>
+      <li hidden><a href="#db-bts">Behind the scenes</a></li>
     </ul></div>
   </nav>
 
-  <!-- Overview: the brand, my role, and behind-the-scenes photos from the start -->
+  <!-- Overview: the brand and my role -->
   <section class="csx-sec" id="db-overview" aria-labelledby="db-overview-h">
     <div class="wrap csx-ov">
       <div class="csx-ov-copy">
@@ -1608,12 +1614,6 @@ body[data-view="case-studies"] .float-nav .navlink{color:var(--leaf);text-decora
             <li><svg aria-hidden="true"><use href="#ci-check"/></svg>Made buying a second time easy</li>
           </ul>
         </div>
-      </div>
-      <div class="bts-start" aria-label="Behind the scenes: the start">
-        <p class="hand bts-note">where it started <svg viewBox="0 0 60 40" aria-hidden="true"><path d="M4 8c18-6 38 0 46 22M50 30l-9-3M50 30l2-10"/></svg></p>
-        <figure class="bts-pol p1"><span class="tape" aria-hidden="true"></span><div class="media" data-asset="assets/case-studies/dawnbreaker/bts-start-1.webp"><span class="bts-ph"><svg aria-hidden="true"><use href="#ci-camera"/></svg><b>Add your photo</b><code>dawnbreaker/bts-start-1.webp</code></span></div><figcaption class="hand">Day 1: first walk through the store</figcaption></figure>
-        <figure class="bts-pol p2"><span class="tape" aria-hidden="true"></span><div class="media" data-asset="assets/case-studies/dawnbreaker/bts-start-2.webp"><span class="bts-ph"><svg aria-hidden="true"><use href="#ci-camera"/></svg><b>Add your photo</b><code>dawnbreaker/bts-start-2.webp</code></span></div><figcaption class="hand">Mapping where shoppers drop off</figcaption></figure>
-        <figure class="bts-pol p3"><span class="tape" aria-hidden="true"></span><div class="media" data-asset="assets/case-studies/dawnbreaker/bts-start-3.webp"><span class="bts-ph"><svg aria-hidden="true"><use href="#ci-camera"/></svg><b>Add your photo</b><code>dawnbreaker/bts-start-3.webp</code></span></div><figcaption class="hand">The fix list, biggest leak first</figcaption></figure>
       </div>
     </div>
   </section>
@@ -1657,7 +1657,7 @@ body[data-view="case-studies"] .float-nav .navlink{color:var(--leaf);text-decora
         </ul></div>
         <div class="csx-goal"><p class="csx-goal-h"><span class="ico"><svg aria-hidden="true"><use href="#ci-user"/></svg></span>For the shopper</p><ul>
           <li><svg aria-hidden="true"><use href="#ci-check"/></svg>Feel safe buying from a brand they just found.</li>
-          <li><svg aria-hidden="true"><use href="#ci-check"/></svg>Reorder a favourite flavour without any hassle.</li>
+          <li><svg aria-hidden="true"><use href="#ci-check"/></svg>Reorder a favorite flavor without any hassle.</li>
         </ul></div>
       </div>
     </div>
@@ -1707,7 +1707,7 @@ body[data-view="case-studies"] .float-nav .navlink{color:var(--leaf);text-decora
   </section>
 
   <!-- The work: video + screenshots -->
-  <section class="csx-sec" id="db-work" aria-labelledby="db-work-h">
+  <section class="csx-sec" id="db-work" aria-labelledby="db-work-h" hidden>
     <div class="wrap">
       <div class="csx-head">
         <p class="csx-kicker">The work</p>
@@ -1757,7 +1757,7 @@ body[data-view="case-studies"] .float-nav .navlink{color:var(--leaf);text-decora
   </section>
 
   <!-- Behind the scenes: a plain photo collage, no captions -->
-  <section class="csx-sec bts-end" id="db-bts" aria-labelledby="db-bts-h">
+  <section class="csx-sec bts-end" id="db-bts" aria-labelledby="db-bts-h" hidden>
     <div class="wrap">
       <div class="csx-head">
         <p class="csx-kicker">Behind the scenes</p>
@@ -1845,7 +1845,7 @@ body[data-view="case-studies"] .float-nav .navlink{color:var(--leaf);text-decora
       <li><a href="#bb-problem">The problem</a></li>
       <li><a href="#bb-goal">The goal</a></li>
       <li><a href="#bb-fix">How I fixed it</a></li>
-      <li><a href="#bb-work">The work</a></li>
+      <li hidden><a href="#bb-work">The work</a></li>
       <li><a href="#bb-results">The results</a></li>
       <li><a href="#bb-bts">Behind the scenes</a></li>
     </ul></div>
@@ -1916,7 +1916,7 @@ body[data-view="case-studies"] .float-nav .navlink{color:var(--leaf);text-decora
         </ul></div>
         <div class="csx-goal"><p class="csx-goal-h"><span class="ico"><svg aria-hidden="true"><use href="#ci-user"/></svg></span>For the shopper</p><ul>
           <li><svg aria-hidden="true"><use href="#ci-check"/></svg>Find Best Bites wherever they already shop online.</li>
-          <li><svg aria-hidden="true"><use href="#ci-check"/></svg>Order a favourite namkeen in a few taps.</li>
+          <li><svg aria-hidden="true"><use href="#ci-check"/></svg>Order a favorite namkeen in a few taps.</li>
         </ul></div>
       </div>
     </div>
@@ -1979,7 +1979,7 @@ body[data-view="case-studies"] .float-nav .navlink{color:var(--leaf);text-decora
   </section>
 
   <!-- The work: video + screenshots -->
-  <section class="csx-sec" id="bb-work" aria-labelledby="bb-work-h">
+  <section class="csx-sec" id="bb-work" aria-labelledby="bb-work-h" hidden>
     <div class="wrap">
       <div class="csx-head">
         <p class="csx-kicker">The work</p>
@@ -2148,13 +2148,13 @@ body[data-view="case-studies"] .float-nav .navlink{color:var(--leaf);text-decora
       <li><a href="#ss-problem">The problem</a></li>
       <li><a href="#ss-goal">The goal</a></li>
       <li><a href="#ss-fix">How I fixed it</a></li>
-      <li><a href="#ss-work">The work</a></li>
+      <li hidden><a href="#ss-work">The work</a></li>
       <li><a href="#ss-results">The results</a></li>
       <li><a href="#ss-bts">Behind the scenes</a></li>
     </ul></div>
   </nav>
 
-  <!-- Overview: the brand, my role, and behind-the-scenes photos from the start -->
+  <!-- Overview: the brand and my role -->
   <section class="csx-sec" id="ss-overview" aria-labelledby="ss-overview-h">
     <div class="wrap csx-ov">
       <div class="csx-ov-copy">
@@ -2170,12 +2170,6 @@ body[data-view="case-studies"] .float-nav .navlink{color:var(--leaf);text-decora
             <li><svg aria-hidden="true"><use href="#ci-check"/></svg>Ran and tuned the ads, and tracked what sold</li>
           </ul>
         </div>
-      </div>
-      <div class="bts-start" aria-label="Behind the scenes: the start">
-        <p class="hand bts-note">where it started <svg viewBox="0 0 60 40" aria-hidden="true"><path d="M4 8c18-6 38 0 46 22M50 30l-9-3M50 30l2-10"/></svg></p>
-        <figure class="bts-pol p1"><span class="tape" aria-hidden="true"></span><div class="media" data-asset="assets/case-studies/shahi-sweets/bts-start-1.webp"><span class="bts-ph"><svg aria-hidden="true"><use href="#ci-camera"/></svg><b>Add your photo</b><code>shahi-sweets/bts-start-1.webp</code></span></div><figcaption class="hand">Day 1: first look at the listings</figcaption></figure>
-        <figure class="bts-pol p2"><span class="tape" aria-hidden="true"></span><div class="media" data-asset="assets/case-studies/shahi-sweets/bts-start-2.webp"><span class="bts-ph"><svg aria-hidden="true"><use href="#ci-camera"/></svg><b>Add your photo</b><code>shahi-sweets/bts-start-2.webp</code></span></div><figcaption class="hand">Mapping what to fix first</figcaption></figure>
-        <figure class="bts-pol p3"><span class="tape" aria-hidden="true"></span><div class="media" data-asset="assets/case-studies/shahi-sweets/bts-start-3.webp"><span class="bts-ph"><svg aria-hidden="true"><use href="#ci-camera"/></svg><b>Add your photo</b><code>shahi-sweets/bts-start-3.webp</code></span></div><figcaption class="hand">Setting up the tracking</figcaption></figure>
       </div>
     </div>
   </section>
@@ -2252,7 +2246,7 @@ body[data-view="case-studies"] .float-nav .navlink{color:var(--leaf);text-decora
   </section>
 
   <!-- The work: video + screenshots -->
-  <section class="csx-sec" id="ss-work" aria-labelledby="ss-work-h">
+  <section class="csx-sec" id="ss-work" aria-labelledby="ss-work-h" hidden>
     <div class="wrap">
       <div class="csx-head">
         <p class="csx-kicker">The work</p>
@@ -2313,11 +2307,37 @@ body[data-view="case-studies"] .float-nav .navlink{color:var(--leaf);text-decora
         <p class="csx-kicker">Behind the scenes</p>
         <h2 id="ss-bts-h">Behind the scenes.</h2>
       </div>
-      <div class="bts-collage">
-        <div class="media" data-asset="assets/case-studies/shahi-sweets/bts-end-1.webp"><span class="bts-ph"><svg aria-hidden="true"><use href="#ci-camera"/></svg><b>Add your photo</b><code>shahi-sweets/bts-end-1.webp</code></span></div>
-        <div class="media" data-asset="assets/case-studies/shahi-sweets/bts-end-2.webp"><span class="bts-ph"><svg aria-hidden="true"><use href="#ci-camera"/></svg><b>Add your photo</b><code>shahi-sweets/bts-end-2.webp</code></span></div>
-        <div class="media" data-asset="assets/case-studies/shahi-sweets/bts-end-3.webp"><span class="bts-ph"><svg aria-hidden="true"><use href="#ci-camera"/></svg><b>Add your photo</b><code>shahi-sweets/bts-end-3.webp</code></span></div>
-        <div class="media" data-asset="assets/case-studies/shahi-sweets/bts-end-4.webp"><span class="bts-ph"><svg aria-hidden="true"><use href="#ci-camera"/></svg><b>Add your photo</b><code>shahi-sweets/bts-end-4.webp</code></span></div>
+      <div class="bx" role="group" aria-label="Behind-the-scenes photos from Sushant’s work, featuring Vadik">
+        <figure class="bx-it bx-ph" style="--x:5;--y:15;--w:19;--r:-2deg;--mx:2;--my:12;--mw:47;--mr:-2deg;--z:4"><div class="bx-paper" style="clip-path:polygon(0.0% 0.0%,6.3% 0.6%,12.5% 0.2%,18.8% 0.1%,25.0% 2.1%,31.3% 0.1%,37.5% 2.1%,43.8% 1.8%,50.0% 0.1%,56.3% 0.7%,62.5% 0.9%,68.8% 2.2%,75.0% 2.5%,81.3% 2.3%,87.5% 1.0%,93.8% 0.2%,100.0% 0.0%,100.0% 6.3%,100.0% 12.5%,100.0% 18.8%,100.0% 25.0%,100.0% 31.3%,100.0% 37.5%,100.0% 43.8%,100.0% 50.0%,100.0% 56.3%,100.0% 62.5%,100.0% 68.8%,100.0% 75.0%,100.0% 81.3%,100.0% 87.5%,100.0% 93.8%,100.0% 100.0%,93.8% 100.0%,87.5% 100.0%,81.3% 100.0%,75.0% 100.0%,68.8% 100.0%,62.5% 100.0%,56.3% 100.0%,50.0% 100.0%,43.8% 100.0%,37.5% 100.0%,31.3% 100.0%,25.0% 100.0%,18.8% 100.0%,12.5% 100.0%,6.3% 100.0%,0.0% 100.0%,2.5% 93.8%,1.2% 87.5%,2.0% 81.3%,1.7% 75.0%,0.4% 68.8%,2.5% 62.5%,2.6% 56.3%,0.5% 50.0%,1.2% 43.8%,1.7% 37.5%,2.5% 31.3%,1.5% 25.0%,1.0% 18.8%,1.5% 12.5%,0.7% 6.3%)"><div class="bx-pic retro" style="--ar:3/4"><img src="assets/case-studies/best-bites/bts-horse-gwalior.webp" alt="Sushant riding a horse in Gwalior" loading="lazy"></div></div></figure>
+        <figure class="bx-it bx-ph" style="--x:22;--y:11;--w:21;--r:1.5deg;--mx:47;--my:10;--mw:50;--mr:2deg;--z:6"><div class="bx-paper" style="clip-path:polygon(0.0% 0.0%,6.3% 0.7%,12.5% 1.9%,18.8% 2.2%,25.0% 0.2%,31.3% 1.8%,37.5% 0.1%,43.8% 1.9%,50.0% 1.2%,56.3% 2.2%,62.5% 2.0%,68.8% 0.1%,75.0% 2.0%,81.3% 1.9%,87.5% 0.1%,93.8% 1.8%,100.0% 0.0%,99.4% 6.3%,98.6% 12.5%,97.7% 18.8%,98.1% 25.0%,99.1% 31.3%,98.0% 37.5%,97.6% 43.8%,97.7% 50.0%,97.5% 56.3%,98.8% 62.5%,99.9% 68.8%,98.0% 75.0%,98.0% 81.3%,99.4% 87.5%,98.5% 93.8%,100.0% 100.0%,93.8% 100.0%,87.5% 100.0%,81.3% 100.0%,75.0% 100.0%,68.8% 100.0%,62.5% 100.0%,56.3% 100.0%,50.0% 100.0%,43.8% 100.0%,37.5% 100.0%,31.3% 100.0%,25.0% 100.0%,18.8% 100.0%,12.5% 100.0%,6.3% 100.0%,0.0% 100.0%,0.0% 93.8%,0.0% 87.5%,0.0% 81.3%,0.0% 75.0%,0.0% 68.8%,0.0% 62.5%,0.0% 56.3%,0.0% 50.0%,0.0% 43.8%,0.0% 37.5%,0.0% 31.3%,0.0% 25.0%,0.0% 18.8%,0.0% 12.5%,0.0% 6.3%)"><div class="bx-pic real" style="--ar:2/3"><img src="assets/case-studies/best-bites/bts-horse-riding.webp" alt="Sushant horse riding" loading="lazy"></div></div></figure>
+        <figure class="bx-it bx-ph" style="--x:41;--y:13;--w:34;--r:1.5deg;--mx:3;--my:72;--mw:60;--mr:1.5deg;--z:3"><div class="bx-paper" style="clip-path:polygon(0.0% 0.0%,6.3% 0.0%,12.5% 0.0%,18.8% 0.0%,25.0% 0.0%,31.3% 0.0%,37.5% 0.0%,43.8% 0.0%,50.0% 0.0%,56.3% 0.0%,62.5% 0.0%,68.8% 0.0%,75.0% 0.0%,81.3% 0.0%,87.5% 0.0%,93.8% 0.0%,100.0% 0.0%,99.3% 6.3%,99.1% 12.5%,98.4% 18.8%,99.1% 25.0%,99.0% 31.3%,99.3% 37.5%,98.1% 43.8%,97.7% 50.0%,99.0% 56.3%,99.6% 62.5%,99.4% 68.8%,98.6% 75.0%,98.5% 81.3%,98.1% 87.5%,99.3% 93.8%,100.0% 100.0%,93.8% 98.7%,87.5% 98.4%,81.3% 97.4%,75.0% 97.9%,68.8% 98.6%,62.5% 98.4%,56.3% 97.7%,50.0% 98.5%,43.8% 98.8%,37.5% 99.2%,31.3% 99.6%,25.0% 97.5%,18.8% 99.7%,12.5% 97.7%,6.3% 97.6%,0.0% 100.0%,0.0% 93.8%,0.0% 87.5%,0.0% 81.3%,0.0% 75.0%,0.0% 68.8%,0.0% 62.5%,0.0% 56.3%,0.0% 50.0%,0.0% 43.8%,0.0% 37.5%,0.0% 31.3%,0.0% 25.0%,0.0% 18.8%,0.0% 12.5%,0.0% 6.3%)"><div class="bx-pic retro" style="--ar:4/3"><img src="assets/case-studies/best-bites/bts-office.webp" alt="Sushant at the office, in front of the planning whiteboard" loading="lazy"></div></div></figure>
+        <figure class="bx-it bx-ph" style="--x:4;--y:40;--w:19;--r:-2.5deg;--mx:58;--my:82;--mw:40;--mr:-2deg;--z:5"><div class="bx-paper" style="clip-path:polygon(0.0% 0.0%,6.3% 0.0%,12.5% 0.0%,18.8% 0.0%,25.0% 0.0%,31.3% 0.0%,37.5% 0.0%,43.8% 0.0%,50.0% 0.0%,56.3% 0.0%,62.5% 0.0%,68.8% 0.0%,75.0% 0.0%,81.3% 0.0%,87.5% 0.0%,93.8% 0.0%,100.0% 0.0%,100.0% 6.3%,100.0% 12.5%,100.0% 18.8%,100.0% 25.0%,100.0% 31.3%,100.0% 37.5%,100.0% 43.8%,100.0% 50.0%,100.0% 56.3%,100.0% 62.5%,100.0% 68.8%,100.0% 75.0%,100.0% 81.3%,100.0% 87.5%,100.0% 93.8%,100.0% 100.0%,93.8% 99.3%,87.5% 97.4%,81.3% 98.9%,75.0% 98.5%,68.8% 99.9%,62.5% 98.7%,56.3% 98.0%,50.0% 99.3%,43.8% 97.5%,37.5% 98.5%,31.3% 99.0%,25.0% 99.1%,18.8% 98.9%,12.5% 99.0%,6.3% 97.7%,0.0% 100.0%,0.0% 93.8%,0.0% 87.5%,0.0% 81.3%,0.0% 75.0%,0.0% 68.8%,0.0% 62.5%,0.0% 56.3%,0.0% 50.0%,0.0% 43.8%,0.0% 37.5%,0.0% 31.3%,0.0% 25.0%,0.0% 18.8%,0.0% 12.5%,0.0% 6.3%)"><div class="bx-pic retro" style="--ar:3/4"><img src="assets/case-studies/best-bites/bts-tt-closeup.webp" alt="Close-up of a table tennis bat beside the energy drink cans" loading="lazy"></div></div></figure>
+        <figure class="bx-it bx-ph" style="--x:21;--y:42;--w:28;--r:-1.5deg;--mx:2;--my:114;--mw:56;--mr:-1.5deg;--z:7"><div class="bx-paper" style="clip-path:polygon(0.0% 0.0%,6.3% 0.7%,12.5% 1.6%,18.8% 0.6%,25.0% 2.2%,31.3% 1.8%,37.5% 1.9%,43.8% 2.0%,50.0% 1.8%,56.3% 1.4%,62.5% 2.5%,68.8% 1.5%,75.0% 0.4%,81.3% 0.6%,87.5% 0.1%,93.8% 1.2%,100.0% 0.0%,100.0% 6.3%,100.0% 12.5%,100.0% 18.8%,100.0% 25.0%,100.0% 31.3%,100.0% 37.5%,100.0% 43.8%,100.0% 50.0%,100.0% 56.3%,100.0% 62.5%,100.0% 68.8%,100.0% 75.0%,100.0% 81.3%,100.0% 87.5%,100.0% 93.8%,100.0% 100.0%,93.8% 100.0%,87.5% 98.1%,81.3% 99.5%,75.0% 100.0%,68.8% 97.5%,62.5% 99.2%,56.3% 98.1%,50.0% 97.5%,43.8% 98.8%,37.5% 97.6%,31.3% 99.1%,25.0% 99.1%,18.8% 97.7%,12.5% 99.4%,6.3% 98.6%,0.0% 100.0%,0.0% 93.8%,0.0% 87.5%,0.0% 81.3%,0.0% 75.0%,0.0% 68.8%,0.0% 62.5%,0.0% 56.3%,0.0% 50.0%,0.0% 43.8%,0.0% 37.5%,0.0% 31.3%,0.0% 25.0%,0.0% 18.8%,0.0% 12.5%,0.0% 6.3%)"><div class="bx-pic real" style="--ar:4/3"><img src="assets/case-studies/best-bites/bts-tt-cans.webp" alt="Table tennis bats and a row of energy drink cans on the planning table" loading="lazy"></div></div></figure>
+        <figure class="bx-it bx-ph" style="--x:47;--y:35;--w:22;--r:2deg;--mx:52;--my:132;--mw:46;--mr:2deg;--z:8"><div class="bx-paper" style="clip-path:polygon(0.0% 0.0%,6.3% 0.0%,12.5% 0.0%,18.8% 0.0%,25.0% 0.0%,31.3% 0.0%,37.5% 0.0%,43.8% 0.0%,50.0% 0.0%,56.3% 0.0%,62.5% 0.0%,68.8% 0.0%,75.0% 0.0%,81.3% 0.0%,87.5% 0.0%,93.8% 0.0%,100.0% 0.0%,100.0% 6.3%,100.0% 12.5%,100.0% 18.8%,100.0% 25.0%,100.0% 31.3%,100.0% 37.5%,100.0% 43.8%,100.0% 50.0%,100.0% 56.3%,100.0% 62.5%,100.0% 68.8%,100.0% 75.0%,100.0% 81.3%,100.0% 87.5%,100.0% 93.8%,100.0% 100.0%,93.8% 100.0%,87.5% 100.0%,81.3% 100.0%,75.0% 100.0%,68.8% 100.0%,62.5% 100.0%,56.3% 100.0%,50.0% 100.0%,43.8% 100.0%,37.5% 100.0%,31.3% 100.0%,25.0% 100.0%,18.8% 100.0%,12.5% 100.0%,6.3% 100.0%,0.0% 100.0%,0.7% 93.8%,0.7% 87.5%,0.0% 81.3%,0.3% 75.0%,1.0% 68.8%,2.5% 62.5%,2.1% 56.3%,0.3% 50.0%,0.2% 43.8%,1.0% 37.5%,1.9% 31.3%,2.4% 25.0%,0.2% 18.8%,1.8% 12.5%,0.2% 6.3%)"><div class="bx-pic real" style="--ar:3/4"><img src="assets/case-studies/best-bites/bts-products-flatlay.webp" alt="Product packs laid out on the office table" loading="lazy"></div></div></figure>
+        <figure class="bx-it bx-ph" style="--x:67;--y:36;--w:28;--r:-2deg;--mx:3;--my:154;--mw:52;--mr:-2deg;--z:7"><div class="bx-paper" style="clip-path:polygon(0.0% 0.0%,6.3% 0.7%,12.5% 2.3%,18.8% 2.1%,25.0% 1.0%,31.3% 0.1%,37.5% 0.5%,43.8% 2.1%,50.0% 1.3%,56.3% 1.7%,62.5% 2.0%,68.8% 2.4%,75.0% 1.9%,81.3% 2.4%,87.5% 1.0%,93.8% 1.8%,100.0% 0.0%,98.6% 6.3%,97.7% 12.5%,98.9% 18.8%,99.5% 25.0%,99.0% 31.3%,97.5% 37.5%,98.4% 43.8%,99.1% 50.0%,98.7% 56.3%,98.5% 62.5%,98.7% 68.8%,98.1% 75.0%,98.4% 81.3%,98.5% 87.5%,99.5% 93.8%,100.0% 100.0%,93.8% 100.0%,87.5% 100.0%,81.3% 100.0%,75.0% 100.0%,68.8% 100.0%,62.5% 100.0%,56.3% 100.0%,50.0% 100.0%,43.8% 100.0%,37.5% 100.0%,31.3% 100.0%,25.0% 100.0%,18.8% 100.0%,12.5% 100.0%,6.3% 100.0%,0.0% 100.0%,0.0% 93.8%,0.0% 87.5%,0.0% 81.3%,0.0% 75.0%,0.0% 68.8%,0.0% 62.5%,0.0% 56.3%,0.0% 50.0%,0.0% 43.8%,0.0% 37.5%,0.0% 31.3%,0.0% 25.0%,0.0% 18.8%,0.0% 12.5%,0.0% 6.3%)"><div class="bx-pic retro" style="--ar:4/3"><img src="assets/case-studies/best-bites/bts-tt-wide.webp" alt="The planning table with energy drink cans, wide shot" loading="lazy"></div></div></figure>
+        <figure class="bx-it bx-ph" style="--x:74;--y:8;--w:17;--r:3deg;--mx:54;--my:176;--mw:38;--mr:3deg;--z:9"><div class="bx-paper" style="clip-path:polygon(0.0% 0.0%,6.3% 0.7%,12.5% 1.4%,18.8% 1.6%,25.0% 1.6%,31.3% 1.8%,37.5% 1.1%,43.8% 2.1%,50.0% 2.4%,56.3% 0.5%,62.5% 0.5%,68.8% 0.2%,75.0% 1.4%,81.3% 2.0%,87.5% 0.1%,93.8% 0.7%,100.0% 0.0%,97.9% 6.3%,97.5% 12.5%,98.6% 18.8%,99.3% 25.0%,98.5% 31.3%,97.9% 37.5%,98.5% 43.8%,100.0% 50.0%,97.4% 56.3%,98.9% 62.5%,98.4% 68.8%,97.6% 75.0%,97.5% 81.3%,99.4% 87.5%,98.7% 93.8%,100.0% 100.0%,93.8% 100.0%,87.5% 100.0%,81.3% 100.0%,75.0% 100.0%,68.8% 100.0%,62.5% 100.0%,56.3% 100.0%,50.0% 100.0%,43.8% 100.0%,37.5% 100.0%,31.3% 100.0%,25.0% 100.0%,18.8% 100.0%,12.5% 100.0%,6.3% 100.0%,0.0% 100.0%,0.0% 93.8%,0.0% 87.5%,0.0% 81.3%,0.0% 75.0%,0.0% 68.8%,0.0% 62.5%,0.0% 56.3%,0.0% 50.0%,0.0% 43.8%,0.0% 37.5%,0.0% 31.3%,0.0% 25.0%,0.0% 18.8%,0.0% 12.5%,0.0% 6.3%)"><div class="bx-pic real" style="--ar:2/3"><img src="assets/case-studies/best-bites/bts-with-vadik.webp" alt="Sushant and Vadik, mirror selfie" loading="lazy"></div></div></figure>
+        <span class="bx-it bx-clip" style="--x:62;--y:32.5;--w:5;--r:84deg;--mx:86;--my:128;--mw:9;--mr:84deg;--z:10"><svg viewBox="0 0 124 40" aria-hidden="true"><path d="M40 20 H 96 A 6 6 0 0 0 96 8 H 14 A 12 12 0 0 0 14 32 H 104 A 10 10 0 0 0 104 12 H 30" fill="none" stroke="#D9A520" stroke-width="3.6" stroke-linecap="round"/><path d="M40 20 H 96 A 6 6 0 0 0 96 8 H 14 A 12 12 0 0 0 14 32 H 104 A 10 10 0 0 0 104 12 H 30" fill="none" stroke="#FFFFFF" stroke-opacity=".45" stroke-width="1" stroke-linecap="round" transform="translate(-.6 -.8)"/></svg></span>
+        <span class="bx-it bx-stamp" style="--x:0.5;--y:1;--w:10;--r:-10deg;--mx:78;--my:-1.5;--mw:19;--mr:-10deg;--z:11"><svg viewBox="0 0 124 124" aria-hidden="true"><defs><path id="arcs3" d="M 20 62 A 42 42 0 0 1 104 62"/><path id="arcbs3" d="M 24 66 A 38 38 0 0 0 100 66"/></defs>
+  <g class="bx-worn">
+  <circle cx="62" cy="62" r="56" fill="none" stroke="#2747A6" stroke-width="3"/><circle cx="62" cy="62" r="34" fill="none" stroke="#2747A6" stroke-width="2"/>
+  <text font-family="DM Mono, monospace" font-size="9" font-weight="500" letter-spacing="1" fill="#2747A6"><textPath href="#arcs3" startOffset="50%" text-anchor="middle">SHAHI SWEETS</textPath></text>
+  <text font-family="DM Mono, monospace" font-size="8.5" letter-spacing="1" fill="#2747A6"><textPath href="#arcbs3" startOffset="50%" text-anchor="middle">MARKETPLACES</textPath></text>
+  <text x="62" y="60" text-anchor="middle" font-family="DM Mono, monospace" font-size="13" font-weight="500" fill="#2747A6">60 DAYS</text>
+  <text x="62" y="76" text-anchor="middle" font-family="DM Mono, monospace" font-size="10" fill="#2747A6">ONLINE</text></g></svg></span>
+        <span class="bx-it bx-stamp" style="--x:78;--y:55;--w:17;--r:8deg;--mx:4;--my:199;--mw:30;--mr:8deg;--z:11"><svg viewBox="0 0 200 124" aria-hidden="true"><defs><path id="arcs4" d="M 20 62 A 42 42 0 0 1 104 62"/><path id="arcbs4" d="M 24 66 A 38 38 0 0 0 100 66"/></defs>
+  <g class="bx-worn"><path d="M96 40 C 116 32 136 48 156 40 S 196 32 200 40 M96 56 C 116 48 136 64 156 56 S 196 48 200 56 M96 72 C 116 64 136 80 156 72 S 196 64 200 72 M96 88 C 116 80 136 96 156 88 S 196 80 200 88" fill="none" stroke="#2747A6" stroke-width="2.4"/>
+  <circle cx="62" cy="62" r="56" fill="none" stroke="#2747A6" stroke-width="3"/><circle cx="62" cy="62" r="34" fill="none" stroke="#2747A6" stroke-width="2"/>
+  <text font-family="DM Mono, monospace" font-size="9" font-weight="500" letter-spacing="1" fill="#2747A6"><textPath href="#arcs4" startOffset="50%" text-anchor="middle">AMAZON · FLIPKART</textPath></text>
+  <text font-family="DM Mono, monospace" font-size="8.5" letter-spacing="1" fill="#2747A6"><textPath href="#arcbs4" startOffset="50%" text-anchor="middle">EVERY MONTH</textPath></text>
+  <text x="62" y="60" text-anchor="middle" font-family="DM Mono, monospace" font-size="13" font-weight="500" fill="#2747A6">0 → 148</text>
+  <text x="62" y="76" text-anchor="middle" font-family="DM Mono, monospace" font-size="10" fill="#2747A6">ORDERS</text></g></svg></span>
+        <span class="bx-it bx-doodle" style="--x:96.5;--y:52;--w:3;--r:0deg;--mx:92;--my:236;--mw:6;--mr:0deg;--z:2"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M49.6 8.6L50.0 16.8L50.3 29.6L51.3 43.4L51.3 58.7L51.9 73.2L52.6 85.5L53.4 94.2M6.7 49.5L15.0 48.8L27.4 48.3L41.6 47.3L56.6 46.9L71.4 45.7L83.0 45.9L91.1 45.6M18.6 18.1L24.3 25.0L33.3 34.0L43.9 45.4L55.1 57.4L65.3 69.1L73.6 78.3L80.3 85.5M80.8 19.1L74.1 24.8L65.4 33.6L54.3 43.9L43.6 54.2L32.3 64.3L23.7 73.0L18.0 78.5"/></svg></span>
+        <span class="bx-it bx-doodle" style="--x:38.5;--y:8;--w:4.5;--r:0deg;--mx:44;--my:6;--mw:8;--mr:0deg;--z:2"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M-0.1 33.5L9.9 33.2L24.0 32.4L41.1 31.3L59.1 30.5L77.0 28.9L91.4 28.5L101.0 27.2M36.2 1.8L35.9 11.7L36.4 24.9L35.7 41.4L35.7 58.5L36.0 74.3L36.5 87.8L36.5 98.0"/></svg></span>
+        <span class="bx-it bx-doodle" style="--x:96;--y:34;--w:3;--r:8deg;--mx:92;--my:108;--mw:6;--mr:8deg;--z:2"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M20.4 25.9L26.1 24.8L34.3 23.1L44.0 20.7L55.0 19.0L64.7 17.6L73.0 18.0L78.8 20.7L82.2 26.0L84.8 33.6L87.0 42.8L87.6 53.2L85.9 62.5L83.9 70.4L80.4 76.1L74.5 80.0L66.9 83.6L57.0 84.9L46.4 86.3L36.9 85.6L28.2 84.5L21.5 82.3L18.3 78.0L15.1 70.7L13.7 62.9L12.7 54.9L13.2 47.1L15.2 40.6L18.1 36.0L21.3 33.2L27.6 33.1L35.1 32.5L43.0 33.9L50.4 35.9L56.9 37.5L61.3 39.5L63.4 42.1L63.7 45.0L62.8 48.7L61.6 52.6L60.4 56.6L59.1 59.4L58.3 62.4"/></svg></span>
+        <span class="bx-it bx-doodle" style="--x:1;--y:33;--w:5;--r:0deg;--mx:90;--my:150;--mw:9;--mr:0deg;--z:2"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M74.6 48.6L76.3 50.8L77.7 54.9L80.3 58.9L81.9 63.5L83.8 67.0L84.1 70.7L83.6 72.2L81.5 73.5L78.6 73.6L74.6 73.0L69.9 71.2L65.0 70.4L61.6 68.9L58.6 68.2L55.9 66.5L54.4 65.3L53.1 64.5L52.3 63.0L51.4 61.8L49.5 60.9L47.2 61.0L44.8 60.9L41.2 61.5L37.3 62.7L33.9 64.6L29.8 65.6L26.5 66.6L22.8 65.6L20.5 65.2L18.2 62.5L15.3 60.1L13.3 57.9L11.9 54.7L10.9 52.1L11.7 50.9L13.4 49.6L16.8 48.0L21.2 47.4L25.5 46.5L30.4 45.4L35.0 44.7L37.4 43.7L39.4 42.8L40.6 41.7L42.2 40.5L42.0 40.4L43.2 38.7L43.5 38.2L45.8 35.6L47.5 33.5L49.2 29.9L51.7 26.7L54.4 22.6L56.3 20.3L56.7 16.5L61.2 16.2L63.9 17.5L68.1 17.8L69.6 21.1L71.8 24.1L74.1 27.0L75.1 30.5L76.3 33.3L74.8 35.0L72.8 37.5L69.1 39.2L65.9 41.3L62.9 43.6L60.3 46.2L58.9 47.9L59.2 49.8L60.6 52.1L62.8 53.8L65.5 55.1L68.2 57.8L69.7 59.9L70.8 61.7L72.0 64.7L71.8 69.0L71.6 72.8L71.4 76.9L70.9 79.9L69.5 82.2L68.2 83.7L65.7 84.1L62.8 82.8L58.6 80.7L54.7 78.4L51.2 75.4L49.6 71.5L45.8 70.4L45.4 68.3L44.9 66.2L45.5 63.0L45.8 59.9L46.2 57.6L45.5 55.8L44.8 54.1L41.7 53.5L37.9 53.6L33.5 53.2L28.5 53.7L24.2 53.6L20.1 54.0L16.9 52.8L15.0 50.9L13.1 48.2L11.8 44.5L10.4 40.9L11.1 37.9L11.7 35.0L12.3 33.2L15.5 32.3L18.7 32.6L23.7 32.9L28.6 33.6L33.4 34.1L38.1 35.2L41.3 35.4L43.8 36.2L45.6 37.1L46.9 37.0L47.5 38.5L48.5 38.7L49.9 38.6L52.6 38.2L55.3 37.2L59.3 36.4L62.4 33.8L66.4 31.3L70.3 29.1L73.2 28.0L76.2 27.4L78.3 28.1L79.8 30.1L81.6 33.1L82.4 35.8L82.8 38.6L82.8 41.8L82.1 43.8L79.6 45.4L76.8 46.9L72.1 48.1L68.5 50.0L64.4 50.7L60.8 52.2L58.1 53.8L57.6 55.2L58.1 56.3L59.5 57.5L60.9 59.7L64.0 59.2L61.9 62.4L61.5 64.4L60.7 67.7L58.6 71.3L55.4 74.6L52.6 78.2L50.0 81.5L46.5 83.2L44.7 84.1L41.8 83.7L39.6 81.5L37.7 78.9L36.4 75.3L34.2 72.3L32.8 68.7L32.5 65.3L32.7 63.2L34.1 60.8L36.2 58.3L37.8 55.8L39.6 53.6L40.2 51.4L40.9 50.1L39.1 48.4L36.7 47.6L33.6 45.9L29.2 45.2L26.5 44.7L23.5 42.8L22.2 43.2L22.2 38.9L21.6 35.0L23.0 32.4L24.0 28.4L24.9 25.0L27.1 22.6L26.4 20.8L31.5 22.5L34.7 23.8L38.0 26.6L41.1 29.3L45.1 31.4L48.1 34.3L50.0 35.7L51.3 37.7L52.4 38.2L53.7 39.7L54.2 39.9L54.4 40.9L55.5 41.7L57.3 41.8L61.3 41.9L65.2 41.7L70.0 41.3L74.1 40.6L78.4 39.7L82.7 40.5L85.1 41.7L86.2 43.1L87.4 46.3L87.6 50.4L87.3 54.0L86.5 57.0L84.3 59.9L82.5 62.0L80.1 63.1L76.4 62.5L71.8 62.7L67.6 61.2L62.2 60.2L58.9 59.5L55.0 59.2L53.4 59.8L52.0 60.6L51.6 61.4L50.6 62.5L49.9 64.4L49.0 65.4L46.8 66.4L44.6 67.8L40.8 70.6L37.5 72.8L33.8 75.0L30.2 76.6L26.1 77.6L23.9 77.6L22.8 76.3L21.0 73.8L20.5 70.6L20.0 67.2L19.7 63.9L20.1 61.0L21.7 59.1L22.5 57.1L25.4 55.5L28.7 53.8L32.3 52.8L35.2 51.6L38.2 49.7L39.2 47.4L39.3 45.7L39.3 43.9L38.1 41.8L35.8 38.6L35.4 36.5L34.2 33.6L33.8 31.4L35.4 28.2L37.1 25.2L40.2 21.8L42.1 18.2L44.9 15.2L47.9 14.1L50.7 13.6L52.3 14.6L54.3 16.9L56.8 21.0L59.0 24.4L61.2 28.7L62.9 32.9L64.0 35.3L64.9 37.7L64.3 39.3L63.3 39.8L62.5 41.0L62.1 42.5L62.4 43.3L63.6 45.0L65.0 46.2L68.0 48.7L71.7 50.7L76.1 52.0L79.2 53.6L81.8 56.0L82.5 57.8L83.5 61.1L82.8 63.3L80.8 66.4L78.7 69.0L76.9 71.4L74.3 73.5L72.0 74.3L68.6 73.7L66.2 73.1L61.9 71.2L58.6 68.5L55.9 65.9L52.8 63.2L49.6 61.7L47.8 61.7L46.3 60.9L44.9 60.6L43.7 60.1L42.5 60.5L41.4 60.4L38.8 59.9L36.7 59.8L32.4 60.0L28.3 60.2L23.8 60.1L20.1 60.8L16.3 60.6L14.7 61.3"/></svg></span>
+        <span class="bx-it bx-doodle" style="--x:3;--y:63;--w:3;--r:180deg;--mx:1;--my:110;--mw:5;--mr:180deg;--z:9"><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M-0.9 7.6L2.3 8.1L6.1 8.7L11.5 8.5L16.6 8.5L21.9 8.2L26.3 8.8L29.2 9.0M10.4 2.3L10.0 4.1L10.0 8.0L10.2 12.6L11.3 16.7L11.1 21.7L10.9 24.9L11.2 27.8"/></svg></span>
+        <p class="bx-it bx-title" style="--x:41;--y:2;--w:34;--r:0deg;--mx:4;--my:2;--mw:70;--mr:0deg;--z:12">Sushant, 60 days, Shahi Sweets<span class="bx-dline"><svg viewBox="0 0 100 22" aria-hidden="true"><path d="M-1.3 8.5L8.9 7.9L22.9 8.0L40.1 7.2L58.0 6.1L74.4 6.2L89.0 5.4L98.8 5.1M13.5 19.0L21.0 19.1L32.9 18.1L46.5 16.8L61.7 16.1L75.2 15.2L86.4 15.0L94.8 14.4"/></svg></span></p>
+        <p class="bx-it bx-feat" style="--x:80;--y:0.5;--w:14;--r:-3deg;--mx:6;--my:226;--mw:36;--mr:-3deg;--z:12"><span>feat.</span><svg viewBox="0 0 200 115" role="img" aria-label="Signed: Vadik"><path d="M19.4 19.2L20.5 21.6L21.7 27.1L22.9 31.9L23.1 38.7L24.6 45.3L24.6 51.8L26.7 56.7L25.9 63.4L26.3 69.6L27.1 75.6L26.8 83.0L28.5 88.0L28.9 90.4L29.8 92.3L32.2 91.5L34.5 87.5L37.5 82.1L40.7 74.6L44.4 68.1L48.2 60.5L51.5 55.8L54.3 48.6L56.8 42.3L60.3 34.8L64.7 28.4L66.6 22.9L69.8 18.0L70.6 14.5L71.2 13.9L70.8 14.8L69.0 17.6L68.3 21.4L66.1 26.0L64.7 27.8L64.0 29.8M72.8 62.1L74.5 62.3L72.1 62.2L70.3 61.3L69.4 61.0L68.0 61.1L65.5 61.9L64.2 62.6L63.4 63.2L62.3 65.8L60.9 67.8L62.5 70.0L60.9 73.8L59.3 75.0L58.4 77.9L58.7 79.7L58.8 83.3L59.4 86.7L60.6 90.0L61.9 92.5L62.5 93.6L63.1 94.7L65.9 95.9L65.4 93.5L67.6 91.3L68.8 89.1L69.9 87.4L72.1 84.4L73.0 81.8L73.4 79.9L75.4 75.3L76.1 71.4L77.1 68.9L79.1 65.1L77.8 64.8L79.0 62.2L79.7 63.0L78.6 66.4L78.1 71.2L77.4 74.1L76.3 78.7L76.3 82.9L76.3 86.4L77.3 87.0L77.5 88.7L77.9 89.8L79.8 91.7L81.1 91.6L82.1 91.5L84.1 89.7L86.5 88.0L90.4 84.7L94.4 81.0L97.9 75.7L101.4 72.3L104.2 67.8L106.3 66.5L104.8 64.6L103.8 63.2L101.5 62.7L99.1 62.0L97.6 62.5L95.2 63.6L92.0 64.0L90.0 64.9L88.7 67.8L86.1 69.9L85.6 73.6L83.0 76.3L83.3 79.0L82.9 81.0L83.4 82.8L83.5 84.3L85.3 86.1L87.0 87.3L88.2 88.2L91.2 87.3L92.9 89.5L94.0 89.6L94.3 89.9L96.5 89.5L96.8 88.6L99.0 87.0L99.2 84.0L101.4 78.7L103.4 71.4L106.1 61.1L109.9 48.5L111.8 34.7L114.6 24.1L115.7 16.4L116.2 15.1L116.1 19.3L114.4 29.4L111.1 42.4L107.5 57.9L104.7 72.9L103.1 85.9L101.9 94.1L103.2 97.8L102.5 97.6L106.7 98.9L108.5 96.0L111.1 93.6L114.2 91.5L115.6 88.6L117.3 85.7L120.0 81.1L120.7 76.4L121.1 72.0L122.5 67.5L122.7 64.6L124.2 63.1L122.4 63.6L123.7 67.2L122.3 72.1L121.9 76.5L121.6 81.7L120.6 86.3L120.2 88.1L120.5 90.7L121.7 91.4L121.9 91.0L123.6 90.7L123.8 89.9L125.1 90.0L125.6 89.2L126.5 91.2L127.5 92.2L127.8 94.6L127.9 95.8L128.6 95.2L129.9 93.5L131.2 90.9L132.2 81.2L138.1 70.4L142.2 55.3L147.4 40.7L150.8 28.0L152.8 18.6L154.8 14.7L154.1 19.5L150.9 28.7L148.6 41.6L144.4 56.8L141.5 71.9L138.2 83.1L135.9 89.5L135.7 92.4L134.7 89.8L134.4 87.2L136.2 82.6L137.3 77.4L140.2 69.6L140.8 68.9L142.5 66.6L145.8 64.9L149.9 63.8L155.3 62.4L158.5 60.8L162.3 60.5L162.3 62.0L162.8 63.4L160.5 64.6L155.9 67.4L153.2 70.5L149.1 73.7L146.6 76.2L145.1 78.8L145.2 81.3L145.9 83.9L147.9 85.5L152.1 87.9L153.5 88.5L155.9 91.1L157.3 91.9L159.6 92.2L160.2 90.8L161.6 90.1L162.1 90.0L164.0 88.8L163.6 87.6L164.8 87.8M127.4 48.0L127.1 47.2L128.0 47.2L129.3 47.1L129.4 46.3L130.6 47.0L132.0 45.7L132.1 45.1L131.8 45.5L130.9 46.1L130.8 46.2L130.6 46.2L129.7 46.4L129.0 47.7L127.9 47.8M-0.2 104.5L6.1 104.9L15.0 104.5L25.1 105.0L36.3 104.3L48.2 103.7L60.5 103.0L72.1 101.9L82.3 101.5L94.5 99.9L107.3 98.6L119.8 98.4L132.2 97.5L141.8 96.2L152.2 95.2L159.9 94.4L167.4 92.9L174.2 92.7L180.4 91.8L184.9 91.3L188.5 91.9L191.0 91.9"/></svg></p>
       </div>
     </div>
   </section>
