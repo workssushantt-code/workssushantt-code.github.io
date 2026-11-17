@@ -532,6 +532,18 @@ body[data-view="case-studies"] .float-nav .navlink{color:var(--leaf);text-decora
 .of-title{align-self:center;text-align:center;font-size:clamp(1.3rem,2.3vw,1.7rem);font-weight:800;letter-spacing:-.02em;line-height:1.25;text-wrap:balance}
 .of-title .mark{white-space:nowrap;padding-inline:0;background:linear-gradient(transparent 55%,var(--leaf-soft) 55%,var(--leaf-soft) 92%,transparent 92%)}
 @media (max-width:480px){.of-card{box-shadow:6px 6px 0 -2px var(--mint-mid),6px 6px 0 0 var(--leaf-soft)}.of-card .tape{width:64px;height:22px;top:-11px}}
+/* Amazon and eBay wordmarks as two small stickers on the card's bottom corners (official logos from Wikimedia Commons) */
+.of-sticker{position:absolute;bottom:-18px;z-index:1;display:grid;place-items:center;height:42px;padding:0 14px;background:var(--paper);border:1.5px solid var(--rule);border-radius:12px;box-shadow:0 8px 16px -10px rgba(19,58,34,.45)}
+.of-sticker img{display:block;width:auto;height:20px}
+.of-sticker.amz{left:-16px;rotate:-6deg}
+.of-sticker.amz img{height:21px;margin-top:5px}
+.of-sticker.eby{right:-16px;rotate:5deg}
+.of-sticker.eby img{height:24px}
+@media (max-width:480px){
+  .of-sticker{height:34px;padding:0 10px;bottom:-15px;border-radius:10px}
+  .of-sticker.amz{left:-8px}.of-sticker.amz img{height:16px;margin-top:4px}
+  .of-sticker.eby{right:-8px}.of-sticker.eby img{height:19px}
+}
 
 /* Scroll-in: the card rises and settles, tape lands, problems tick in one by one. Added by script only, so no-JS and reduced-motion visitors see it static. */
 .of-anim{opacity:0;transform:translateY(32px) rotate(-.8deg);box-shadow:0 0 0 -2px var(--mint-mid),0 0 0 0 var(--leaf-soft);transition:opacity .6s ease,transform .8s cubic-bezier(.2,.75,.25,1),box-shadow .5s ease .55s}
@@ -540,6 +552,9 @@ body[data-view="case-studies"] .float-nav .navlink{color:var(--leaf);text-decora
 .of-anim .tape{opacity:0;scale:1.35;transition:opacity .25s ease .7s,scale .35s cubic-bezier(.3,1.6,.5,1) .7s}
 .of-anim .tape.tr{transition-delay:.85s}
 .of-anim.is-in .tape{opacity:1;scale:1}
+.of-anim .of-sticker{opacity:0;scale:.6;transition:opacity .25s ease 1.35s,scale .4s cubic-bezier(.3,1.6,.5,1) 1.35s}
+.of-anim .of-sticker.eby{transition-delay:1.5s}
+.of-anim.is-in .of-sticker{opacity:1;scale:1}
 .of-anim .of-list li{opacity:0;translate:-12px 0;transition:opacity .4s ease,translate .5s cubic-bezier(.2,.75,.25,1);transition-delay:calc(.45s + var(--i,0) * 70ms)}
 .of-anim.is-in .of-list li{opacity:1;translate:0 0}
 .of-anim .of-terms,.of-anim .btn,.of-anim .of-title{opacity:0;transition:opacity .5s ease,transform .15s ease,background-color .15s ease}
@@ -1140,7 +1155,7 @@ body[data-view="case-studies"] .float-nav .navlink{color:var(--leaf);text-decora
     <div class="wrap">
       <div class="hero-copy">
         <p class="kicker">For Food &amp; Beverage E-commerce Brands</p>
-        <h1><span class="l">Grow your food brand's</span> <span class="l">online sales by <span class="hl circled">$10K<svg viewBox="0 0 160 62" preserveAspectRatio="none" aria-hidden="true"><path d="M14 30 C 12 12, 62 5, 110 8 C 150 11, 158 30, 150 43 C 139 57, 80 60, 40 54 C 14 50, 3 38, 13 24 C 20 15, 42 10, 66 9"/></svg></span></span> <span class="l hl">in 60 days.</span></h1>
+        <h1><span class="l">Grow your ecom brand's</span> <span class="l">online sales by <span class="hl circled">$10K<svg viewBox="0 0 160 62" preserveAspectRatio="none" aria-hidden="true"><path d="M14 30 C 12 12, 62 5, 110 8 C 150 11, 158 30, 150 43 C 139 57, 80 60, 40 54 C 14 50, 3 38, 13 24 C 20 15, 42 10, 66 9"/></svg></span></span> <span class="l hl">in 60 days.</span></h1>
         <p class="lead"><span class="l">I find where your Amazon, eBay and Shopify sales get stuck.</span> <span class="l">Then I fix it for you with a clear plan, hands-on work and weekly results.</span></p>
         <div class="cta-row">
           <a class="btn" href="https://calendly.com/works-sushant/schedule-your-cro-consultation-now" target="_blank" rel="noopener">Let's hit your $10K mark
@@ -1246,6 +1261,8 @@ body[data-view="case-studies"] .float-nav .navlink{color:var(--leaf);text-decora
       </div>
       <article class="of-card">
         <span class="tape tl" aria-hidden="true"></span><span class="tape tr" aria-hidden="true"></span>
+        <span class="of-sticker amz"><img src="assets/logo-amazon.svg" alt="Amazon" width="603" height="182"></span>
+        <span class="of-sticker eby"><img src="assets/logo-ebay.svg" alt="eBay" width="1000" height="401"></span>
         <h3 class="of-title">I solve all of these in <span class="mark">60 days</span>.</h3>
         <ul class="of-list">
           <li>Stuck under 50 reviews?</li>
